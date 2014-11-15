@@ -1,0 +1,1875 @@
+/**
+* 
+*
+* WISHBONE CSS
+*
+* This file contains all of the Wishone theme CSS code.
+*
+* Site Name: Wishbone WordPress Theme
+* Theme URI: http://wishbone.wishynet.co.uk
+* Description: Wishbone WordPress Theme CSS file.
+* Author: Paul Williamson
+* Author URI: http://www.wishynet.co.uk
+* Version: 1.00
+*
+* Contents:
+*
+* 1.0 - HEADER STYLES
+* 2.0 - NAVIGATION MENU STYLES
+* 3.0 - SHOWCASE STYLES
+* 4.0 - CONTENT STYLES
+* 5.0 - POST STYLES
+* 6.0 - POST FORMATS
+* 7.0 - GALLERIES
+* 8.0 - COMMENTS
+* 9.0 - PAGE TEMPLATES
+* 10.0 - SIDEBAR
+* 11.0 - WIDGETS
+* 12.0 - SEMI-FOOTER STYLES
+* 13.0 - FOOTER STYLES
+* 14.0 - MEDIA QUERIES
+*
+* Notes:
+* 
+* This file is itself a dependency of the 'style.css' file found within the root of this theme.
+* Please check the 'style.css' file to understand the stucture of CSS used by this theme.
+*
+* 
+**/
+
+
+
+
+/** 
+* 
+* 1.0 - HEADER STYLES
+* ==================================================
+*  
+**/
+
+#header
+{
+	background-color: #eeeeee;
+}
+
+#logo,
+#title
+{
+	display: inline-block;
+	float: left;
+}
+
+#logo img
+{
+	margin: 50px 50px 50px 0;
+	float: left;
+}
+
+#title
+{	
+	position: absolute;
+	top: 50%;
+	margin: -35px 0 30px 0;
+}
+
+#title h1,p
+{
+	margin-bottom: 5px;
+	vertical-align: middle;	
+}
+
+
+/* Login Links */
+#login
+{
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 150px;
+	margin: -25px 0 20px 0;
+	float: right;
+}
+
+#login a
+{
+	float: right;
+}
+
+#login ul
+{
+	margin-right: 0;
+	margin-bottom: 0;
+	float: right;
+}
+
+#login ul li
+{
+	margin: 0 0 10px 10px;
+	float: left;
+}
+
+#login ul li a
+{
+	margin: 0;
+}
+
+
+/* Back To Top Button */
+#back-to-top
+{
+	display: none;
+	position: fixed;
+	bottom: 14px;
+	right: 14px;
+	width: 50px;
+	height: 50px;
+	z-index: 100;
+	background-color: #aaaaaa;
+	text-align: center;
+	opacity: 0.75;
+}
+
+#back-to-top img
+{
+	margin-top: 11px;
+}
+
+
+
+
+/**
+*
+* 2.0 - NAVIGATION MENU STYLES
+* ==================================================
+*
+* Notes:  
+*
+* Wishbone makes use of the Wordpress wp_nav_menu function with ref: "main_menu"
+*
+**/
+
+/* Navigation Container */
+#navigation
+{
+	min-height: 50px;
+	border-top: 5px solid #444444;
+}
+
+
+/* Mobile Menu */
+#mobile_menu
+{
+	display: none;
+	height: 50px;
+	background-color: #444444;
+	cursor: pointer;
+	text-align: center;
+}
+
+#mobile_menu img,
+#mobile_menu p
+{
+	display: inline-block;
+}
+
+#mobile_menu p
+{
+	line-height: 50px;
+	margin: -40px 0 0 0;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+
+/* Desktop Menu */
+#desktop_menu ul.menu
+{
+	margin: 0; 
+	padding: 0;
+}
+
+		
+/* Menu Items */
+#desktop_menu li.menu-item
+{
+	position: relative;
+	margin: 0;
+	float: left;
+}
+		
+#desktop_menu li.menu-item a
+{
+	display: block;
+	padding: 0 10px 0 10px;
+	line-height: 50px;
+	color: #444444;      		
+  	font-weight: bold;
+  	text-align: center;
+ 	text-decoration: none;
+}
+		
+#desktop_menu li.menu-item:hover
+{
+	background-color: #444444; 
+	-webkit-transition: all 0.25s ease-in-out;
+       -moz-transition: all 0.25s ease-in-out;
+   		-ms-transition: all 0.25s ease-in-out;
+    	 -o-transition: all 0.25s ease-in-out;   
+      		transition: all 0.25s ease-in-out; 	
+}
+		
+#desktop_menu li.menu-item:hover a		
+{
+	color: #eeeeee;
+}
+
+		
+/* Sub-Menus */
+#desktop_menu ul.sub-menu
+{		
+	display: none;
+	position: absolute;
+	top: 50px;
+	margin: 0;
+	z-index: 200;
+}
+		
+#desktop_menu li.menu-item-has-children:hover > ul.sub-menu
+{		
+	display: block;
+}
+
+		
+/* Sub-Menu Items */
+#desktop_menu ul.sub-menu li
+{
+	margin: 0;
+	float: none;
+	background-color: #444444; 
+}
+		
+#desktop_menu ul.sub-menu li a
+{
+	white-space: nowrap;
+}
+
+		
+/* Deeper Menu Items */
+#desktop_menu li.menu-item-has-children:hover ul.sub-menu:hover ul.sub-menu
+{
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+	
+#desktop_menu li.menu-item-has-children:hover ul.sub-menu li a,
+#desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a
+{
+	color: #ffffff;
+	background-color: #444444;
+}
+		
+#desktop_menu li.menu-item-has-children:hover ul.sub-menu li:hover a,
+#desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li:hover a
+{
+	color: #444444;
+	background-color: #eeeeee;
+}
+
+
+/* Current Menu Items */
+#desktop_menu li.current_page_item,
+#desktop_menu li.current-menu-item
+{
+	background-color: #444444;
+}
+
+#desktop_menu li.current_page_item a,
+#desktop_menu li.current-menu-item a
+{
+	color: #ffffff;
+}
+
+
+
+
+/**
+*
+* 3.0 - SHOWCASE STYLES
+* ==================================================
+* 
+**/
+
+#showcase
+{
+	min-height: 340px;
+	margin: 50px 0 50px 0;
+}
+
+#showcase h1
+{
+	color: #ffffff;
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0 1px 2px #000000;
+	
+}
+
+#showcase p
+{
+	color: #ffffff;
+	font-size: 24px;
+	text-align: center;
+}
+
+
+/* Welcome Slogan */
+#welcomeslogan
+{
+	height: 100px;
+	margin-top: 125px;
+}
+
+
+
+
+/**
+* 
+* 4.0 - CONTENT STYLES
+* ==================================================
+*
+**/
+
+#content
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	overflow: auto;
+}
+
+/* Content Positioning */
+.alignnone
+{
+    margin: 5px 20px 20px 0;
+}
+
+.alignright
+{
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft
+{
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter
+{
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+
+
+
+/**
+* 
+* 5.0 - POST STYLES
+* ==================================================
+*
+**/
+
+.post
+{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.postexcerpt
+{
+	margin-bottom: 40px;
+}
+
+.postimg,
+.posttitle,
+.postmeta,
+.postcats,
+.postcontent,
+.entry
+{
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+.postimg
+{
+	margin: 0px 15px 10px 0px;
+}
+
+.postmeta,
+.postcats,
+.posttags
+{
+	margin-bottom: 5px;
+}
+
+.postcats
+{
+	display: inline-block;
+	font-size: 85%;
+	line-height: 16px;
+	opacity: 0.70;
+}
+
+.postcats a
+{
+	margin-right: 5px;
+}
+
+.postcats a:hover
+{
+	text-decoration: none;
+}
+
+.posttags a
+{
+	display: inline-block;
+	margin: 0 5px 10px 5px;
+	padding: 5px;
+	background-color: #eeeeee;
+}
+
+.posttags a:hover
+{
+	color: #ffffff;
+	background-color: #444444;
+	-webkit-transition: all 0.25s ease-in-out;
+	   -moz-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+}
+
+.entry
+{
+	margin-bottom: 50px;
+}
+
+.entry p
+{
+	margin-bottom: 20px;
+}
+
+.postmore
+{
+	height: 32px;
+	line-height: 32px;
+	padding-bottom: 15px;
+}
+
+.postmore a
+{
+	clear: both;
+	float: right;
+}
+
+/* Nav-Post Styles (next/prev links) */
+.postnav
+{
+	min-height: 50px;
+	line-height: 50px;
+	margin-bottom: 20px;
+}
+
+.prevlink,
+.homelink,
+.nextlink
+{
+	margin: 0 15px 0 0;
+	float: left;
+}
+
+
+/* Nav-Page Styles (pagination links) */
+.pagenav
+{
+	height: 50px;
+	margin-top: 20px;
+	clear: both;
+}
+
+.pagenav ul li
+{
+	margin-right: 10px;
+}
+
+.pagenav ul li a
+{
+	padding: 8px;
+	background-color: #ebebeb;
+}
+
+.pagenav ul li .current,
+.pagenav ul li a:hover
+{
+	padding: 8px;
+	background-color: #444444;
+	color: #ffffff;
+	-webkit-transition: all 0.25s ease-in-out;
+ 	   -moz-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+}
+
+
+/* Both Post And Page Navigation Styles */
+.postnav,
+.pagenav
+{
+	display: table; 	/* use this to center links */
+	margin: 0 auto 20px auto;
+	clear: both;
+}
+
+.postnav li:last-of-type,
+.pagenav li:last-of-type
+{
+	margin-right: 0;
+}
+
+.postnav ul li,
+.pagenav ul li
+{
+	display: inline;
+	float: left;
+}
+
+
+/* Post Pagination (used for posts that are divided into multiple pages) */
+p.postpages
+{
+	height: 32px;
+	margin-bottom: 20px;
+	clear: both;
+}
+
+p.postpages .button
+{
+	margin-left: 5px;
+	background-color: #eeeeee;
+	color: #444444;
+}	
+
+p.postpages .button:hover
+{
+	background-color: #444444;
+	color: #ffffff;
+	-webkit-transition: all 0.25s ease-in-out;
+ 	   -moz-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+}
+	
+
+/* Sticky Posts */
+.sticky
+{
+	background-color: #eeeeee;
+	padding: 15px;
+	border: 1px solid #cccccc;
+	border-radius: 2px;
+}
+
+.sticky .posttitle a
+{
+	color: #f3432c;
+}
+
+.sticky .posttags a
+{
+	background-color: #cccccc;
+}
+
+.sticky .posttags a:hover
+{
+	background-color: #444444;
+}
+
+	
+/* Author Styles */
+.authorimg,
+.authorurl,
+.authoremail
+{
+	margin-bottom: 10px;
+}
+
+.authordescription
+{
+	margin-bottom: 40px;
+}
+
+
+
+
+/**
+* 
+* 6.0 - POST FORMATS
+* ==================================================
+*
+**/
+
+.format-gallery
+{
+	
+}
+
+.format-image
+{
+	
+}
+
+.format-audio
+{
+	
+}
+
+.format-video
+{
+	
+}
+
+.format-aside
+{
+	
+}
+
+.format-status
+{
+	
+}
+
+.format-link
+{
+	
+}
+
+.format-quote
+{
+	
+}
+
+.format-chat
+{
+	
+}
+
+/* Videos */
+.entry iframe,
+.entry object,
+.entry embed,
+.entry .videopress-placeholder,
+.entry .videopress-poster
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+}
+
+.entry .videopress-placeholder,
+.entry .videopress-poster
+{
+	height: auto !important;
+	margin-bottom: 30px;
+}
+
+
+
+/**
+* 
+* 7.0 - GALLERIES
+* ==================================================
+*
+* Notes: 
+*	
+* Wishbone uses a customized native WordPress gallery 
+* structure and styling for both native WordPress galleries 
+* and the portfolio page templates. 
+*	
+* The WordPress default gallery styles have been 
+* disabled in the theme functions.php file.
+* 
+* Wishbone supports Thickbox; a lightbox or modal script packaged with Wordpress.
+* The Thickbox styles listed below the gallery styles are used to override the default Thickbox styles.
+* Unfortunately, Thickbox does not use valid HTML markup and is therefore not the default option for Wishbone.
+*
+**/
+
+.gallery
+{	
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+.gallery-item
+{
+	position: relative;
+	padding: 0 15px 15px 0;
+	float: left;
+	box-sizing: border-box;
+}
+
+.gallery-columns-1 .gallery-item
+{
+	max-width: 100%;
+}
+
+.gallery-columns-2 .gallery-item
+{
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item
+{
+	max-width: 33.3%;
+}
+
+.gallery-columns-4 .gallery-item
+{
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item
+{
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item
+{
+	max-width: 16.6%;
+}
+
+.gallery-columns-7 .gallery-item
+{
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item
+{
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item
+{
+	max-width: 11%;
+}
+/*
+.gallery-columns-1 .gallery-item:nth-of-type(1n),
+.gallery-columns-2 .gallery-item:nth-of-type(2n),
+.gallery-columns-3 .gallery-item:nth-of-type(3n),
+.gallery-columns-4 .gallery-item:nth-of-type(4n),
+.gallery-columns-5 .gallery-item:nth-of-type(5n),
+.gallery-columns-6 .gallery-item:nth-of-type(6n),
+.gallery-columns-7 .gallery-item:nth-of-type(7n),
+.gallery-columns-8 .gallery-item:nth-of-type(8n),
+.gallery-columns-9 .gallery-item:nth-of-type(9n)
+{
+	margin-right: 0;
+	padding-right: 0;
+}
+*/
+.gallery .gallery-icon
+{
+	margin-bottom: -6px;
+	opacity: 0.65;
+}
+
+.gallery .gallery-icon:hover
+{
+	opacity: 1;
+	-webkit-transition: all 0.25s ease-in-out;
+	   -moz-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+}
+
+
+/* Gallery Captions */
+.gallery .gallery-caption
+{
+	position: absolute;
+	z-index: 100;
+	top: 100%;
+	width: 100%;
+	margin-top: -15px;
+	padding: 10px;
+	color: #ffffff;
+	background-color: #444444;
+	text-align: center;
+	display: none;
+}
+
+.gallery .gallery-caption:before
+{
+	position: absolute;
+	bottom: 100%;
+	left: 20%;
+	width: 0;
+	height: 0;
+	margin-left: -10px;
+	content: " ";
+	border: solid transparent;
+	border-bottom-color: #444444;
+	border-width: 10px;
+}
+
+.gallery .gallery-item:hover .gallery-caption
+{
+	display: block;
+}
+
+.gallery-columns-5 .gallery-caption,
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption
+{
+	display: none;
+}
+
+/* WordPress Captions */
+.wp-caption
+{
+    max-width: 90%;
+    margin: 0;
+    padding: 5px 3px 10px 3px;
+}
+
+.wp-caption-text
+{
+	text-align: left;
+	word-wrap: break-word;
+}
+
+.wp-caption img
+{
+    width: auto;
+    height: auto;            
+    max-width: 98.5%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+/* Thickbox Styles */
+#TB_Image
+{
+	border: none !important;
+}
+
+#TB_caption,
+#TB_closeWindow
+{
+	height: 15px !important;
+	padding: 15px !important;
+}
+
+.tb-close-icon
+{
+	background-image: url( '../images/close.png' );
+}
+
+
+
+/**
+* 
+* 8.0 - COMMENTS
+* ==================================================
+* 
+**/
+
+.comments
+{
+	width: 100%; 
+	clear: both;
+}
+
+#comment-count
+{
+	margin-bottom: 30px;
+}
+
+.comment
+{
+	min-height: 100px;
+	margin-bottom: 30px;
+	clear: both;
+}
+
+.depth-2
+{
+	margin-left: 20px;
+}
+
+.depth-3
+{
+	margin-left: 40px;
+}
+
+.depth-4
+{
+	margin-left: 60px;	
+}
+
+.depth-5,
+.depth-6,
+.depth-7,
+.depth-8,
+.depth-9,
+.depth-10
+{
+	margin-left: 80px;	
+}
+
+.comment-author,
+.comment-meta
+{
+	display: block;
+	width: 20%;
+	margin-right: 20px;
+	float: left;
+	text-align: left;
+}
+
+.comment-meta
+{
+	font-size: 85%;
+	opacity: 0.70;
+	clear: both;
+}
+
+.avatar
+{
+	border-radius: 50%;
+}
+
+.comment-author .fn
+{
+	display: block;
+	clear: both;
+	font-weight: bold;
+}
+
+.comment-author .says
+{
+	display: none;		/* This removes the additional "says:" output of the 'comment_author' class */
+}
+
+.bypostauthor
+{
+	border-left: 2px solid #ff0000;
+}
+
+.authcomment
+{
+	background-color: #eeeeee;
+}
+
+.reply
+{
+	width: 100%;
+	min-height: 32px;
+	margin: 20px 0 20px 0;
+	clear: both;
+}
+
+.comment-reply-link,
+.comment-reply-link:hover
+{
+	padding: 5px;
+	float: right;
+	color: #ffffff;
+	background-color: #444444;
+}
+
+
+/* Comment Pagination */
+.comment-nav
+{
+	height: 50px;
+	clear: both;
+	text-align: center;
+}
+
+.comment-nav a
+{
+	margin-right: 10px;
+	padding: 8px;
+	background-color: #ebebeb;
+}
+
+.comment-nav a:hover
+{
+	padding: 8px;
+	color: #ffffff;
+	background-color: #444444;
+	-webkit-transition: all 0.25s ease-in-out;
+	   -moz-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;	
+}
+
+
+/* Comment Reply Form */
+.comment-respond
+{
+	min-height: 300px;
+	margin-top: 30px;
+	clear: both;
+}
+
+.comment-form-url
+{
+	display: none;
+}
+
+#commentform input,
+#commentform textarea
+{
+	width: 50%;
+}
+
+.form-allowed-tags
+{
+	width: 50%;
+	margin: 2% 2% 2% 0;
+	padding: 5px;	
+}
+
+.form-allowed-tags
+{
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+}
+
+input#submit
+{
+	width: 25%;
+}
+
+
+
+
+/**
+* 
+* 9.0 - PAGE TEMPLATES
+* ==================================================
+* 
+* Notes: 
+*	
+* This section lists various styles for specific page templates. 
+*  
+**/
+
+/* page-search.php */
+.search-page-links
+{
+	display: block;
+	max-width: 300px;
+	height: 32px;
+	margin: 0 auto 50px auto;	
+}
+
+.search-page-links li
+{
+	height: 32px;
+	margin: 0 15px 15px 0;
+	float: left;
+}
+
+.search-page-links li:nth-of-type(3n)
+{
+	margin-right: 0;
+}
+
+
+/* 404.php */
+h1.fourzerofour
+{
+	font-size: 210px;
+	line-height: 210px;
+	opacity: 0.5;
+	float: right;
+}
+
+h2.fourzerofour
+{
+	margin-top: 70px;
+}
+
+.fourzerofourhelp
+{
+	display: block;
+	width: 50%;
+	margin: 50px auto 0 auto;
+	text-align: center;
+}
+
+.fourzerofourhelp p
+{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fourzerofourhelp ul
+{
+	list-style-type: none;
+	width: 65%;
+	margin: 10px auto 10px auto;
+}	
+
+.fourzerofourhelp li
+{
+	display: inline;
+}
+
+.fourzerofourhelp li,
+.fourzerofourhelp li a
+{
+	margin: 0 10px 10px 0;
+}
+
+
+
+/**
+* 
+* 10.0 - SIDEBAR
+* ==================================================
+*
+**/
+
+#sidebar
+{
+	/*float: right;*/
+}
+
+#sidebar ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+#sidebar ul li
+{
+	display: block;
+	margin-bottom: 15px;
+	clear: both;
+}
+
+#sidebar ul li a
+{
+	padding: 5px !important;
+	line-height: 26px;
+	background-color: #eeeeee;
+}
+
+#sidebar ul li a:hover
+{
+	color: #ffffff;
+	background-color: #444444;	
+	-webkit-transition: all 0.25s ease-in-out;
+	   -moz-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+}
+
+#sidebar ul ul,
+.sub-menu,
+.children
+{
+	margin-top: 15px;
+}
+
+
+
+
+/**
+*
+* 11.0 - WIDGETS
+* ==================================================
+*
+**/
+
+/* Search Form */
+#searchform input
+{
+	margin-bottom: 10px;
+}
+
+#search-input
+{
+	width: 97%;
+	line-height: 22px;
+}
+
+#search-submit
+{
+	display: none;
+}
+
+
+/* Calendar */
+#calendar_wrap th
+{
+	text-align: center;
+}
+
+#wp-calendar
+{
+	width: 100%;
+	border: none;
+}
+
+#wp-calendar caption
+{
+	text-align: left;
+	color: #5b5b5b;
+	font-size: 13px;
+	font-style: italic;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+#wp-calendar thead
+{
+	font-size: 13px;
+	background: none;
+	border: none;
+}
+
+#wp-calendar tbody
+{
+	color: #aaaaaa;
+}
+
+#wp-calendar tbody td
+{
+	text-align: center;
+	padding: 15px;
+	background-color: #ebebeb;
+}
+
+#wp-calendar tbody td a
+{
+	margin: 0px;
+	padding: 0px;	
+}
+
+#wp-calendar tbody td:hover
+{
+	color: #ffffff;
+	background-color: #444444;
+	-webkit-transition: all 0.25s ease-in-out;
+	   -moz-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+}
+
+#wp-calendar tbody .pad
+{
+	background: none;
+	border: none;
+}
+
+#wp-calendar #today
+{
+	color: #ffffff;
+	background-color: #444444;
+}
+
+#wp-calendar #next,
+#wp-calendar #prev
+{
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 15px 0 0 0;
+}
+
+#wp-calendar #next
+{
+	text-align: right;
+}
+
+
+/* Tag Cloud */
+.wp-tag-cloud ul
+{
+	display: block;
+	margin-bottom: 20px;
+}
+
+.wp-tag-cloud a,
+.wp-tag-cloud a:before,
+.wp-tag-cloud a:after,
+.widget_tag_cloud a,
+.widget_tag_cloud a:before,
+.widget_tag_cloud a:after
+{
+	margin-bottom: 10px;
+	margin-right: 10px;
+	padding: 5px;
+	background-color: #444444;
+	font-size: 14px !important;
+	float: left;
+}
+
+
+/* RSS Feed */
+.widget_rss img
+{
+	display: none;
+}
+
+.rss-date
+{
+	font-size: 85%; 
+	opacity: 0.70;
+}
+
+
+
+
+/**
+* 
+* 12.0 - SEMI-FOOTER STYLES
+* ==================================================
+*
+**/
+
+#semi_footer
+{
+	min-height: 260px;
+	padding: 50px 0 0 0;
+	background-color: #eeeeee;
+	border-top: 5px solid #444444;
+}
+
+#semi_footer .columns
+{
+	margin-bottom: 50px;
+}
+
+#semi_footer ul
+{
+	margin-bottom: 20px;
+}
+
+#semi_footer ul li
+{
+	margin-bottom: 10px;
+}
+
+
+/* Popular Topics */
+#semi_footer .wp-tag-cloud a,
+#semi_footer .wp-tag-cloud a:before,
+#semi_footer .wp-tag-cloud a:after,
+#semi_footer .widget_tag_cloud a,
+#semi_footer .widget_tag_cloud a:before,
+#semi_footer .widget_tag_cloud a:after
+{
+	color: #ffffff;
+}
+
+
+/* Recent News */
+#recentnews li
+{
+	line-height: 42px;
+	margin-bottom: 0 !important;
+}
+
+#recentnews a
+{
+	margin-bottom: 0;
+}
+
+#recentnews img
+{
+	width: 42px;
+	height: 42px;
+	float: left;
+	display: block;
+	margin-right: 10px;
+	background-color: #cccccc;
+}
+
+
+
+
+/**
+* 
+* 13.0 - FOOTER STYLES
+* ==================================================
+*
+**/
+
+#footer
+{
+	min-height: 80px;
+	line-height: 80px;
+	background-color: #cccccc;
+}
+
+#footer p
+{
+	margin: 0;
+	text-align: center;
+}
+
+
+
+
+/** 
+*
+* 14.0 - MEDIA QUERIES
+* ==================================================
+*  
+**/
+
+/* Phone (Portrait): min - 479px */
+@media only screen and ( max-width: 479px )
+{
+	
+	/* Login */
+	#logo
+	{
+		display: none;
+	}
+	
+		
+	/* Title */
+	#title
+	{
+		width: 100%;
+	}
+	
+	
+	/* Galleries */
+	.gallery .gallery-item:hover .plus_button
+	{
+		display: none;
+	}
+
+}
+
+
+/* Phone (Landscape): 480px - 767px */
+@media only screen and ( max-width: 767px )
+{
+	
+	/* Logo */
+	#logo
+	{
+		display: none;
+	}
+	
+	
+	/* Title */
+	#title
+	{
+		position: relative;
+		width: 100%;
+		margin-top: 40px;
+	}
+		
+	#title h1,
+	p
+	{
+		text-align: center;	
+	}
+	
+		
+	/* Login */
+	#login
+	{
+		display: none;
+	}
+	
+		
+	/* Mobile Navigation Menu */
+	#navigation
+	{
+		border: none !important;
+	}
+		
+	#mobile_menu
+	{
+		display: block;
+	}
+
+
+	/* Main Menu */
+	#mobile_menu ul.menu
+	{
+		position: fixed;
+		top: 0;
+		left: -100%;
+		min-width: 60%;
+		height: 100%;
+		margin: 0;
+		z-index: 100;
+		overflow: auto;
+		background-color: #444444;
+		-webkit-transition: left 0.25s ease-in-out;
+   		   -moz-transition: left 0.25s ease-in-out;
+			-ms-transition: left 0.25s ease-in-out;
+	 		 -o-transition: left 0.25s ease-in-out;
+				transition: left 0.25s ease-in-out;
+	}
+		
+	#mobile_menu:hover ul.menu
+	{
+		left: 0;
+	}
+		
+	#mobile_menu .menulogo img
+	{
+		margin-top: 55px;
+	}
+		
+	#mobile_menu .menutitle h2
+	{
+		margin-bottom: 45px;
+		color: #eeeeee;
+	}
+		
+	#mobile_menu hr
+	{
+		margin: 10px 15px 10px 15px;
+		border-color: #aaaaaa;
+		opacity: 0.25;
+	}
+		
+	#mobile_menu li p
+	{
+		margin: 5px 0 5px 0;
+		color: #aaaaaa;
+	}
+	
+		
+	/* WP Menu */
+	#mobile_menu .main-menu
+	{
+		margin-left: 0;
+	}
+	
+		
+	/* WP Menu Items */
+	#mobile_menu li.menu-item
+	{
+		width: 100%;
+		margin: 0;
+	}
+		
+	#mobile_menu li.menu-item a
+	{
+		display: block;
+		padding: 0 15px 0 15px;
+		line-height: 50px;
+		color: #ffffff;
+		font-weight: bold;
+		text-align: left;
+   		text-decoration: none;
+	}
+		
+	#mobile_menu li.menu-item:hover
+	{
+		background-color: #eeeeee;	
+	}
+		
+	#mobile_menu li.menu-item:hover a		
+	{
+		color: #444444;
+	}
+	
+		
+	/* WP Sub Menus */
+	#mobile_menu ul.sub-menu,
+	#mobile_menu ul.sub-menu:hover
+	{
+		display: block;
+		margin: 0;
+		color: #ffffff;
+		background-color: #444444;
+	}
+	
+		
+	/* WP Sub Menu Items */
+	#mobile_menu ul.sub-menu li
+	{
+		display: block;
+	}
+		
+	#mobile_menu ul.sub-menu li a:before
+	{
+		margin-right: 10px;
+		float: left;
+		content: '\203A \203A ';
+	}
+	
+		
+	/* WP Deeper Menu Items */		
+	#mobile_menu ul.sub-menu ul.sub-menu li a:before
+	{
+		margin-right: 10px;
+		float: left;
+		content: '\203A \203A \203A ';
+	}
+		
+	#mobile_menu li.menu-item-has-children:hover ul.sub-menu li a,
+	#mobile_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a
+	{
+		color: #ffffff;
+	}
+		
+	#mobile_menu li.menu-item-has-children:hover ul.sub-menu li:hover a,
+	#mobile_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li:hover a
+	{
+		color: #444444;
+	}		
+	
+		
+	/* Navigation */
+	#desktop_menu
+	{
+		display: none;
+	}
+	
+			
+	/* Welcome Slogan */
+	#welcomeslogan
+	{
+		margin-top: 85px;
+	}
+	
+			
+	/* Content */		
+	#content h1,
+	#content h2,
+	#content h3,
+	#content h4,
+	#content h5,
+	#content h6,
+	.postmeta,
+	.posttags,
+	.entry address
+	{
+		text-align: center;
+	}
+		
+	.entry
+	{
+		margin-bottom: 15px;
+	}
+		
+	input[type="password"]
+	{
+		width: 100%;
+	}
+		
+	.postmore
+	{
+		margin-bottom: 30px;
+	}
+		
+	.postmore a
+	{
+		width: 100px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	}
+		
+	.author-img
+	{
+		text-align: center;
+	}		
+	
+		
+	/* Galleries */
+	.gallery-item
+	{
+		padding: 0 7px 7px 0;
+	}
+		
+	.gallery .gallery-caption,
+	.gallery .gallery-item:hover .gallery-caption 
+	{
+		display: none;
+	}	
+	
+	
+	/* Comments */
+	.comment p
+	{
+		width: 100%;
+		clear: both;
+	}
+		
+	.comment-main
+	{
+		clear: both;
+	}
+		
+	.comment-input,
+	.comment-author,
+	.comment-meta,
+	.reply
+	{
+		width: 100%;
+		text-align: center;
+		margin-right: 0;
+	}
+
+	.comment-meta
+	{
+		height: 50px;
+	}
+		
+	.comment-reply-link,
+	.comment-reply-link:hover
+	{
+		display: inline-block;
+		float: none;
+	}
+		
+	#commentform input,
+	#commentform textarea,
+	.form-allowed-tags
+	{
+		width: 100%;
+	}
+		
+	.form-allowed-tags
+	{
+		margin-bottom: 20px;
+	}
+		
+	input#submit
+	{
+		width: 50%;
+	}
+		
+	.comment p
+	{
+		margin-bottom: 15px;
+		clear: both;
+	}		
+	
+		
+	/* Sidebar */
+	#search-input
+	{
+		width: 100%;
+	}
+		
+	#wp-calendar tfoot #prev
+	{
+		float: left;
+	}
+		
+	#wp-calendar tfoot #next
+	{
+		float: right;
+	}	
+	
+	
+	/* Semi-Footer */
+	#semi_footer .columns
+	{
+		margin-bottom: 40px;
+	}
+		
+	#semi_footer h3, h4, ul, li, p, a
+	{
+		text-align: center;
+	}	
+	
+	
+	/* Footer */
+	#footer
+	{
+		text-align: center;
+	}
+	
+}
+
+
+/* Tablet (Portrait): 768px - 959px */
+@media only screen and ( min-width: 768px )
+{
+		
+	/* Logo */
+	#logo img
+	{
+		max-width: 100px;
+		margin: 50px 30px 50px 0;
+	}	
+	
+		
+	/* Comments */
+	input#submit
+	{
+		width: 50%;
+	}
+	
+	
+	/* 404.php */
+	.fourzerofourhelp
+	{
+		width: 100%;
+	}
+		
+}
+
+
+/* Tablet (Landscape): 960px - 1279px */
+@media only screen and ( min-width: 960px )
+{
+	
+}
+
+
+/* Desktop (1280): 1280px - 1599px */
+@media only screen and ( min-width: 1280px )
+{
+		
+}
+
+
+/* Desktop (1600): 1600px - max */
+@media only screen and ( min-width: 1600px )
+{
+		
+}
+
+
+/* END OF FILE */
+

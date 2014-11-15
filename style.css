@@ -1,0 +1,36 @@
+/**
+*
+* Theme Name: 		Wishbone
+* Theme URI: 		http://wishbone.wishynet.co.uk
+* Description: 		Wishbone is a multi purpose WordPress theme containing everything needed to build a great WordPress website. Wishbone fully supports all WordPress theme features without being cluttered with gimmicky extras.
+* Version: 			1.00
+* Author: 			Paul Williamson
+* Author URI: 		http://www.wishynet.co.uk
+* Tags:				black, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, sticky-post, flexible-header, full-width-template, post-formats, theme-options, translation-ready
+* Text Domain:		wishbone
+* License: 			GNU General Public License v2.0
+* License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
+*
+*
+* Wishbone WordPress Theme, Copyright 2014 wishynet.co.uk
+* Wishbone is distributed under the terms of the GNU GPL
+*
+*
+* Notes:
+* 
+* These files are listed in exact order so that project.css styles overrule any Skellington styles.
+*
+*/
+
+
+/* core Skellington stylesheets + Wishbone styles */
+@import url( 'stylesheets/grid.css' );
+@import url( 'stylesheets/base.css' );
+@import url( 'stylesheets/project.css' );
+
+/* extra CSS files */
+@import url( 'stylesheets/modules/colorbox.css' );
+
+
+/* END OF FILE */
+

@@ -1,0 +1,278 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wishbone\n"
+"POT-Creation-Date: 2014-10-15 14:39-0000\n"
+"PO-Revision-Date: 2014-10-15 14:39-0000\n"
+"Last-Translator: Paul Williamson <paul@wishynet.co.uk>\n"
+"Language-Team: Wishynet <hello@wishynet.co.uk>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:22
+msgid "Whoops! Sorry, the page you are looking for cannot be found anywhere."
+msgstr ""
+"¡Vaya ! Lo sentimos, la página que está buscando no se puede encontrar en "
+"cualquier lugar."
+
+#: ../404.php:31
+msgid ""
+"Something went wrong when trying to reach the requested page, Maybe these "
+"links can help you find what you are looking for:"
+msgstr ""
+"Algo salió mal al intentar acceder a la página solicitada, Quizás estos "
+"enlaces pueden ayudar a encontrar lo que buscas:"
+
+#: ../404.php:42 ../page-search.php:20
+msgid "Search Page"
+msgstr "Página de búsqueda"
+
+#: ../404.php:45 ../page-search.php:37
+msgid "Site Map"
+msgstr "Mapa Del Sitio"
+
+#: ../404.php:48 ../page-search.php:40
+msgid "Home Page"
+msgstr "La página principal"
+
+#: ../author.php:66 ../category.php:44 ../content-aside.php:19
+#: ../content-audio.php:19 ../content-chat.php:19 ../content-gallery.php:19
+#: ../content-image.php:19 ../content-link.php:19 ../content-quote.php:19
+#: ../content-status.php:19 ../content-video.php:19 ../content.php:19
+#: ../date.php:42 ../tag.php:50
+msgid "Posted By "
+msgstr "Publicado Por"
+
+#: ../author.php:74 ../category.php:52 ../date.php:50 ../index.php:26
+#: ../page-blog.php:41 ../tag.php:58
+msgid "Read More"
+msgstr "Leer Más"
+
+#: ../author.php:92
+msgid "No Posts By This Author"
+msgstr "No Hay Mensajes De Este Autor"
+
+#: ../category.php:69
+msgid "No Posts In This Category"
+msgstr "No Hay Envíos En Esta Categoría"
+
+#: ../comments.php:12
+#, php-format
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "Un Comentario"
+msgstr[1] "%1$s Comentarios"
+
+#: ../comments.php:43
+msgid "There are no Comments"
+msgstr "No Hay Comentarios"
+
+#: ../comments.php:50
+msgid "Comments are Closed"
+msgstr "Los comentarios están cerrados"
+
+#: ../date.php:70
+msgid "No Posts On This Date"
+msgstr "No Hay Mensajes En Esta Fecha"
+
+#: ../footer.php:13
+msgid "About Us"
+msgstr "Sobre Nosotros"
+
+#: ../footer.php:27
+msgid "Popular Topics"
+msgstr "Temas Populares"
+
+#: ../footer.php:40
+msgid "Recent News"
+msgstr "Noticias Recientes"
+
+#: ../footer.php:69
+msgid "Contact Us"
+msgstr "Contáctenos"
+
+#: ../footer.php:111
+msgid ""
+"Copyrights etc. go here. Wishbone theme development by Wishynet. All Rights "
+"Reserved."
+msgstr ""
+"Derechos de autor etc van aquí. Wishbone desarrollo del tema por Wishynet. "
+"Reservados todos los derechos."
+
+#: ../functions.php:110
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+#: ../functions.php:302
+msgid "Wishbone - Slide"
+msgstr "Wishbone - Diapositiva"
+
+#: ../functions.php:303
+msgid "Wishbone - Gallery"
+msgstr "Wishbone - Galería"
+
+#: ../functions.php:304
+msgid "Wishbone - Gallery Wide"
+msgstr "Wishbone - Galería (Ancho)"
+
+#: ../functions.php:305
+msgid "Wishbone - Post (normal)"
+msgstr "Wishbone - Mensaje (normal)"
+
+#: ../functions.php:306
+msgid "Wishbone - Post (large)"
+msgstr "Wishbone - Mensaje (grande)"
+
+#: ../functions.php:307
+msgid "Wishbone - Post (full)"
+msgstr "Wishbone - (completo)"
+
+#: ../header.php:96
+msgid "Login"
+msgstr "El Login"
+
+#: ../header.php:97
+msgid "Signup"
+msgstr "Inscripción"
+
+#: ../header.php:100
+msgid "Lost your password?"
+msgstr "Perdió su Contraseña ?"
+
+#: ../index.php:33 ../page-blog.php:48
+msgid "Sorry, no posts matched your criteria."
+msgstr "Lo sentimos, no hay puestos corresponde a sus criterios"
+
+#: ../page-contact.php:20
+msgid "Contact"
+msgstr "Contacto"
+
+#: ../page-contact.php:29
+msgid "Email"
+msgstr "Email"
+
+#: ../page-contact.php:52
+msgid "Address"
+msgstr "Dirección"
+
+#: ../page-home.php:39
+msgid "Clean"
+msgstr "Aseado"
+
+#: ../page-home.php:41
+msgid ""
+"WishBone is a clean and simple Wordpress theme that gets straight to the "
+"point; putting content at the center of user focus and wrapping it around a "
+"clean and simple design."
+msgstr ""
+"Wishbone es un tema de Wordpress limpio y simple que va directo al grano; "
+"poner el contenido en el centro de atención al usuario y envolviéndolo "
+"alrededor de un diseño limpio y simple."
+
+#: ../page-home.php:50
+msgid "Responsive"
+msgstr "Responsivo"
+
+#: ../page-home.php:52
+msgid ""
+"Built on Skellington, WishBone is a fully responsive theme that accurately "
+"displays on anything from a phone to a large desktop screen ensuring that "
+"all of the site content is visible to the user."
+msgstr ""
+"Construido sobre Skellington, Wishbone es un tema totalmente sensible que "
+"muestra con precisión en cualquier cosa, desde un teléfono a una pantalla "
+"grande de escritorio asegurando que todo el contenido del sitio es visible "
+"para el usuario."
+
+#: ../page-home.php:61
+msgid "Flexible"
+msgstr "Flexible"
+
+#: ../page-home.php:63
+msgid ""
+"WishBone comes packed with features and page templates for use with almost "
+"any type of website including personal blogs, portfolios, business, news and "
+"community sites."
+msgstr ""
+"Wishbone viene embalado con las características y plantillas de páginas para "
+"su uso con casi cualquier tipo de sitio web, incluyendo blogs personales, "
+"carteras, negocios, noticias y sitios de la comunidad."
+
+#: ../page-home.php:75
+msgid "Latest Posts"
+msgstr "Últimos Mensajes"
+
+#: ../page-search.php:22
+msgid ""
+"Looking for something on this site? Try using the search bar and archive "
+"lists below to help you find it."
+msgstr ""
+"¿Buscas algo en este sitio ? Trate de usar la barra de búsqueda y listas de "
+"archivos siguientes para ayudar a encontrarla."
+
+#: ../page-search.php:33
+msgid "Perhaps these links can also help you find what you are looking for:"
+msgstr "Tal vez estos enlaces también pueden ayudar a encontrar lo que buscas:"
+
+#: ../page-search.php:49
+msgid "Archives by Month:"
+msgstr "Archivos por Mes:"
+
+#: ../page-search.php:59
+msgid "Archives by Category:"
+msgstr "Archivos por Categoría:"
+
+#: ../page-search.php:69
+msgid "Archives by Author:"
+msgstr "Archivos por Autor :"
+
+#: ../page-testimonials.php:20
+msgid "Testimonials"
+msgstr "Testimonios"
+
+#: ../search.php:15
+msgid "Search Results"
+msgstr "Resultados de la búsqueda"
+
+#: ../search.php:17
+msgid "Your search criteria was found in the following pages: "
+msgstr "Sus criterios de búsqueda se encuentran en las páginas siguientes:"
+
+#: ../search.php:52
+msgid "Sorry, no posts found. Perhaps try a different search?"
+msgstr ""
+"No fue posible encontrar mensajes. Tal vez intente una búsqueda diferente?"
+
+#: ../searchform.php:1 ../sidebar.php:8
+msgid "Search"
+msgstr "Búsqueda"
+
+#: ../sidebar.php:14
+msgid "Categories"
+msgstr "Categorías"
+
+#: ../sidebar.php:22
+msgid "Archives"
+msgstr "Archivos"
+
+#: ../sidebar.php:30
+msgid "Popular Tags"
+msgstr "Etiquetas Populares"
+
+#: ../sidebar.php:38
+msgid "Admin"
+msgstr "Administración"
+
+#: ../single.php:29
+msgid "Pages In This Post:"
+msgstr "Páginas en este post:"

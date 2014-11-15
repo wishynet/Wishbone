@@ -1,0 +1,238 @@
+/*
+ 
+ Skellington v0.01
+ Copyright 2014, Paul Williamson
+ http://skellington.wishynet.co.uk
+ Free to use under the MIT license.
+ http://opensource.org/licenses/MIT
+ 07/04/2014
+ 
+ Inspiration and Thanks go to:
+ Dave Gamache and Skeleton: 	http://www.getskeleton.com
+ Joe Richardson and Lemonade:	http://lemonade.im
+ Chris Coyer and CSS Tricks:	http://css-tricks.com
+ 
+ Thank you for using Skellington!
+
+*/
+
+
+/* 
+
+ Contents
+ ==================================================
+
+ 1.0 - Box Sizing and Gutters 
+ 2.0 - Mobile (Portrait)
+ 3.0 - Mobile (Landscape)
+ 4.0 - Tablet (Portrait)   
+ 5.0 - Tablet (Landscape) or Desktop (960 Grid)
+ 6.0 - Larger Screens
+ 7.0 - Clearing
+
+*/
+
+
+/*  
+  
+ 1.0 - Box Sizing and Gutters
+ ================================================== 
+ 
+ The box-sizing rules maintain widths when they are 
+ set, even if any padding or border rules are applied 
+ afterwards. box-sizing is applied to everything.
+ 
+ Gutters are applied to all grid columns except the 
+ last within a container class.
+ 
+*/  
+
+*,
+*:after,
+*:before
+{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+[class*='column']
+{
+  padding-right: 20px;
+  float: left;
+}
+
+[class*='column']:last-of-type
+{
+  padding-right: 0;
+}
+
+
+/*  
+ 
+ 2.0 - Mobile (Portrait)
+ ================================================== 
+ 
+ Sets the core container class properties and mobile 
+ column settings to full width (of the container). 
+ 
+ Padding-right is removed from all column classes 
+ so that gutters don't push content back from the 
+ right edge.
+ 
+*/
+
+.container
+{ 
+	position: relative; 
+	width: 300px; 
+	margin: 0 auto; 
+	padding: 0; 
+}
+
+.container .columns,
+.container .column
+{ 
+	padding-right: 0; 
+}
+
+.container .one.column,
+.container .one.columns,
+.container .two.columns,
+.container .three.columns,
+.container .four.columns,
+.container .five.columns,
+.container .six.columns,
+.container .seven.columns,
+.container .eight.columns,
+.container .nine.columns,
+.container .ten.columns,
+.container .eleven.columns,
+.container .twelve.columns,
+.container .thirteen.columns,
+.container .fourteen.columns,
+.container .fifteen.columns,
+.container .sixteen.columns
+{ 
+	width: 100%;
+}
+
+
+/* 
+ 
+ 3.0 - Mobile (Landscape)
+ ==================================================  
+ 
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px)
+{
+	.container
+	{ 
+		width: 480px; /* or 420px? */
+	}  
+}
+
+
+/* 
+ 
+ 4.0 - Tablet (Portrait)
+ ================================================== 
+ 
+ This section where the page structure changes columns 
+ from a mobile orientated design to a more traditional
+ desktop layout.
+ 
+ Column percentages will now work the same no matter what
+ the container class width is. Additional widths could 
+ be added to expand on the available selections.
+ 
+ Also, padding-right has returned here so that guttering works
+ correctly on desktop style layouts. 
+
+*/
+
+@media only screen and (min-width: 768px)
+{
+	.container
+	{ 
+		width: 768px; 
+	}
+	
+    .container .column,
+    .container .columns
+    {
+    	padding-right: 20px;
+    }
+  
+	.container .one.column,
+    .container .one.columns			{ width: 6.25%; }
+    .container .two.columns			{ width: 12.50%; }
+    .container .three.columns       { width: 18.75%; }
+    .container .four.columns        { width: 25%; }
+	.container .five.columns        { width: 31.25%; }
+    .container .six.columns         { width: 37.50%; }
+    .container .seven.columns       { width: 43.75%; }
+	.container .eight.columns       { width: 50%; }
+    .container .nine.columns        { width: 56.25%; }
+    .container .ten.columns         { width: 62.50%; }
+    .container .eleven.columns      { width: 68.75%; }
+    .container .twelve.columns      { width: 75%; }
+    .container .thirteen.columns    { width: 81.25%; }
+    .container .fourteen.columns    { width: 87.50%; }
+    .container .fifteen.columns     { width: 93.75%; }
+    .container .sixteen.columns     { width: 100%; }
+}
+
+        
+/* 
+
+ 5.0 - Tablet (Landscape) or Desktop (960 Grid)
+ ==================================================
+
+*/
+
+@media only screen and (min-width: 960px)
+{
+	.container
+	{ 
+		width: 960px;
+	}
+}
+
+
+/* 
+  
+ 6.0 - Large Screens 1280 (and beyond)
+ ================================================== 
+ 
+*/
+    
+@media only screen and (min-width: 1280px)
+{
+	.container
+	{ 
+		width: 1280px; 
+	}
+}
+    
+    
+/*
+
+ 7.0 - Clearing
+ ==================================================
+ 
+*/
+
+.container:after
+{
+	content: ""; 
+	display: block; 
+	clear: both;
+}
+
+
+/* END OF FILE */

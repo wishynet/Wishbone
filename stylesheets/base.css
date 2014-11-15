@@ -1,0 +1,629 @@
+/*
+ 
+ Skellington v0.01
+ Copyright 2014, Paul Williamson
+ http://skellington.wishynet.co.uk
+ Free to use under the MIT license.
+ http://opensource.org/licenses/MIT
+ 23/04/2014
+ 
+ Inspiration and Thanks go to:
+ Dave Gamache and Skeleton: 	http://www.getskeleton.com
+ Joe Richardson and Lemonade:	http://lemonade.im
+ Chris Coyer and CSS Tricks:	http://css-tricks.com
+ 
+ Thank you for using Skellington!
+
+*/
+
+
+/* 
+ 
+ Contents
+ ==================================================
+	
+ 1.0 - Reset & Basics
+ 2.0 - Body
+ 3.0 - Typography
+ 4.0 - Links
+ 5.0 - Lists
+ 6.0 - Tables
+ 7.0 - Images
+ 8.0 - Buttons
+ 9.0 - Forms
+ 
+*/
+
+/* 
+ 
+ 1.0 - Reset & Basics (Inspired by Eric Meyers)
+ ==================================================
+
+*/
+
+html, body, div, span, applet, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
+a, abbr, acronym, address, big, cite, code, del, 
+dfn, em, img, ins, kbd, q, s, samp, small, strike, 
+strong, tt, var, b, u, i, center, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, embed, figure, 
+figcaption, footer, header, hgroup, menu, nav, 
+output, ruby, section, summary, time, mark, audio, video 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; 
+}
+	
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+menu, 
+nav, 
+section
+{
+	display: block;
+}
+
+body
+{
+	line-height: 1;
+}
+
+ol, 
+ul
+{
+	list-style: none;
+}
+
+blockquote, 
+q
+{
+	quotes: none;
+}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after
+{
+	content: '';
+	content: none;
+}
+	
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 
+ 
+ 2.0 - Body
+ ==================================================
+ 
+*/
+
+body
+{
+	background: #ffffff;
+	font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #444444;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+
+
+/* 
+ 
+ 3.0 - Typography
+ ==================================================
+ 
+*/
+
+/* 3.1 - Headings */
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 
+{
+	color: #444444;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	letter-spacing: -0.05em;
+	-ms-word-wrap: break-word;
+		word-wrap: break-word;
+}
+
+h1 a, 
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a
+{ 
+	font-weight: inherit;
+	text-decoration: none; 
+}
+
+h1
+{ 
+	font-size: 46px; 
+	line-height: 50px; 
+	margin-bottom: 14px; 
+}
+
+h2 
+{ 
+	font-size: 35px; 
+	line-height: 40px; 
+	margin-bottom: 10px; 
+}
+
+h3 
+{ 
+	font-size: 28px; 
+	line-height: 34px; 
+	margin-bottom: 8px; 
+}
+
+h4 
+{ 
+	font-size: 21px; 
+	line-height: 30px; 
+	margin-bottom: 4px; 
+}
+
+h5 
+{ 
+	font-size: 17px; 
+	line-height: 24px;
+	margin-bottom: 4px; 
+}
+
+h6 
+{ 
+	font-size: 14px; 
+	line-height: 21px;
+	margin-bottom: 4px; 
+}
+
+/* 3.2 - Paragraphs / Text */
+p
+{ 
+	margin: 0 0 20px 0;
+}
+
+p img
+{ 
+	margin: 0;
+}
+
+em
+{ 
+	font-style: italic;
+}
+
+strong
+{ 
+	font-weight: bold; 
+	color: #444444;
+}
+
+small
+{ 
+	font-size: 85%; 
+	opacity: 0.70;
+}
+
+/* 3.3 - Blockquotes */
+blockquote, 
+blockquote p
+{ 
+	font-size: 17px; 
+	line-height: 24px; 
+	color: #777777; 
+	font-style: italic; 
+}
+
+blockquote
+{ 
+	margin: 0 0 20px 0; 
+	padding: 9px 20px 0 19px; 
+	border-left: 1px solid #dddddd; 
+}
+
+blockquote cite
+{ 
+	display: block; 
+	font-size: 12px; 
+	color: #555555;
+}
+
+blockquote cite:before
+{ 
+	content: "\2014 \0020";
+}
+
+blockquote cite a, 
+blockquote cite a:visited, 
+blockquote cite a:visited
+{ 
+	color: #555555;
+}
+
+address
+{
+	margin: 15px 0 15px 0;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+pre 
+{
+	margin: 15px 0 15px 0;
+	padding: 15px;
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+	border-radius: 2px;
+	overflow: auto;
+	font-family: monospace, serif;
+}
+
+hr
+{ 
+	border: solid #dddddd; 
+	border-width: 1px 0 0 0; 
+	clear: both; 
+	margin: 30px 0 30px 0; 
+	height: 0; 
+}
+
+
+/* 
+ 
+ 4.0 - Links
+ ==================================================
+ 
+*/
+
+a, 
+a:visited,
+a.button, 
+.button a
+{
+	text-decoration: none;
+	outline: 0;	
+}
+
+a, 
+a:visited
+{
+	color: #444444;
+}
+
+a.button, 
+.button a,
+a.more-link
+{ 
+	color: #ffffff;
+}
+
+p a:hover
+{
+	text-decoration: underline;
+}
+
+
+
+/* 
+ 
+ 5.0 - Lists
+ ================================================== 
+
+*/
+
+ul, 
+ol
+{ 
+	margin-bottom: 20px;
+}
+
+ul
+{ 
+	list-style: none outside;
+}
+
+ol
+{ 
+	list-style: decimal inside;
+}
+
+ul.square
+{ 
+	list-style: square outside;
+}
+
+ul.circle
+{ 
+	list-style: circle outside;
+}
+
+ul.disc
+{ 
+	list-style: disc outside;
+}
+
+ul ul, 
+ul ol, 
+ol ol, 
+ol ul
+{ 
+	margin: 5px 0 5px 30px;
+}
+
+li
+{
+	margin-bottom: 12px;
+}
+
+li p
+{ 
+	line-height: 21px;
+}
+
+dt
+{
+	font-weight: bold;
+}
+
+dd
+{
+	margin-left: 15px;
+}
+
+
+/* 
+ 
+ 6.0 - Tables
+ ================================================== 
+
+*/
+
+table
+{
+	margin-bottom: 15px;
+	border: 1px solid #cccccc;
+}
+
+table thead
+{
+	border-bottom: 1px solid #cccccc;
+	font-weight: bold;
+}
+
+table thead,
+table tr:nth-child(even)
+{
+	background-color: #eeeeee;
+}
+
+table thead th,
+table td,
+table a
+{
+	padding: 5px;
+}
+
+th
+{
+	text-align: left;
+}
+
+
+/* 
+ 
+ 7.0 - Images
+ ================================================== 
+
+*/
+
+img,
+img.scale-with-grid
+{
+	max-width: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic;
+}
+
+
+/* 
+ 
+ 8.0 - Buttons 
+ ================================================== 
+
+*/
+
+/* 7.1 - Standard Styles */
+.button,
+.submit,
+.more-link,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
+{
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 8px 10px;
+	line-height: normal;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	text-decoration: none;
+	border: none;		  
+	color: #ffffff;
+	background-color: #444444;
+	cursor: pointer;	 
+}
+
+/* 7.2 - Hovered Styles  */
+.button:hover,
+.submit:hover,
+.more-link:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover
+{
+		/*
+		color: #222222;
+		background: #dddddd;
+		background: #dddddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); 
+		background: #dddddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); 
+		background: #dddddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); 
+		background: #dddddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); 
+		background: #dddddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); 
+		background: #dddddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); 
+		*/
+		/*
+		border: 1px solid #888888;
+		border-top: 1px solid #aaaaaa;
+		border-left: 1px solid #aaaaaa;
+		*/
+		text-decoration: none;
+}
+
+/* 7.3 - Active Styles */
+.button:active,
+.submit:active,
+.more-link:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active
+{
+		/*
+		background: #cccccc;
+		background: #cccccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); 
+		background: #cccccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); 
+		background: #cccccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); 
+		background: #cccccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); 
+		background: #cccccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); 
+		background: #cccccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%);
+		*/
+		/*
+		border: 1px solid #666666;
+		*/
+}
+
+/* Fix for odd Mozilla border & padding issues */
+button::-moz-focus-inner,
+input::-moz-focus-inner
+{
+	border: 0;
+	padding: 0;
+}
+
+
+/* 
+ 
+ 9.0 - Forms
+ ================================================== 
+
+*/
+
+form
+{
+	margin-bottom: 20px; 
+}
+
+fieldset 
+{
+	margin-bottom: 20px; 
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select
+{
+	display: block;
+	width: 210px;
+	max-width: 100%;	
+	margin: 0;
+	margin-bottom: 20px;	
+	padding: 6px 4px;
+	outline: none;	
+	font: 14px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #777777;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+		 -o-border-radius: 2px;
+			border-radius: 2px;
+}
+
+textarea
+{
+	min-height: 60px;
+}
+
+select
+{
+	width: 220px;
+	padding: 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus 
+{
+	color: #444444;	
+	border: 1px solid #aaa;
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	   -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	   	 -o-box-shadow: 0 0 3px rgba(0,0,0,.2);
+			box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+
+label,
+legend
+{
+	display: block;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+label span,
+legend span
+{
+	font-weight: normal;
+	font-size: 13px;
+	color: #444444;
+}
+
+input[type="checkbox"]
+{
+	display: inline;
+}
+
+
+/* END OF FILE */
+

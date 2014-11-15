@@ -1,0 +1,66 @@
+<hr>
+
+
+<h2>Comments</h2>
+
+
+<!-- if there are any comments, then do the following... -->
+<?php if ( have_comments() ) : ?>
+	
+
+<!-- comment count -->
+<p id="comment-count">( <?php printf( _n( 'One Comment', '%1$s Comments', get_comments_number() ), number_format_i18n( get_comments_number() ) ); ?> )</p>
+	
+	
+<!-- comment loop -->
+<?php $args = array(
+	
+	'style'             => 'div',
+	'callback'          => null,
+	'end-callback'      => null,
+	'type'              => 'all',
+	'reply_text'        => 'Reply To This Comment',
+	'page'              => null,
+	'per_page'          => '',
+	'avatar_size'       => 96,
+				
+); ?>
+
+<?php wp_list_comments( $args ); ?>
+
+
+<!-- comment pagination -->
+<div class="comment-nav">	
+	
+	<?php paginate_comments_links(); ?>
+	
+</div><!-- end of comment-nav -->
+
+
+<!-- alternate responses -->
+<?php else: ?>
+	
+	<p><?php _e( 'There are no Comments', 'wishbone' ); ?></p>
+	
+<?php endif; ?>
+
+
+<?php if ( !comments_open() ) : ?>
+
+	<h3><?php _e( 'Comments are Closed', 'wishbone' ); ?></h3>
+	
+<?php else: ?>
+	
+
+<!-- comment form -->
+<?php $args = array(
+	
+	'title_reply' 	=> 'Leave a Comment:',
+	'label_submit' 	=> 'Add Your Comment'
+	
+); ?>
+		
+<?php comment_form( $args ); ?>
+		
+	
+<?php endif; ?><!-- end 'if' have comments -->

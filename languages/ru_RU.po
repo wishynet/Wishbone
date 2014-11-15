@@ -1,0 +1,276 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wishbone\n"
+"POT-Creation-Date: 2014-10-12 21:16-0000\n"
+"PO-Revision-Date: 2014-10-30 16:13-0000\n"
+"Last-Translator: Paul Williamson <paul@wishynet.co.uk>\n"
+"Language-Team: Wishynet <hello@wishynet.co.uk>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:22
+msgid "Whoops! Sorry, the page you are looking for cannot be found anywhere."
+msgstr ""
+"Упс ! К сожалению, страница, которую вы ищете не может быть найден в любом "
+"месте."
+
+#: ../404.php:31
+msgid ""
+"Something went wrong when trying to reach the requested page, Maybe these "
+"links can help you find what you are looking for:"
+msgstr ""
+"Что-то пошло не так, когда пытаются достичь запрошенную страницу, Может "
+"быть, эти связи могут помочь вам найти то, что вы ищете:"
+
+#: ../404.php:42 ../page-search.php:20
+msgid "Search Page"
+msgstr "Страница поиска"
+
+#: ../404.php:45 ../page-search.php:37
+msgid "Site Map"
+msgstr "Карта сайта"
+
+#: ../404.php:48 ../page-search.php:40
+msgid "Home Page"
+msgstr "Главная страница"
+
+#: ../author.php:66 ../category.php:44 ../content-aside.php:19
+#: ../content-audio.php:19 ../content-chat.php:19 ../content-gallery.php:19
+#: ../content-image.php:19 ../content-link.php:19 ../content-quote.php:19
+#: ../content-status.php:19 ../content-video.php:19 ../content.php:19
+#: ../date.php:42 ../tag.php:50
+msgid "Posted By "
+msgstr "Написал"
+
+#: ../author.php:74 ../category.php:52 ../date.php:50 ../index.php:26
+#: ../page-blog.php:41 ../tag.php:58
+msgid "Read More"
+msgstr "прочитайте больше"
+
+#: ../author.php:92
+msgid "No Posts By This Author"
+msgstr "Нет сообщений от этого автора"
+
+#: ../category.php:69
+msgid "No Posts In This Category"
+msgstr "Нет сообщений в этой категории"
+
+#: ../comments.php:12
+#, php-format
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "Один комментарий"
+msgstr[1] "%1$s Комментарии"
+
+#: ../comments.php:43
+msgid "There are no Comments"
+msgstr "Там нет комментариев"
+
+#: ../comments.php:50
+msgid "Comments are Closed"
+msgstr "Комментарии закрыты"
+
+#: ../date.php:70
+msgid "No Posts On This Date"
+msgstr "Нет сообщений на эту дату"
+
+#: ../footer.php:13
+msgid "About Us"
+msgstr "о нас"
+
+#: ../footer.php:27
+msgid "Popular Topics"
+msgstr "Популярные темы"
+
+#: ../footer.php:40
+msgid "Recent News"
+msgstr "Последние новости"
+
+#: ../footer.php:69
+msgid "Contact Us"
+msgstr "свяжитесь с нами"
+
+#: ../footer.php:111
+msgid ""
+"Copyrights etc. go here. Wishbone theme development by Wishynet. All Rights "
+"Reserved."
+msgstr ""
+"Авторские права и т.д. идут сюда. Развитие Поперечный рычаг тема по "
+"Wishynet. Все права защищены."
+
+#: ../functions.php:110
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: ../functions.php:302
+msgid "Wishbone - Slide"
+msgstr "Wishbone - слайд"
+
+#: ../functions.php:303
+msgid "Wishbone - Gallery"
+msgstr "Wishbone - галерея"
+
+#: ../functions.php:304
+msgid "Wishbone - Gallery Wide"
+msgstr "Wishbone - галерея (широкий)"
+
+#: ../functions.php:305
+msgid "Wishbone - Post (normal)"
+msgstr "Wishbone - статья (нормальный)"
+
+#: ../functions.php:306
+msgid "Wishbone - Post (large)"
+msgstr "Wishbone - статья (большой)"
+
+#: ../functions.php:307
+msgid "Wishbone - Post (full)"
+msgstr "Wishbone - статья (полный)"
+
+#: ../header.php:96
+msgid "Login"
+msgstr "логиниться"
+
+#: ../header.php:97
+msgid "Signup"
+msgstr "нанимать на работу"
+
+#: ../header.php:100
+msgid "Lost your password?"
+msgstr "Забыли пароль?"
+
+#: ../index.php:33 ../page-blog.php:48
+msgid "Sorry, no posts matched your criteria."
+msgstr "Извините, нет записей, удовлетворяющих вашим условиям."
+
+#: ../page-contact.php:20
+msgid "Contact"
+msgstr "контакт"
+
+#: ../page-contact.php:29
+msgid "Email"
+msgstr "E-mail"
+
+#: ../page-contact.php:52
+msgid "Address"
+msgstr "адрес"
+
+#: ../page-home.php:39
+msgid "Clean"
+msgstr "опрятный"
+
+#: ../page-home.php:41
+msgid ""
+"WishBone is a clean and simple Wordpress theme that gets straight to the "
+"point; putting content at the center of user focus and wrapping it around a "
+"clean and simple design."
+msgstr ""
+"Поперечных рычагах является чистой и простой Wordpress тема, которая "
+"получает прямо в точку; размещения контента в центре внимания пользователя "
+"и, окружив его вокруг простой и понятный дизайн."
+
+#: ../page-home.php:50
+msgid "Responsive"
+msgstr "ответный"
+
+#: ../page-home.php:52
+msgid ""
+"Built on Skellington, WishBone is a fully responsive theme that accurately "
+"displays on anything from a phone to a large desktop screen ensuring that "
+"all of the site content is visible to the user."
+msgstr ""
+"Построенный на Скеллингтона, рычаг является полностью реагировать тема, "
+"которая точно отображает ни на чем с телефона на большом экране настольного "
+"гарантируя, что все содержание сайта видна пользователю."
+
+#: ../page-home.php:61
+msgid "Flexible"
+msgstr "гибкий"
+
+#: ../page-home.php:63
+msgid ""
+"WishBone comes packed with features and page templates for use with almost "
+"any type of website including personal blogs, portfolios, business, news and "
+"community sites."
+msgstr ""
+"Поперечный рычаг поставляется упакованной с функциями и шаблонов страниц для "
+"использования практически с любым типом сайте, включая личные блоги, "
+"портфолио, бизнес, новости и сайты сообщества."
+
+#: ../page-home.php:75
+msgid "Latest Posts"
+msgstr "Последние сообщения"
+
+#: ../page-search.php:22
+msgid ""
+"Looking for something on this site? Try using the search bar and archive "
+"lists below to help you find it."
+msgstr ""
+"Ищете что-то на этом сайте? Попробуйте использовать панель поиска и архивные "
+"списки ниже, чтобы помочь вам найти его."
+
+#: ../page-search.php:33
+msgid "Perhaps these links can also help you find what you are looking for:"
+msgstr "Возможно, эти ссылки также могут помочь вам найти то, что вы ищете:"
+
+#: ../page-search.php:49
+msgid "Archives by Month:"
+msgstr "Архивы по месяцам:"
+
+#: ../page-search.php:59
+msgid "Archives by Category:"
+msgstr "Архивы по категориям:"
+
+#: ../page-search.php:69
+msgid "Archives by Author:"
+msgstr "Архивы по Автор:"
+
+#: ../page-testimonials.php:20
+msgid "Testimonials"
+msgstr "рекомендация"
+
+#: ../search.php:15
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: ../search.php:17
+msgid "Your search criteria was found in the following pages: "
+msgstr "Ваши критерии поиска был найден на следующих страницах:"
+
+#: ../search.php:52
+msgid "Sorry, no posts found. Perhaps try a different search?"
+msgstr "Извините, нет записей не найдено. Возможно, попробуйте другой поиск?"
+
+#: ../searchform.php:1 ../sidebar.php:8
+msgid "Search"
+msgstr "поиск"
+
+#: ../sidebar.php:14
+msgid "Categories"
+msgstr "категории"
+
+#: ../sidebar.php:22
+msgid "Archives"
+msgstr "архив"
+
+#: ../sidebar.php:30
+msgid "Popular Tags"
+msgstr "Популярные теги"
+
+#: ../sidebar.php:38
+msgid "Admin"
+msgstr "Админ"
+
+#: ../single.php:29
+msgid "Pages In This Post:"
+msgstr "Страницы в этой должности:"
