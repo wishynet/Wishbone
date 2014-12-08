@@ -64,11 +64,14 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 
 ##Screenshots
 
-![Wishbone Logo](http://wishbone.wishynet.co.uk/wp-content/themes/wishbone/screenshot.png "Wishbone Logo")
+![Wishbone Default Layout](http://wishbone.wishynet.co.uk/wp-content/themes/wishbone/screenshot.png "Wishbone Default Layout")
 
-![Wishbone Default Layout](http://wishbone.wishynet.co.uk/wp-content/themes/wishbone/screenshot2.png "Wishbone Default Layout")
+![Wishbone Logo](http://wishbone.wishynet.co.uk/wp-content/themes/wishbone/screenshot-logo.png "Wishbone Logo")
 
 ##Changelog
+
+#### 1.01
+* Updated screenshot files
 
 #### 1.0
 * Initial Release
