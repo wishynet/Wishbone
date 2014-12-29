@@ -12,8 +12,8 @@
 		
 			<h3><?php _e( 'About Us', 'wishbone' ); ?></h3>
 		
-			<p>Wishbone is a Wordpress theme based on the Skellington boilerplate, both created by Wishynet. Support for a variety of site styles are included out of the box.</p>
-			<p>This theme is free for any use. Please let me know what you think of it, any suggestions welcome. I love to hear from you!</p>
+			<p><?php _e( 'Wishbone is a WordPress theme based on the Skellington boilerplate, both created by Wishynet. Support for a variety of site styles are included out of the box.', 'wishbone' ); ?></p>
+			<p><?php _e( 'This theme is free for any use. Please let me know what you think of it, any suggestions welcome. I love to hear from you!', 'wishbone' ); ?></p>
 	
 		<?php endif; ?>
 		

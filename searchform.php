@@ -2,7 +2,7 @@
 
 <form method="get" id="searchform" action="<?php echo home_url(); ?>">
 	<p>
-		<input type="text" id="search-input" value="<?php the_search_query(); ?>" name="s" placeholder="Search..." />
-		<input type="submit" id="search-submit" value="Search" />
+		<input type="text" id="search-input" value="<?php the_search_query(); ?>" name="s" placeholder="<?php _e( 'Search...', 'wishbone' ); ?>" />
+		<input type="submit" id="search-submit" value="<?php _e( 'Search', 'wishbone' ); ?>" />
 	</p>
 </form>

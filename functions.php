@@ -84,9 +84,9 @@ function wishbone_theme_setup() {
     
     /* Load CSS files on the 'admin_enqueue_styles' action hook. */
     add_action( 'admin_enqueue_scripts', 'wishbone_load_backend_styles' );
-
-    /* Modifies the logo on the dashboard login page. */
-    add_action( 'login_head', 'wishbone_dash_login_logo' );
+	
+	/* Load the sites Favicon via wp_head */
+	add_action( 'wp_head', 'wishbone_favicon' ); 
 	
 	/* Adds additional CSS to align links under the dashboard login page */
     add_action( 'login_head', 'wishbone_dash_login_page' );
@@ -161,7 +161,10 @@ function wishbone_register_widget_areas() {
     ));
 }
 
-
+function wishbone_favicon() { ?>
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/favicon-152.png">
+<?php }
 
 
 /**
@@ -216,6 +219,9 @@ function wishbone_load_backend_scripts() {
 **/
 
 function wishbone_load_frontend_styles() {
+	/* Loads the style.css file */
+	wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css' );
+	
 	/* Loads 'thickbox' lightbox functionality CSS */
 	/* wp_enqueue_style( 'thickbox' ); */
 	
@@ -239,17 +245,7 @@ function wishbone_load_backend_styles() {
 * 
 * Modifies default WordPress back-end elements to match theme branding etc. 
 *  
-**/ 
-
-function wishbone_dash_login_logo() {
-    /* Modifies the logo on the dashboard login page. */
-    echo '<style type="text/css">
-	h1 a 
-	{
-		background-image: url( '. get_template_directory_uri() . '/images/wp_login_logo.png ) !important;
-	}
-    </style>';
-}
+**/
 
 function wishbone_dash_login_page() {
 	/* Adds additional CSS to align links under the dashboard login page */
