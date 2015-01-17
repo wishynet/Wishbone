@@ -48,6 +48,25 @@ To install and activate the Wishbone theme:
 4. Use the 'Customize' sub-menu to make any changes to the visual appearance of the Wishbone theme
 5. Start blogging!
 
+##Configuration
+
+####Showcase
+Wishbone provides a Showcase that can display a banner image and/or statement at a single location on your site (usually a home page). To make use of this feature, paste the following code either directly in your home page code or by using the WordPress code editor. 
+
+    <div id="showcase">
+		
+	<div class="container">
+		
+	
+	    <?php get_template_part( 'showcase' ); ?>
+		
+			
+	</div><!-- container -->
+	
+    </div><!-- end of showcase -->
+
+Finally, configure the Showcase in the theme Customizer section of the Dashboard. 
+
 ##Frequently Asked Questions
 
 **I have a problem with Wishbone, where should I go to get help?**

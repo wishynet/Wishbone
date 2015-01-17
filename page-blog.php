@@ -38,7 +38,7 @@ Template Name: Blog
 				
 				<div class="postmore">
 						
-					<a href="<?php the_permalink(); ?>" class="button" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php _e( 'Read More', 'wishbone' );?></a>
+					<a href="<?php the_permalink(); ?>" class="button" rel="bookmark" title="<?php _e( 'Permanent Link to', 'wishbone' ); ?> <?php the_title(); ?>"><?php _e( 'Read More', 'wishbone' ); ?></a>
 						
 				</div><!-- end of postmore -->
 					

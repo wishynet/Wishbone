@@ -50,9 +50,9 @@
 				</div><!-- end of logo -->
 		
 			<?php endif; ?>
-		
-		
-			<?php if ( get_theme_mod( 'wishbone_toggle_title_tagline_setting', true ) ) : ?>
+
+			
+			<?php if ( get_header_textcolor() != 'blank' ) : ?>
 		
 			<div id="title">
 		

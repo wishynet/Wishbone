@@ -32,9 +32,6 @@
 *  
 **/
 
-/* Adds the menu using the admin_menu hook */
-add_action( 'admin_menu', 'wishbone_options_menus' );
-
 /* Registers the option panels */
 add_action( 'customize_register', 'wishbone_options_panels' );
 
@@ -46,12 +43,7 @@ add_action( 'customize_register', 'wishbone_options_settings' );
 
 /* Registers the option controls */
 add_action( 'customize_register', 'wishbone_options_controls' );
-
-/* Displays the Customizer menu on the main WordPress Dashboard */
-function wishbone_options_menus() {
-	add_theme_page( 'Wishbone Theme Options', 'Wishbone Theme', 'edit_theme_options', 'customize.php' );
-}
-    
+   
 
 
 
@@ -195,13 +187,14 @@ function wishbone_options_sections( $wp_customize ) {
         )
     );
 
-    /* Hides some of the default sections */
-    
+    /* Hides any default sections ( uncomment to hide ) */
+    /*
     $wp_customize->remove_section( 'colors' );
 	$wp_customize->remove_section( 'header_image' );
     $wp_customize->remove_section( 'background_image' );
 	$wp_customize->remove_section( 'nav' );
 	$wp_customize->remove_section( 'static_front_page' );
+	*/
 }
 
 
@@ -403,17 +396,6 @@ function wishbone_options_settings( $wp_customize ) {
     
     $wp_customize->add_setting(
         'wishbone_header_toggle_logo_setting',
-        array(
-            'default'       	=> 'true',
-            'type'          	=> 'theme_mod',
-            'capability'    	=> 'edit_theme_options',
-            'transport'     	=> '',
-            'sanitize_callback' => 'wishbone_sanitize_checkbox'
-        )
-    );
-	
-	$wp_customize->add_setting(
-        'wishbone_toggle_title_tagline_setting',
         array(
             'default'       	=> 'true',
             'type'          	=> 'theme_mod',
@@ -893,17 +875,7 @@ function wishbone_options_controls( $wp_customize ) {
             'type'          => 'checkbox'
         )
     );
-	
-	$wp_customize->add_control(
-        'wishbone_toggle_title_tagline_control',
-        array(
-            'label'         => 'Display Title & Tagline',
-            'section'       => 'wishbone_header_section',
-            'settings'      => 'wishbone_toggle_title_tagline_setting',
-            'type'          => 'checkbox'
-        )
-    );
-	
+
     $wp_customize->add_control(
         'wishbone_header_toggle_login_control',
         array(
@@ -1259,7 +1231,7 @@ if ( $content_font != '' ) {
 if ( $theme_color !='' ) {
 	echo '<style type="text/css">';
 		echo '.button, button, .submit, .more-link, .comment-reply-link, input[type="submit"], input[type="reset"], input[type="button"], .posttags a:hover, #wp-calendar tbody #today, #wp-calendar tbody td:hover, .wp-tag-cloud a, #sidebar ul li a:hover, .pagenav ul li .current, .pagenav ul li a:hover, p.postpages .button:hover, .gallery .gallery-caption, #back-to-top{ background-color:' . $theme_color . '; }';
-		echo '.gallery .gallery-caption:before{ border-bottom-color: ' . $theme_color . '; }';
+		echo '#navigation, .gallery .gallery-caption:before{ border-bottom-color: ' . $theme_color . '; }';
 		echo '#navigation, #semi_footer{ border-top: 5px solid' . $theme_color . '; }';
 		echo '#mobile_menu, #desktop_menu li.menu-item:hover, #desktop_menu li.current-page-item, #desktop_menu li.current-menu-item, #desktop_menu li.menu-item-has-children:hover ul.sub-menu li a, #desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a{ background-color:' . $theme_color . ' }';
 	echo '</style>';

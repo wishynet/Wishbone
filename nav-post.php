@@ -13,7 +13,7 @@
     
     
     <li class="homelink">
-		<a class="button" href="<?php echo home_url(); ?>">Home</a>
+		<a class="button" href="<?php echo home_url(); ?>"><?php e( 'Home', 'wishbone' ) ;?></a>
     </li>
     
     
