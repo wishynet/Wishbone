@@ -57,7 +57,7 @@ function wishbone_options_panels( $wp_customize ) {
 	$wp_customize->add_panel(    
         'wishbone_colors_panel',
         array(
-            'title'         => 'Site Colors',
+            'title'         => __( 'Site Colors', 'wishbone' ),
             'priority'      => 32,
             'description'   => 'Change the colors of your site'
         )
@@ -78,7 +78,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_logo_section',
         array(
-            'title'         => 'Site Logo',
+            'title'         => __( 'Site Logo', 'wishbone' ),
             'priority'      => 30,
             'description'   => 'Choose your site logo'
         )
@@ -87,7 +87,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_fonts_section',
         array(
-            'title'         => 'Site Fonts',
+            'title'         => __( 'Site Fonts', 'wishbone' ),
             'priority'      => 31,
             'description'   => 'Choose your site fonts'
         )
@@ -96,7 +96,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_colors_theme_section',
         array(
-            'title'         => 'Colors: Theme',
+            'title'         => __( 'Colors: Theme', 'wishbone' ),
             'priority'      => 40,
             'description'   => 'Choose your site theme colors',
             'panel'			=> 'wishbone_colors_panel'
@@ -106,7 +106,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_colors_bg_section',
         array(
-            'title'         => 'Colors: Backgrounds',
+            'title'         => __( 'Colors: Backgrounds', 'wishbone' ),
             'priority'      => 41,
             'description'   => 'Customize the background colors',
             'panel'			=> 'wishbone_colors_panel'
@@ -116,7 +116,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_colors_text_section',
         array(
-            'title'         => 'Colors: Text',
+            'title'         => __( 'Colors: Text', 'wishbone' ),
             'priority'      => 42,
             'description'   => 'Customize the text colors',
             'panel'			=> 'wishbone_colors_panel'
@@ -126,7 +126,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_colors_nav_section',
         array(
-            'title'         => 'Colors: Navigation',
+            'title'         => __( 'Colors: Navigation', 'wishbone' ),
             'priority'      => 43,
             'description'   => 'Customize the Navigation Bar colors',
             'panel'			=> 'wishbone_colors_panel'
@@ -136,7 +136,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_page_section',
         array(
-            'title'         => 'Site Components',
+            'title'         => __( 'Site Components', 'wishbone' ),
             'priority'      => 33,
             'description'   => 'Choose which page components to display'
         )
@@ -145,7 +145,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_header_section',
         array(
-            'title'         => 'Header',
+            'title'         => __( 'Header', 'wishbone' ),
             'priority'      => 34,
             'description'   => 'Modify header options'
         )
@@ -154,7 +154,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_navigation_section',
         array(
-            'title'         => 'Navigation',
+            'title'         => __( 'Navigation', 'wishbone' ),
             'priority'      => 35,
             'description'   => 'Modify navigation options'
         )
@@ -163,7 +163,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_showcase_section',
         array(
-            'title'         => 'Showcase',
+            'title'         => __( 'Showcase', 'wishbone' ),
             'priority'      => 36,
             'description'   => 'Modify showcase options'
         )
@@ -172,7 +172,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_blog_section',
         array(
-            'title'         => 'Blog',
+            'title'         => __( 'Blog', 'wishbone' ),
             'priority'      => 37,
             'description'   => 'Modify blog options'
         )
@@ -181,7 +181,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_footer_section',
         array(
-            'title'         => 'Footer',
+            'title'         => __( 'Footer', 'wishbone' ),
             'priority'      => 38,
             'description'   => 'Modify footer options'
         )
