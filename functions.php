@@ -54,7 +54,7 @@ function wishbone_theme_setup() {
     add_theme_support( 'automatic-feed-links' );
 
     /* Add theme support for post thumbnails (featured images). */
-    add_theme_support( 'post-thumbnails', array( 'post', 'page', 'slide', 'project', 'testimonial' ) );
+    add_theme_support( 'post-thumbnails' );
 	
 	/* Add theme support for Wordpress post formats */
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
