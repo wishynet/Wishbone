@@ -132,7 +132,7 @@
 					
 					<hr>
 					
-					<li><p><?php _e( 'Thanks for Visting', 'wishbone' ); ?></p></li>
+					<li><p><?php _e( 'Thanks for Visiting', 'wishbone' ); ?></p></li>
 					
 				</ul><!-- end of menu -->				
 		
