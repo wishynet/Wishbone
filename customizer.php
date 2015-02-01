@@ -32,9 +32,6 @@
 *  
 **/
 
-/* Adds the menu using the admin_menu hook */
-add_action( 'admin_menu', 'wishbone_options_menus' );
-
 /* Registers the option panels */
 add_action( 'customize_register', 'wishbone_options_panels' );
 
@@ -46,12 +43,7 @@ add_action( 'customize_register', 'wishbone_options_settings' );
 
 /* Registers the option controls */
 add_action( 'customize_register', 'wishbone_options_controls' );
-
-/* Displays the Customizer menu on the main WordPress Dashboard */
-function wishbone_options_menus() {
-	add_theme_page( 'Wishbone Theme Options', 'Wishbone Theme', 'edit_theme_options', 'customize.php' );
-}
-    
+   
 
 
 
@@ -65,7 +57,7 @@ function wishbone_options_panels( $wp_customize ) {
 	$wp_customize->add_panel(    
         'wishbone_colors_panel',
         array(
-            'title'         => 'Site Colors',
+            'title'         => __( 'Site Colors', 'wishbone' ),
             'priority'      => 32,
             'description'   => 'Change the colors of your site'
         )
@@ -86,7 +78,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_logo_section',
         array(
-            'title'         => 'Site Logo',
+            'title'         => __( 'Site Logo', 'wishbone' ),
             'priority'      => 30,
             'description'   => 'Choose your site logo'
         )
@@ -95,7 +87,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_fonts_section',
         array(
-            'title'         => 'Site Fonts',
+            'title'         => __( 'Site Fonts', 'wishbone' ),
             'priority'      => 31,
             'description'   => 'Choose your site fonts'
         )
@@ -104,7 +96,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_colors_theme_section',
         array(
-            'title'         => 'Colors: Theme',
+            'title'         => __( 'Colors: Theme', 'wishbone' ),
             'priority'      => 40,
             'description'   => 'Choose your site theme colors',
             'panel'			=> 'wishbone_colors_panel'
@@ -114,7 +106,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_colors_bg_section',
         array(
-            'title'         => 'Colors: Backgrounds',
+            'title'         => __( 'Colors: Backgrounds', 'wishbone' ),
             'priority'      => 41,
             'description'   => 'Customize the background colors',
             'panel'			=> 'wishbone_colors_panel'
@@ -124,7 +116,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_colors_text_section',
         array(
-            'title'         => 'Colors: Text',
+            'title'         => __( 'Colors: Text', 'wishbone' ),
             'priority'      => 42,
             'description'   => 'Customize the text colors',
             'panel'			=> 'wishbone_colors_panel'
@@ -134,7 +126,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_colors_nav_section',
         array(
-            'title'         => 'Colors: Navigation',
+            'title'         => __( 'Colors: Navigation', 'wishbone' ),
             'priority'      => 43,
             'description'   => 'Customize the Navigation Bar colors',
             'panel'			=> 'wishbone_colors_panel'
@@ -144,7 +136,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_page_section',
         array(
-            'title'         => 'Site Components',
+            'title'         => __( 'Site Components', 'wishbone' ),
             'priority'      => 33,
             'description'   => 'Choose which page components to display'
         )
@@ -153,7 +145,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_header_section',
         array(
-            'title'         => 'Header',
+            'title'         => __( 'Header', 'wishbone' ),
             'priority'      => 34,
             'description'   => 'Modify header options'
         )
@@ -162,7 +154,7 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_navigation_section',
         array(
-            'title'         => 'Navigation',
+            'title'         => __( 'Navigation', 'wishbone' ),
             'priority'      => 35,
             'description'   => 'Modify navigation options'
         )
@@ -171,7 +163,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_showcase_section',
         array(
-            'title'         => 'Showcase',
+            'title'         => __( 'Showcase', 'wishbone' ),
             'priority'      => 36,
             'description'   => 'Modify showcase options'
         )
@@ -180,7 +172,7 @@ function wishbone_options_sections( $wp_customize ) {
     $wp_customize->add_section(    
         'wishbone_blog_section',
         array(
-            'title'         => 'Blog',
+            'title'         => __( 'Blog', 'wishbone' ),
             'priority'      => 37,
             'description'   => 'Modify blog options'
         )
@@ -189,19 +181,20 @@ function wishbone_options_sections( $wp_customize ) {
 	$wp_customize->add_section(    
         'wishbone_footer_section',
         array(
-            'title'         => 'Footer',
+            'title'         => __( 'Footer', 'wishbone' ),
             'priority'      => 38,
             'description'   => 'Modify footer options'
         )
     );
 
-    /* Hides some of the default sections */
-    
+    /* Hides any default sections ( uncomment to hide ) */
+    /*
     $wp_customize->remove_section( 'colors' );
 	$wp_customize->remove_section( 'header_image' );
     $wp_customize->remove_section( 'background_image' );
 	$wp_customize->remove_section( 'nav' );
 	$wp_customize->remove_section( 'static_front_page' );
+	*/
 }
 
 
@@ -403,17 +396,6 @@ function wishbone_options_settings( $wp_customize ) {
     
     $wp_customize->add_setting(
         'wishbone_header_toggle_logo_setting',
-        array(
-            'default'       	=> 'true',
-            'type'          	=> 'theme_mod',
-            'capability'    	=> 'edit_theme_options',
-            'transport'     	=> '',
-            'sanitize_callback' => 'wishbone_sanitize_checkbox'
-        )
-    );
-	
-	$wp_customize->add_setting(
-        'wishbone_toggle_title_tagline_setting',
         array(
             'default'       	=> 'true',
             'type'          	=> 'theme_mod',
@@ -893,17 +875,7 @@ function wishbone_options_controls( $wp_customize ) {
             'type'          => 'checkbox'
         )
     );
-	
-	$wp_customize->add_control(
-        'wishbone_toggle_title_tagline_control',
-        array(
-            'label'         => 'Display Title & Tagline',
-            'section'       => 'wishbone_header_section',
-            'settings'      => 'wishbone_toggle_title_tagline_setting',
-            'type'          => 'checkbox'
-        )
-    );
-	
+
     $wp_customize->add_control(
         'wishbone_header_toggle_login_control',
         array(
@@ -1259,7 +1231,7 @@ if ( $content_font != '' ) {
 if ( $theme_color !='' ) {
 	echo '<style type="text/css">';
 		echo '.button, button, .submit, .more-link, .comment-reply-link, input[type="submit"], input[type="reset"], input[type="button"], .posttags a:hover, #wp-calendar tbody #today, #wp-calendar tbody td:hover, .wp-tag-cloud a, #sidebar ul li a:hover, .pagenav ul li .current, .pagenav ul li a:hover, p.postpages .button:hover, .gallery .gallery-caption, #back-to-top{ background-color:' . $theme_color . '; }';
-		echo '.gallery .gallery-caption:before{ border-bottom-color: ' . $theme_color . '; }';
+		echo '#navigation, .gallery .gallery-caption:before{ border-bottom-color: ' . $theme_color . '; }';
 		echo '#navigation, #semi_footer{ border-top: 5px solid' . $theme_color . '; }';
 		echo '#mobile_menu, #desktop_menu li.menu-item:hover, #desktop_menu li.current-page-item, #desktop_menu li.current-menu-item, #desktop_menu li.menu-item-has-children:hover ul.sub-menu li a, #desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a{ background-color:' . $theme_color . ' }';
 	echo '</style>';

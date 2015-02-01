@@ -37,7 +37,7 @@
 					
 	<div class="entry">
 						
-		<?php the_content( 'Continue Reading...' ); ?>
+		<?php the_content( __( 'Continue Reading...', 'wishbone' ) ); ?>
 						
 	</div><!-- end of entry -->
 					

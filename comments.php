@@ -19,7 +19,7 @@
 	'callback'          => null,
 	'end-callback'      => null,
 	'type'              => 'all',
-	'reply_text'        => 'Reply To This Comment',
+	'reply_text'        => __( 'Reply To This Comment', 'wishbone' ),
 	'page'              => null,
 	'per_page'          => '',
 	'avatar_size'       => 96,
@@ -55,8 +55,8 @@
 <!-- comment form -->
 <?php $args = array(
 	
-	'title_reply' 	=> 'Leave a Comment:',
-	'label_submit' 	=> 'Add Your Comment'
+	'title_reply' 	=> __( 'Leave a Comment:', 'wishbone' ),
+	'label_submit' 	=> __( 'Add Your Comment', 'wishbone' )
 	
 ); ?>
 		

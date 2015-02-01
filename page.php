@@ -21,7 +21,7 @@
 						<h2><?php the_title(); ?></h2>
 					
 						<div class="entry">
-							<?php the_content( '<p class="serif">Read the rest of this page &raquo;</p>' ); ?>	
+							<?php the_content( __( '<p class="serif">Read the rest of this page &raquo;</p>', 'wishbone' ) ); ?>	
 						</div>
 					
 					</article><!-- end of post -->

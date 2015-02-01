@@ -6,25 +6,14 @@
 
 	<!-- Title and Meta -->
 	<title><?php wp_title( '' ); ?></title>
-	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
-	<meta name="generator" content="WordPress <?php bloginfo( 'version' ); ?>" />  
+	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" /> 
 	<meta name="keywords" content="black, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, sticky-post, flexible-header, full-width-template, post-formats, rtl-language-support, theme-options, translation-ready" />  
 	<meta name="description" content="Wishbone is a responsive WordPress theme" />  
-	<meta name="author" content="Paul Williamson" />  
-	<meta name="robots" content="all" />
+	<meta name="author" content="Paul Williamson" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS -->
-	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 	<!-- Additional CSS loaded from the Wishbone theme customizer options -->
 	<?php wishbone_options_css(); ?>
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
-	
-	<!-- iOS and Android App Icon -->
-	<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/favicon-152.png">	
 
 	<!-- The wp_head hook -->
 	<?php wp_head(); ?>
@@ -48,7 +37,7 @@
 	
 				<div id="logo">
 					
-					<?php if ( get_theme_mod( 'wishbone_logo_setting', true ) ) : ?>
+					<?php if ( get_theme_mod( 'wishbone_logo_setting', false ) ) : ?>
 		
 						<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="logo" />
 					
@@ -61,9 +50,9 @@
 				</div><!-- end of logo -->
 		
 			<?php endif; ?>
-		
-		
-			<?php if ( get_theme_mod( 'wishbone_toggle_title_tagline_setting', true ) ) : ?>
+
+			
+			<?php if ( get_header_textcolor() != 'blank' ) : ?>
 		
 			<div id="title">
 		
