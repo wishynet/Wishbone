@@ -70,7 +70,7 @@
 			
 				<ul>
 					<li><a href="<?php echo esc_url( wp_login_url() ); ?>" class="button"><?php _e( 'Login', 'wishbone' ); ?></a></li>
-					<li><a href="<?php echo esc_url( wp_register() ); ?>" class="button"><?php _e( 'Signup', 'wishbone' ); ?></a></li>
+					<li><a href="<?php echo esc_url( wp_registration_url() ); ?>" class="button"><?php _e( 'Sign Up', 'wishbone' ); ?></a></li>
 				</ul>
 			
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-login.php?action=lostpassword" title="Password Lost and Found"><?php _e( 'Lost your password?', 'wishbone' ); ?></a>
