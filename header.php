@@ -36,11 +36,11 @@
 					
 					<?php if ( get_theme_mod( 'wishbone_logo_setting', false ) ) : ?>
 		
-						<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="logo" />
+						<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
 					
 					<?php else : ?>
 						
-						<img src="<?php echo get_template_directory_uri(); ?>/images/wishbone.png" alt="wishbone" />
+						<img src="<?php echo get_template_directory_uri(); ?>/images/wishbone.png" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
 					
 					<?php endif; ?>
 	
@@ -73,7 +73,7 @@
 					<li><a href="<?php echo esc_url( wp_registration_url() ); ?>" class="button"><?php _e( 'Sign Up', 'wishbone' ); ?></a></li>
 				</ul>
 			
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-login.php?action=lostpassword" title="Password Lost and Found"><?php _e( 'Lost your password?', 'wishbone' ); ?></a>
+				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" title="Password Lost and Found"><?php _e( 'Lost your password?', 'wishbone' ); ?></a>
 				
 			</div><!-- end of login -->
 		
@@ -111,11 +111,11 @@
 						
 						<?php if ( get_theme_mod( 'wishbone_logo_setting', true ) ) : ?>
 		
-							<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="logo" />
+							<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
 					
 						<?php else : ?>
 						
-							<img src="<?php echo get_template_directory_uri(); ?>/images/wishbone.png" alt="wishbone" />
+							<img src="<?php echo get_template_directory_uri(); ?>/images/wishbone.png" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
 					
 						<?php endif; ?>
 						
