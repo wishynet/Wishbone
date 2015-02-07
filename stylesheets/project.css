@@ -50,6 +50,8 @@
 #header
 {
 	background-color: #eeeeee;
+	background-size: cover;
+	background-position: center center;
 }
 
 #logo,
