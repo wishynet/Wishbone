@@ -201,7 +201,7 @@ function wishbone_load_frontend_scripts() {
 
 function wishbone_load_backend_scripts() {	
     /* WordPress colour picker scripts*/
-    wp_enqueue_script( 'wishbone-colour-picker-script', get_template_directory_uri() . '/javascript/colour-picker.js', array( 'jquery', 'wp-color-picker' ), false, true );
+    /* wp_enqueue_script( 'wishbone-colour-picker-script', get_template_directory_uri() . '/javascript/colour-picker.js', array( 'jquery', 'wp-color-picker' ), false, true ); */
 }
 
 

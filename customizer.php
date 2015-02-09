@@ -1233,7 +1233,7 @@ if ( $theme_color !='' ) {
 		echo '.button, button, .submit, .more-link, .comment-reply-link, input[type="submit"], input[type="reset"], input[type="button"], .posttags a:hover, #wp-calendar tbody #today, #wp-calendar tbody td:hover, .wp-tag-cloud a, #sidebar ul li a:hover, .pagenav ul li .current, .pagenav ul li a:hover, p.postpages .button:hover, .gallery .gallery-caption, #back-to-top{ background-color:' . $theme_color . '; }';
 		echo '#navigation, .gallery .gallery-caption:before{ border-bottom-color: ' . $theme_color . '; }';
 		echo '#navigation, #semi_footer{ border-top: 5px solid' . $theme_color . '; }';
-		echo '#mobile_menu, #desktop_menu li.menu-item:hover, #desktop_menu li.current-page-item, #desktop_menu li.current-menu-item, #desktop_menu li.menu-item-has-children:hover ul.sub-menu li a, #desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a{ background-color:' . $theme_color . ' }';
+		echo '#mobile_menu, #desktop_menu li.menu-item:hover, #desktop_menu li.current-page-item, #desktop_menu li.current-menu-item, #desktop_menu li.menu-item-has-children:hover ul.sub-menu li a, #desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a{ background-color:' . $theme_color . '; }';
 	echo '</style>';
 };
 
@@ -1292,7 +1292,7 @@ if ( $text_heading_color !='' ) {
 
 if ( $text_content_color !='' ) {
 	echo '<style type="text/css">';
-		echo 'p, small{ color:' . $text_content_color . '; }';
+		echo 'body, p, small, small a, .postcats a, .posttags a, .entry strong, .entry blockquote p, .entry address, .entry a, .entry ul, .entry ol{ color:' . $text_content_color . '; }';
 	echo '</style>';
 };
 

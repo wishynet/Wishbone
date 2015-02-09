@@ -89,6 +89,10 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 
 ##Changelog
 
+#### 1.03
+
+(TBA)
+
 #### 1.02
 **Updated header.php as follows:**
 

@@ -34,10 +34,10 @@ Template Name: Search
 			
 			<ul class="search-page-links">
 				<li>
-					<a class="button" href="<?php echo home_url(); ?>/sitemap.xml"><?php _e( 'Site Map', 'wishbone' ); ?></a>
+					<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>/sitemap.xml"><?php _e( 'Site Map', 'wishbone' ); ?></a>
 				</li>
 				<li>
-					<a class="button" href="<?php echo home_url(); ?>"><?php _e( 'Home Page', 'wishbone' ); ?></a>
+					<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e( 'Home Page', 'wishbone' ); ?></a>
 				</li>
 			</ul>
 

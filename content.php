@@ -23,7 +23,7 @@
 	
 	<div class="postcats">
 		
-		<p>Categories: <?php the_category( ' / ' ); ?></p>
+		<p>Categories: <?php the_category( '/ ' ); ?></p>
 		
 	</div><!-- end of postcats -->
 	
