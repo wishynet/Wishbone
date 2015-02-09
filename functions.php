@@ -54,7 +54,7 @@ function wishbone_theme_setup() {
     add_theme_support( 'automatic-feed-links' );
 
     /* Add theme support for post thumbnails (featured images). */
-    add_theme_support( 'post-thumbnails', array( 'post', 'page', 'slide', 'project', 'testimonial' ) );
+    add_theme_support( 'post-thumbnails' );
 	
 	/* Add theme support for Wordpress post formats */
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
@@ -201,7 +201,7 @@ function wishbone_load_frontend_scripts() {
 
 function wishbone_load_backend_scripts() {	
     /* WordPress colour picker scripts*/
-    wp_enqueue_script( 'wishbone-colour-picker-script', get_template_directory_uri() . '/javascript/colour-picker.js', array( 'jquery', 'wp-color-picker' ), false, true );
+    /* wp_enqueue_script( 'wishbone-colour-picker-script', get_template_directory_uri() . '/javascript/colour-picker.js', array( 'jquery', 'wp-color-picker' ), false, true ); */
 }
 
 

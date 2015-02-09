@@ -89,6 +89,73 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 
 ##Changelog
 
+#### 1.03
+- update 'header.php' file to remove remaining redundant meta data
+
+- update ‘customizer.php’ file to add further localization for labels and
+description fields
+
+- update various files to include safer 'home_url' links
+
+- remove 'wishbone.masonry.js' file
+
+- update readme documentation files
+
+- update 'customizer.php' file to include additional theme colour elements
+
+- remove background-color values from 'project.css' file that clash with colour defaults in the 'customizer.php' file
+
+#### 1.02
+**Updated header.php as follows:**
+
+- set ‘wishbone_logo_setting default to ‘false’
+
+- remove ‘robots’ meta tag
+
+- remove ‘generator’ meta tag
+
+- remove styles link from the head section
+
+- remove favicon links
+
+**Updated style.css as follows:**
+
+- remove the ‘editor-style’ tag
+
+**Updated functions.php as follows:**
+
+- remove ‘wishbone_dash_login_logo’ function
+- add code to enqueue the style.css file in the ‘wishbone_enqueue_frontend_styles’ function
+- add code to use wp_head to correctly load favicons
+
+**Updated footer.php as follows:**
+
+- update WordPress reference so its spelt correctly
+
+- add additional translation code to all some text to be translated
+
+**Updated searchform.php as follows:**
+
+- add additional translation code to all some text to be translated
+
+**Updated comments.php as follows:**
+
+- add additional translation code to all some text to be translated 
+
+**Additional Updates:**
+
+- add additional localisation for theme files, focusing on ‘read more’
+or ‘continue reading’ links
+
+- update documentation to add Showcase implementation/usage
+
+- remove Customizer functionality that duplicates core WordPress
+functionality
+
+- make all ‘title’ values in the Customizer translatable
+
+- re-enable all core WordPress Customizer functionality
+
 #### 1.01
 * Updated screenshot files
 

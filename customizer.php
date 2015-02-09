@@ -59,7 +59,7 @@ function wishbone_options_panels( $wp_customize ) {
         array(
             'title'         => __( 'Site Colors', 'wishbone' ),
             'priority'      => 32,
-            'description'   => 'Change the colors of your site'
+            'description'   => __( 'Change the colors of your site', 'wishbone' )
         )
     );
 }
@@ -80,7 +80,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Site Logo', 'wishbone' ),
             'priority'      => 30,
-            'description'   => 'Choose your site logo'
+            'description'   => __( 'Choose your site logo', 'wishbone' )
         )
     );
 	
@@ -89,7 +89,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Site Fonts', 'wishbone' ),
             'priority'      => 31,
-            'description'   => 'Choose your site fonts'
+            'description'   => __( 'Choose your site fonts', 'wishbone' )
         )
     );
 	
@@ -98,7 +98,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Colors: Theme', 'wishbone' ),
             'priority'      => 40,
-            'description'   => 'Choose your site theme colors',
+            'description'   => __( 'Choose your site theme colors', 'wishbone' ),
             'panel'			=> 'wishbone_colors_panel'
         )
     );
@@ -108,7 +108,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Colors: Backgrounds', 'wishbone' ),
             'priority'      => 41,
-            'description'   => 'Customize the background colors',
+            'description'   => __( 'Customize the background colors', 'wishbone' ),
             'panel'			=> 'wishbone_colors_panel'
         )
     );
@@ -118,7 +118,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Colors: Text', 'wishbone' ),
             'priority'      => 42,
-            'description'   => 'Customize the text colors',
+            'description'   => __( 'Customize the text colors', 'wishbone' ),
             'panel'			=> 'wishbone_colors_panel'
         )
     );
@@ -128,7 +128,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Colors: Navigation', 'wishbone' ),
             'priority'      => 43,
-            'description'   => 'Customize the Navigation Bar colors',
+            'description'   => __( 'Customize the Navigation Bar colors', 'wishbone' ),
             'panel'			=> 'wishbone_colors_panel'
         )
     );
@@ -138,7 +138,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Site Components', 'wishbone' ),
             'priority'      => 33,
-            'description'   => 'Choose which page components to display'
+            'description'   => __( 'Choose which page components to display', 'wishbone' )
         )
     );
     
@@ -147,7 +147,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Header', 'wishbone' ),
             'priority'      => 34,
-            'description'   => 'Modify header options'
+            'description'   => __( 'Modify header options', 'wishbone' )
         )
     );
 	
@@ -156,7 +156,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Navigation', 'wishbone' ),
             'priority'      => 35,
-            'description'   => 'Modify navigation options'
+            'description'   => __( 'Modify navigation options', 'wishbone' )
         )
     );
 	
@@ -165,7 +165,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Showcase', 'wishbone' ),
             'priority'      => 36,
-            'description'   => 'Modify showcase options'
+            'description'   => __( 'Modify showcase options', 'wishbone' )
         )
     );
     
@@ -174,7 +174,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Blog', 'wishbone' ),
             'priority'      => 37,
-            'description'   => 'Modify blog options'
+            'description'   => __( 'Modify blog options', 'wishbone' )
         )
     );
 
@@ -183,7 +183,7 @@ function wishbone_options_sections( $wp_customize ) {
         array(
             'title'         => __( 'Footer', 'wishbone' ),
             'priority'      => 38,
-            'description'   => 'Modify footer options'
+            'description'   => __( 'Modify footer options', 'wishbone' )
         )
     );
 
@@ -648,7 +648,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_logo_control',
             array(
-                'label'         => 'Site Logo',
+                'label'         => __( 'Site Logo', 'wishbone' ),
                 'section'       => 'wishbone_logo_section',
                 'settings'      => 'wishbone_logo_setting'
             )
@@ -660,7 +660,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
 		'wishbone_font_header_control',
 		array(
-			'label'         => 'Header Font',
+			'label'         => __( 'Header Font', 'wishbone' ),
 			'section'       => 'wishbone_fonts_section',
             'settings'      => 'wishbone_font_header_setting',
 			'type'          => 'select',
@@ -683,7 +683,7 @@ function wishbone_options_controls( $wp_customize ) {
 	$wp_customize->add_control(
 		'wishbone_font_content_control',
 		array(
-			'label'         => 'Content Font',
+			'label'         => __( 'Content Font', 'wishbone' ),
 			'section'       => 'wishbone_fonts_section',
             'settings'      => 'wishbone_font_content_setting',
 			'type'          => 'select',
@@ -710,7 +710,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_theme_color_control',
             array(
-                'label'         => 'Theme Accent Color',
+                'label'         => __( 'Theme Accent Color', 'wishbone' ),
                 'section'       => 'wishbone_colors_theme_section',
                 'settings'      => 'wishbone_theme_color_setting',
                 'priority'   	=> 1
@@ -723,7 +723,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_theme_sub_color_control',
             array(
-                'label'         => 'Theme Accent Sub Color',
+                'label'         => __( 'Theme Accent Sub Color', 'wishbone' ),
                 'section'       => 'wishbone_colors_theme_section',
                 'settings'      => 'wishbone_theme_sub_color_setting',
                 'priority'   	=> 2
@@ -736,7 +736,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_header_background_color_control',
             array(
-                'label'         => 'Header Background Color',
+                'label'         => __( 'Header Background Color', 'wishbone' ),
                 'section'       => 'wishbone_colors_bg_section',
                 'settings'      => 'wishbone_header_background_color_setting',
                 'priority'   	=> 3
@@ -749,7 +749,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_nav_background_color_control',
             array(
-                'label'         => 'Navigation Background Color',
+                'label'         => __( 'Navigation Background Color', 'wishbone' ),
                 'section'       => 'wishbone_colors_bg_section',
                 'settings'      => 'wishbone_nav_background_color_setting',
                 'priority'   	=> 4
@@ -762,7 +762,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_content_background_color_control',
             array(
-                'label'         => 'Content Background Color',
+                'label'         => __( 'Content Background Color', 'wishbone' ),
                 'section'       => 'wishbone_colors_bg_section',
                 'settings'      => 'wishbone_content_background_color_setting',
                 'priority'   	=> 5
@@ -775,7 +775,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_semifooter_background_color_control',
             array(
-                'label'         => 'Semi-Footer Background Color',
+                'label'         => __( 'Semi-Footer Background Color', 'wishbone' ),
                 'section'       => 'wishbone_colors_bg_section',
                 'settings'      => 'wishbone_semifooter_background_color_setting',
                 'priority'   	=> 6
@@ -788,7 +788,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_footer_background_color_control',
             array(
-                'label'         => 'Footer Background Color',
+                'label'         => __( 'Footer Background Color', 'wishbone' ),
                 'section'       => 'wishbone_colors_bg_section',
                 'settings'      => 'wishbone_footer_background_color_setting',
                 'priority'   	=> 7
@@ -801,7 +801,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_heading_text_color_control',
             array(
-                'label'         => 'Heading Text Color',
+                'label'         => __( 'Heading Text Color', 'wishbone' ),
                 'section'       => 'wishbone_colors_text_section',
                 'settings'      => 'wishbone_heading_text_color_setting',
                 'priority'   	=> 8
@@ -814,7 +814,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_content_text_color_control',
             array(
-                'label'         => 'Content Text Color',
+                'label'         => __( 'Content Text Color', 'wishbone' ),
                 'section'       => 'wishbone_colors_text_section',
                 'settings'      => 'wishbone_content_text_color_setting',
                 'priority'   	=> 9
@@ -827,7 +827,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_toggle_header_control',
         array(
-            'label'         => 'Display Header',
+            'label'         => __( 'Display Header', 'wishbone' ),
             'section'       => 'wishbone_page_section',
             'settings'      => 'wishbone_toggle_header_setting',
             'type'          => 'checkbox'
@@ -837,7 +837,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_toggle_navmenu_control',
         array(
-            'label'         => 'Display Navigation Menu',
+            'label'         => __( 'Display Navigation Menu', 'wishbone' ),
             'section'       => 'wishbone_page_section',
             'settings'      => 'wishbone_toggle_navmenu_setting',
             'type'          => 'checkbox'
@@ -847,7 +847,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_toggle_showcase_control',
         array(
-            'label'         => 'Display Showcase',
+            'label'         => __( 'Display Showcase', 'wishbone' ),
             'section'       => 'wishbone_page_section',
             'settings'      => 'wishbone_toggle_showcase_setting',
             'type'          => 'checkbox'
@@ -857,7 +857,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_toggle_semifooter_control',
         array(
-            'label'         => 'Display Semi-Footer',
+            'label'         => __( 'Display Semi-Footer', 'wishbone' ),
             'section'       => 'wishbone_page_section',
             'settings'      => 'wishbone_toggle_semifooter_setting',
             'type'          => 'checkbox'
@@ -869,7 +869,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_header_toggle_logo_control',
         array(
-            'label'         => 'Display Logo',
+            'label'         => __( 'Display Logo', 'wishbone' ),
             'section'       => 'wishbone_header_section',
             'settings'      => 'wishbone_header_toggle_logo_setting',
             'type'          => 'checkbox'
@@ -879,7 +879,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_header_toggle_login_control',
         array(
-            'label'         => 'Display Login',
+            'label'         => __( 'Display Login', 'wishbone' ),
             'section'       => 'wishbone_header_section',
             'settings'      => 'wishbone_header_toggle_login_setting',
             'type'          => 'checkbox'
@@ -891,7 +891,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_header_bg_image_control',
             array(
-                'label'         => 'Header Background Image',
+                'label'         => __( 'Header Background Image', 'wishbone' ),
                 'section'       => 'wishbone_header_section',
                 'settings'      => 'wishbone_header_bg_image_setting'
             )
@@ -903,7 +903,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_navigation_border_control',
         array(
-            'label'         => 'Navigation Border',
+            'label'         => __( 'Navigation Border', 'wishbone' ),
             'section'       => 'wishbone_navigation_section',
             'settings'      => 'wishbone_navigation_border_setting',
             'type'          => 'radio',
@@ -920,7 +920,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_showcase_type_control',
         array(
-            'label'         => 'What to Display in the Showcase',
+            'label'         => __( 'What to Display in the Showcase', 'wishbone' ),
             'section'       => 'wishbone_showcase_section',
             'settings'      => 'wishbone_showcase_type_setting',
             'type'          => 'radio',
@@ -936,7 +936,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_showcase_img_control',
             array(
-                'label'         => 'Showcase Image',
+                'label'         => __( 'Showcase Image', 'wishbone' ),
                 'section'       => 'wishbone_showcase_section',
                 'settings'      => 'wishbone_showcase_img_setting'
             )
@@ -948,7 +948,7 @@ function wishbone_options_controls( $wp_customize ) {
             $wp_customize,
             'wishbone_showcase_bg_color_control',
             array(
-                'label'         => 'Showcase Background Color',
+                'label'         => __( 'Showcase Background Color', 'wishbone' ),
                 'section'       => 'wishbone_showcase_section',
                 'settings'      => 'wishbone_showcase_bg_color_setting'
             )
@@ -958,7 +958,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_showcase_heading_control',
         array(
-            'label'         => 'Showcase Heading',
+            'label'         => __( 'Showcase Heading', 'wishbone' ),
             'section'       => 'wishbone_showcase_section',
             'settings'      => 'wishbone_showcase_heading_setting',
             'type'          => 'text'
@@ -968,7 +968,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_showcase_slogan_control',
         array(
-            'label'         => 'Showcase Slogan',
+            'label'         => __( 'Showcase Slogan', 'wishbone' ),
             'section'       => 'wishbone_showcase_section',
             'settings'      => 'wishbone_showcase_slogan_setting',
             'type'          => 'text'
@@ -980,7 +980,7 @@ function wishbone_options_controls( $wp_customize ) {
     $wp_customize->add_control(
         'wishbone_blog_layout_control',
         array(
-            'label'         => 'Blog Layout',
+            'label'         => __( 'Blog Layout', 'wishbone' ),
             'section'       => 'wishbone_blog_section',
             'settings'      => 'wishbone_blog_layout_setting',
             'type'          => 'radio',
@@ -997,7 +997,7 @@ function wishbone_options_controls( $wp_customize ) {
 	$wp_customize->add_control(
         'wishbone_footer_copyrights_control',
         array(
-            'label'         => 'Footer Text',
+            'label'         => __( 'Footer Text', 'wishbone' ),
             'section'       => 'wishbone_footer_section',
             'settings'      => 'wishbone_footer_copyrights_setting',
             'type'          => 'text'
@@ -1233,7 +1233,7 @@ if ( $theme_color !='' ) {
 		echo '.button, button, .submit, .more-link, .comment-reply-link, input[type="submit"], input[type="reset"], input[type="button"], .posttags a:hover, #wp-calendar tbody #today, #wp-calendar tbody td:hover, .wp-tag-cloud a, #sidebar ul li a:hover, .pagenav ul li .current, .pagenav ul li a:hover, p.postpages .button:hover, .gallery .gallery-caption, #back-to-top{ background-color:' . $theme_color . '; }';
 		echo '#navigation, .gallery .gallery-caption:before{ border-bottom-color: ' . $theme_color . '; }';
 		echo '#navigation, #semi_footer{ border-top: 5px solid' . $theme_color . '; }';
-		echo '#mobile_menu, #desktop_menu li.menu-item:hover, #desktop_menu li.current-page-item, #desktop_menu li.current-menu-item, #desktop_menu li.menu-item-has-children:hover ul.sub-menu li a, #desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a{ background-color:' . $theme_color . ' }';
+		echo '#mobile_menu, #desktop_menu li.menu-item:hover, #desktop_menu li.current-page-item, #desktop_menu li.current-menu-item, #desktop_menu li.menu-item-has-children:hover ul.sub-menu li a, #desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a{ background-color:' . $theme_color . '; }';
 	echo '</style>';
 };
 
@@ -1292,7 +1292,7 @@ if ( $text_heading_color !='' ) {
 
 if ( $text_content_color !='' ) {
 	echo '<style type="text/css">';
-		echo 'p, small{ color:' . $text_content_color . '; }';
+		echo 'body, p, small, small a, .postcats a, .posttags a, .entry strong, .entry blockquote p, .entry address, .entry a, .entry ul, .entry ol{ color:' . $text_content_color . '; }';
 	echo '</style>';
 };
 

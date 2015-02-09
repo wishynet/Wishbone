@@ -6,10 +6,7 @@
 
 	<!-- Title and Meta -->
 	<title><?php wp_title( '' ); ?></title>
-	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" /> 
-	<meta name="keywords" content="black, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, sticky-post, flexible-header, full-width-template, post-formats, rtl-language-support, theme-options, translation-ready" />  
-	<meta name="description" content="Wishbone is a responsive WordPress theme" />  
-	<meta name="author" content="Paul Williamson" />
+	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Additional CSS loaded from the Wishbone theme customizer options -->
@@ -39,11 +36,11 @@
 					
 					<?php if ( get_theme_mod( 'wishbone_logo_setting', false ) ) : ?>
 		
-						<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="logo" />
+						<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
 					
 					<?php else : ?>
 						
-						<img src="<?php echo get_template_directory_uri(); ?>/images/wishbone.png" alt="wishbone" />
+						<img src="<?php echo get_template_directory_uri(); ?>/images/wishbone.png" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
 					
 					<?php endif; ?>
 	
@@ -56,7 +53,7 @@
 		
 			<div id="title">
 		
-				<a href="<?php echo home_url(); ?>">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<h1><?php bloginfo( 'name' ); ?></h1>
 				</a>
 		
@@ -72,11 +69,11 @@
 			<div id="login">
 			
 				<ul>
-					<li><a href="<?php echo home_url(); ?>/wp-login.php" class="button"><?php _e( 'Login', 'wishbone' ); ?></a></li>
-					<li><a href="<?php echo home_url(); ?>/wp-login.php?action=register" class="button"><?php _e( 'Signup', 'wishbone' ); ?></a></li>
+					<li><a href="<?php echo esc_url( wp_login_url() ); ?>" class="button"><?php _e( 'Login', 'wishbone' ); ?></a></li>
+					<li><a href="<?php echo esc_url( wp_registration_url() ); ?>" class="button"><?php _e( 'Sign Up', 'wishbone' ); ?></a></li>
 				</ul>
 			
-				<a href="<?php echo home_url(); ?>/wp-login.php?action=lostpassword" title="Password Lost and Found"><?php _e( 'Lost your password?', 'wishbone' ); ?></a>
+				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" title="Password Lost and Found"><?php _e( 'Lost your password?', 'wishbone' ); ?></a>
 				
 			</div><!-- end of login -->
 		
@@ -114,11 +111,11 @@
 						
 						<?php if ( get_theme_mod( 'wishbone_logo_setting', true ) ) : ?>
 		
-							<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="logo" />
+							<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
 					
 						<?php else : ?>
 						
-							<img src="<?php echo get_template_directory_uri(); ?>/images/wishbone.png" alt="wishbone" />
+							<img src="<?php echo get_template_directory_uri(); ?>/images/wishbone.png" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
 					
 						<?php endif; ?>
 						
@@ -132,7 +129,7 @@
 					
 					<hr>
 					
-					<li><p><?php _e( 'Thanks for Visting', 'wishbone' ); ?></p></li>
+					<li><p><?php _e( 'Thanks for Visiting', 'wishbone' ); ?></p></li>
 					
 				</ul><!-- end of menu -->				
 		
@@ -140,7 +137,7 @@
 		
 			<div id="desktop_menu">
 		
-				<?php wp_nav_menu(); ?>
+				<?php wp_nav_menu( array( 'menu_class' => 'main-menu' ) ); ?>
 			
 			</div><!-- end of desktop_menu -->
 		

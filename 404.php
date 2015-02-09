@@ -37,15 +37,15 @@
 		
 		<div class="sixteen columns">
 
-				<ul class="search-links center">
+				<ul class="search-links aligncenter">
 					<li>
-						<a class="button" href="<?php echo home_url(); ?>/page-search.php" alt="search"><?php _e( 'Search Page', 'wishbone' ); ?></a>
+						<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>page-search.php" alt="search"><?php _e( 'Search Page', 'wishbone' ); ?></a>
 					</li>
 					<li>
-						<a class="button" href="<?php echo home_url(); ?>/sitemap.xml" alt="sitemap"><?php _e( 'Site Map', 'wishbone' ); ?></a>
+						<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>sitemap.xml" alt="sitemap"><?php _e( 'Site Map', 'wishbone' ); ?></a>
 					</li>
 					<li>
-						<a class="button" href="<?php echo home_url(); ?>" alt="home"><?php _e( 'Home Page', 'wishbone' ); ?></a>
+						<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="home"><?php _e( 'Home Page', 'wishbone' ); ?></a>
 					</li>
 				</ul>
 			
