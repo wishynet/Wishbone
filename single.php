@@ -13,7 +13,7 @@
 		<div class="eleven columns">
 			
 			
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
 				
 				<!-- include the content by post format using the 'content-xyz' templates -->
@@ -42,7 +42,7 @@
 
 			<div class="postnav">
 				
-				<?php get_template_part( 'nav-post' ); ?>
+				<?php the_post_navigation(); ?>
 				
 			</div><!-- end of postnav -->
 			

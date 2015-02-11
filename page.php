@@ -36,13 +36,6 @@
 			</div><!-- end of page -->
 			
 			
-			<div class="pagenav">
-			
-				<?php get_template_part( 'nav-page' ); ?>
-				
-			</div><!-- end of pagenav -->
-			
-			
 			<?php if ( comments_open() ) : ?>
 				
 				<div class="comments">

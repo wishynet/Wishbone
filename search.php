@@ -22,10 +22,10 @@
 			
 		<div id="posts">
 		
-			<?php if (have_posts()) : ?>
+			<?php if ( have_posts() ) : ?>
 				
 
-			<?php while (have_posts()) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
 				<div <?php post_class() ?>>
 					
@@ -42,7 +42,7 @@
 
 			<div class="pagenav">
 			
-				<?php get_template_part( 'nav-page' ); ?>
+				<?php the_posts_pagination( ); ?>
 				
 			</div><!-- end of pagenav -->
 

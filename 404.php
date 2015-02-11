@@ -37,13 +37,19 @@
 		
 		<div class="sixteen columns">
 
-				<ul class="search-links aligncenter">
+				<ul class="fourzerofour-page-links aligncenter">
 					<li>
 						<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>page-search.php" alt="search"><?php _e( 'Search Page', 'wishbone' ); ?></a>
 					</li>
+					
+					<?php if( file_exists( 'sitemap.xml' ) ) : ?> 
+						
 					<li>
 						<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>sitemap.xml" alt="sitemap"><?php _e( 'Site Map', 'wishbone' ); ?></a>
 					</li>
+						
+					<?php endif; ?>
+					
 					<li>
 						<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="home"><?php _e( 'Home Page', 'wishbone' ); ?></a>
 					</li>

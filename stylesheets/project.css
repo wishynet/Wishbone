@@ -475,6 +475,7 @@
 	height: 32px;
 	line-height: 32px;
 	padding-bottom: 15px;
+	clear: both;
 }
 
 .postmore a
@@ -483,14 +484,15 @@
 	float: right;
 }
 
-/* Nav-Post Styles (next/prev links) */
+/* Nav-Post Styles (Next/Prev links) */
 .postnav
 {
+	width: 100%;
 	min-height: 50px;
 	line-height: 50px;
 	margin-bottom: 20px;
 }
-
+/*
 .prevlink,
 .homelink,
 .nextlink
@@ -498,9 +500,18 @@
 	margin: 0 15px 0 0;
 	float: left;
 }
+*/
+.nav-previous
+{
+	float: left;
+}
 
+.nav-next
+{
+	float: right;
+}
 
-/* Nav-Page Styles (pagination links) */
+/* Nav-Page Styles (Pagination links) */
 .pagenav
 {
 	height: 50px;
@@ -508,19 +519,21 @@
 	clear: both;
 }
 
-.pagenav ul li
+.pagenav a,
+.pagenav span,
+.pagenav .dots
 {
 	margin-right: 10px;
 }
 
-.pagenav ul li a
+.pagenav a,
+.pagenav .dots
 {
 	padding: 8px;
 	background-color: #ebebeb;
 }
 
-.pagenav ul li .current,
-.pagenav ul li a:hover
+.pagenav .current
 {
 	padding: 8px;
 	background-color: #444444;
@@ -555,8 +568,14 @@
 	float: left;
 }
 
+.postnav .screen-reader-text,
+.pagenav .screen-reader-text
+{
+	display: none;
+}
 
-/* Post Pagination (used for posts that are divided into multiple pages) */
+
+/* Post Pagination (used for posts that are divided into multiple pages - uses the 'wp_link_pages' function) */
 p.postpages
 {
 	height: 32px;
@@ -581,7 +600,7 @@ p.postpages .button:hover
 		 -o-transition: all 0.25s ease-in-out;
 			transition: all 0.25s ease-in-out;
 }
-	
+
 
 /* Sticky Posts */
 .sticky
@@ -1115,6 +1134,7 @@ h1.fourzerofour
 {
 	font-size: 210px;
 	line-height: 210px;
+	letter-spacing: 0.01em;
 	opacity: 0.5;
 	float: right;
 }
@@ -1155,6 +1175,17 @@ h2.fourzerofour
 .fourzerofourhelp li a
 {
 	margin: 0 10px 10px 0;
+}
+
+.fourzerofour-page-links
+{
+	display: table;	
+}
+
+.fourzerofour-page-links li
+{
+	margin: 0 15px 0 0;
+	float: left;
 }
 
 
@@ -1479,6 +1510,13 @@ h2.fourzerofour
 	{
 		display: none;
 	}
+	
+	
+	/* 404 Page */
+	.fourzerofour-page-links li
+	{
+		width: 100%;
+	}
 
 }
 
@@ -1786,7 +1824,7 @@ h2.fourzerofour
 		margin-bottom: 15px;
 		clear: both;
 	}		
-	
+
 		
 	/* Sidebar */
 	#search-input
@@ -1850,6 +1888,19 @@ h2.fourzerofour
 	{
 		width: 100%;
 	}
+	
+	/* check these two values below - the need to be moved to the correct place */
+	h1.fourzerofour
+	{
+		font-size: 150px;
+		line-height: 150px;
+	}
+	
+	h2.fourzerofour
+	{
+		margin-top: 20px;
+	}
+	
 		
 }
 
