@@ -105,6 +105,8 @@ description fields
 
 - remove background-color values from 'project.css' file that clash with colour defaults in the 'customizer.php' file
 
+- update pagination and post links to use new WordPress 4.1 functions
+
 #### 1.02
 **Updated header.php as follows:**
 
