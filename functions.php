@@ -50,6 +50,9 @@ function wishbone_theme_setup() {
 	/* Add theme support for custom backgrounds. */	
     add_theme_support( 'custom-background' );
 	
+	/* Add theme support for title tags */
+	add_theme_support( 'title-tag' );
+	
     /* Add theme support for automatic feed links. */	
     add_theme_support( 'automatic-feed-links' );
 

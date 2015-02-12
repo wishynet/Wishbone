@@ -25,16 +25,12 @@
 				
 				
 				<!-- wp_link_pages functionality -->
-				<?php $args = array(
+				<?php wp_link_pages( array(
 					'before'		=> '<p class="postpages">' . __( 'Pages In This Post:', 'wishbone' ),
 					'after'			=> '</p>',
 					'link_before'	=> '<span class="button">',
 					'link_after'	=> '</span>'
-				);
-				
-				wp_link_pages( $args ); 
-				
-				?>
+				) ); ?>
 
 				
 			<?php endwhile; endif; ?>

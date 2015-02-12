@@ -5,9 +5,9 @@ Wishbone Wordpress Theme
 **Developer Link:** [Here](http://www.wishynet.co.uk)    
 **Donate Link:** [Here](http://wishbone.wishynet.co.uk/donate)    
 **License:** GNU General Public License  
-**Requires at least:** 4.0  
-**Tested up to:** 4.0  
-**Stable tag:** 1.0  
+**Requires at least:** 4.1  
+**Tested up to:** 4.1  
+**Stable tag:** 4.1  
 **Tags:** black, white, light, dark, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, sticky-post, flexible-header, full-width-template, post-formats, theme-options, translation-ready, threaded-comments, accessibility-ready
 
 **Description:** Wishbone is a multi purpose WordPress theme containing everything needed to build a great WordPress website. Wishbone fully supports all WordPress theme features without being cluttered with gimmicky extras. 
@@ -106,6 +106,8 @@ description fields
 - remove background-color values from 'project.css' file that clash with colour defaults in the 'customizer.php' file
 
 - update pagination and post links to use new WordPress 4.1 functions
+
+- add theme support for 'title-tags' 
 
 #### 1.02
 **Updated header.php as follows:**
