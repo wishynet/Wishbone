@@ -33,9 +33,15 @@ Template Name: Search
 			<p><?php _e( 'Perhaps these links can also help you find what you are looking for:', 'wishbone' ); ?></p>
 			
 			<ul class="search-page-links">
+				
+				<?php if( file_exists( 'sitemap.xml' ) ) : ?> 
+				
 				<li>
 					<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>/sitemap.xml"><?php _e( 'Site Map', 'wishbone' ); ?></a>
 				</li>
+				
+				<?php endif; ?>
+				
 				<li>
 					<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e( 'Home Page', 'wishbone' ); ?></a>
 				</li>

@@ -20,12 +20,9 @@
 			
 		<div class="eleven columns">
 			
-		<div id="posts">
-		
-			<?php if ( have_posts() ) : ?>
-				
-
-			<?php while ( have_posts() ) : the_post(); ?>
+		<div id="posts">		
+			
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<div <?php post_class() ?>>
 					
@@ -50,6 +47,7 @@
 			<?php else : ?>
 
 				<h2><?php _e( 'Sorry, no posts found. Perhaps try a different search?', 'wishbone' ); ?></h2>
+				
 				<?php get_search_form(); ?>
 
 			<?php endif; ?>

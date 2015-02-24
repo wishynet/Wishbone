@@ -21,7 +21,7 @@
 			
 			<?php $date_check = ''; ?>
 				
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
 			<?php $date = get_the_date( 'j' );
 			

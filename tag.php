@@ -27,9 +27,9 @@
 		</div><!-- end of five columns -->
 		
 		
-		<div class="eleven columns">
+		<div class="eleven columns">			
 			
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				
 				<div class="postexcerpt">
 					
@@ -64,7 +64,7 @@
 			
 				<p><?php _e( 'No Posts With This Tag', 'wishbone' ); ?></p>	
 			
-			<?php endif; ?>
+			<?php endif; ?>			
 			
 		</div><!-- end of eleven columns -->
 		
