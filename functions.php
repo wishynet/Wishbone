@@ -59,6 +59,9 @@ function wishbone_theme_setup() {
     /* Add theme support for post thumbnails (featured images). */
     add_theme_support( 'post-thumbnails' );
 	
+	/*Add theme support for site titles in the <head> tag. */
+	add_theme_support( 'title-tag' );
+	
 	/* Add theme support for Wordpress post formats */
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 	
@@ -69,9 +72,6 @@ function wishbone_theme_setup() {
 	add_editor_style( 'style-tinymce.css' );
 	
 	/* ACTIONS */
-
-    /* Add your nav menus function to the 'init' action hook. */
-    add_action( 'init', 'wishbone_register_menus' );
 
     /* Add your sidebars function to the 'widgets_init' action hook. */
     add_action( 'widgets_init', 'wishbone_register_widget_areas' );
@@ -116,11 +116,6 @@ function wishbone_theme_setup() {
 
 	/* Filters the default WordPress gallery shortcode output */
 	add_filter( 'post_gallery', 'wishbone_gallery', 10, 2 );
-}
-
-function wishbone_register_menus() {	
-    /* Register nav menus using register_nav_menu() or register_nav_menus() here. */
-    register_nav_menu( 'main_menu', __( 'Main Menu', 'wishbone' ) );
 }
 
 function wishbone_register_widget_areas() {	

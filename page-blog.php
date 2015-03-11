@@ -18,19 +18,21 @@ Template Name: Blog
 			<!-- the loop -->
 			
 			<?php
-				
+			
 			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+			
 			$args = array(
 			'post_type' 	=> 'post',
 			'numberposts' 	=> -1,
 			'orderby' 		=> 'post_date',
 			'paged'			=> $paged
 			);
-				
-			query_posts( $args ); ?>
-				
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					
+
+			$query_blog_posts = new WP_Query( $args ); 
+			
+			?> 
+			
+			<?php if ( $query_blog_posts->have_posts() ) : while ( $query_blog_posts->have_posts() ) : $query_blog_posts->the_post(); ?>
 					
 				<!-- include the content by post format using the 'content-xyz' templates -->
 				<?php get_template_part( 'content', get_post_format() ); ?>

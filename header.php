@@ -107,25 +107,21 @@
 		
 				<ul class="menu">
 					
+					<?php if ( get_theme_mod( 'wishbone_logo_setting', true ) ) : ?>
+					
 					<li class="menulogo">
 						
-						<?php if ( get_theme_mod( 'wishbone_logo_setting', true ) ) : ?>
-		
-							<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
-					
-						<?php else : ?>
-						
-							<img src="<?php echo get_template_directory_uri(); ?>/images/wishbone.png" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
-					
-						<?php endif; ?>
-						
+						<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
+
 					</li>
+					
+					<?php endif; ?>
 					
 					<li class="menutitle"><h2><?php bloginfo( 'name' ); ?></h2></li>
 					
 					<hr>
 					
-					<li class="menulist"><?php wp_nav_menu( array( 'menu_class' => 'main-menu' ) ); ?></li>
+					<li class="menulist"><?php wp_nav_menu(); ?></li>
 					
 					<hr>
 					
@@ -137,7 +133,7 @@
 		
 			<div id="desktop_menu">
 		
-				<?php wp_nav_menu( array( 'menu_class' => 'main-menu' ) ); ?>
+				<?php wp_nav_menu(); ?>
 			
 			</div><!-- end of desktop_menu -->
 		
@@ -153,6 +149,8 @@
 
 	<!-- back to top button -->
 	<a href="#back-to-top" id="back-to-top">
+		
 		<img src="<?php echo get_template_directory_uri(); ?>/images/backtotop.png" alt="backtotop" />
+		
 	</a>
 

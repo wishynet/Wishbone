@@ -29,12 +29,6 @@
 				<p><?php _e( 'Website: ', 'wishbone' ); ?><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></p>
 				
 			</div><!-- end of author-url -->
-				
-			<div class="authoremail">
-				
-				<p><?php _e( 'Email: ', 'wishbone' ); ?><a href="<?php echo $curauth->user_email; ?>"><?php echo $curauth->user_email; ?></a></p>
-				
-			</div><!-- end of author-email -->
 			
 			<div class="authordescription">
 				
@@ -57,7 +51,7 @@
 			
 			<ul id="author-post-list">
 				
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				
 				<div class="postexcerpt">
 					

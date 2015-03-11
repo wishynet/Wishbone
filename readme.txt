@@ -89,6 +89,15 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 
 ##Changelog
 
+#### 1.04
+- remove register nav_menus to maintain same nav styles regardless of menu name
+
+- remove email address from author template
+
+- add theme support for title-tags
+
+- cleanup some redundant search links
+
 #### 1.03
 - update 'header.php' file to remove remaining redundant meta data
 
