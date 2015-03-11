@@ -59,9 +59,6 @@ function wishbone_theme_setup() {
     /* Add theme support for post thumbnails (featured images). */
     add_theme_support( 'post-thumbnails' );
 	
-	/*Add theme support for site titles in the <head> tag. */
-	add_theme_support( 'title-tag' );
-	
 	/* Add theme support for Wordpress post formats */
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 	
