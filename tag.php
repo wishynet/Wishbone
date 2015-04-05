@@ -17,11 +17,9 @@
 			<?php			
 				$tag_description = tag_description();
 				
-				if ( ! empty( $tag_description ))
+				if ( !empty( $tag_description ) )
 				
-					echo '<div class="tag-description">' . $tag_description . '</div>';
-					
-				get_template_part( 'loop', 'tag' );
+				echo '<div class="tag-description">' . $tag_description . '</div>';
 			?>
 
 		</div><!-- end of five columns -->
@@ -56,7 +54,7 @@
 						
 			<div class="pagenav">
 			
-				<?php get_template_part( 'nav-page' ); ?>
+				<?php the_posts_pagination(); ?>
 				
 			</div><!-- end of pagenav -->
 			
