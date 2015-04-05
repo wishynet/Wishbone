@@ -179,8 +179,8 @@ function wishbone_load_frontend_scripts() {
 	/* Loads 'thickbox' lightbox functionality for WordPress */
 	/* please note: these scripts are disabled by default due to thickbox creating invalid markup */
 	/*	 
-	wp_enqueue_script( 'thickbox' );
-	wp_enqueue_script( 'wishbone-thickbox', get_template_directory_uri() . '/javascript/wishbone.thickbox.js', array( 'jquery' ), '', true  ); 
+	DISABLED: wp_enqueue_script( 'thickbox' );
+	DISABLED: wp_enqueue_script( 'wishbone-thickbox', get_template_directory_uri() . '/javascript/wishbone.thickbox.js', array( 'jquery' ), '', true  ); 
 	*/
 	
 	/* Loads 'colorbox' lightbox functionality for WordPress */
@@ -196,8 +196,7 @@ function wishbone_load_frontend_scripts() {
 }
 
 function wishbone_load_backend_scripts() {	
-    /* WordPress colour picker scripts*/
-    /* wp_enqueue_script( 'wishbone-colour-picker-script', get_template_directory_uri() . '/javascript/colour-picker.js', array( 'jquery', 'wp-color-picker' ), false, true ); */
+    /* Backend scripts should be enqueued here */
 }
 
 
@@ -219,7 +218,7 @@ function wishbone_load_frontend_styles() {
 	wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css' );
 	
 	/* Loads 'thickbox' lightbox functionality CSS */
-	/* wp_enqueue_style( 'thickbox' ); */
+	/* DISABELD: wp_enqueue_style( 'thickbox' ); */
 	
 	/* Loads 'colorbox' lightbox functionality CSS */
 	wp_enqueue_style( 'colorbox', get_template_directory_uri() . '/stylesheets/modules/colorbox.css', false, '1.0', 'all' );
@@ -316,7 +315,7 @@ function wishbone_image_sizes( $sizes ) {
 }
 
 function wishbone_gallery( $attr ) {
-        /* Set initial thumbnail size */
+        /* Set initial gallery thumbnail size */
         $attr['size'] = 'wishbone-gallery';
 
         /* set 'thumbnail size' if smaller than 3 columns */
