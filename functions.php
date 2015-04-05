@@ -108,8 +108,8 @@ function wishbone_theme_setup() {
     /* Removes the default WordPress gallery styles */
     add_filter( 'use_default_gallery_style' , '__return_false' );
 
-	/* Filters the default WordPress gallery shortcode output */
-	add_filter( 'post_gallery', 'wishbone_gallery', 10, 2 );
+	/* Filters the default WordPress gallery shortcode attributes */
+	add_filter( 'shortcode_atts_gallery', 'wishbone_gallery' );
 }
 
 function wishbone_register_widget_areas() {	
@@ -315,160 +315,21 @@ function wishbone_image_sizes( $sizes ) {
     ) );
 }
 
-function wishbone_gallery( $output, $attr ) {
-	/* Filters the default gallery shortcode output */
+function wishbone_gallery( $attr ) {
+        /* Set initial thumbnail size */
+        $attr['size'] = 'wishbone-gallery';
 
-	/* Initialize */
-	global $post, $wp_locale;
+        /* set 'thumbnail size' if smaller than 3 columns */
+        if  ( $attr['columns'] == 1 ) {
+                $attr['size'] = 'full';
+        }
+        
+        if  ( $attr['columns'] == 2 ) {
+                $attr['size'] = 'wishbone-gallery-wide';
+        }
 
-	/* Gallery instance counter */
-	static $instance = 0;
-	$instance++;
-
-	/* Validate the author's orderby attribute */
-	if ( isset( $attr['orderby'] ) ) {
-		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-		if ( ! $attr['orderby'] ) unset( $attr['orderby'] );
-	}
-	
-	/* Set the 'size' attribute depending on the number of columns in the gallery */
-	if  ( $attr['columns'] == 1 ) {
-		$attr['size'] = 'full';
-	}
-	
-	if  ( $attr['columns'] == 2 ) {
-		$attr['size'] = 'wishbone-gallery-wide';
-	}
-	
-	/* Get attributes from shortcode */
-	extract( shortcode_atts( array(
-		'order'      => 'ASC',
-		'orderby'    => 'menu_order ID',
-		'id'         => $post->ID,
-		'itemtag'    => 'dl',
-		'icontag'    => 'dt',
-		'captiontag' => 'dd',
-		'columns'    => 3,
-		'size'       => 'wishbone-gallery',
-		'include'    => '',
-		'exclude'    => ''
-	), $attr ) );
-
-	/* Initialize */
-	$id = intval( $id );
-	$attachments = array();
-	if ( $order == 'RAND' ) $orderby = 'none';
-
-	if ( ! empty( $include ) ) {
-
-		/* Include attribute is present */
-		$include = preg_replace( '/[^0-9,]+/', '', $include );
-		$_attachments = get_posts( array( 'include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
-
-		/* Setup attachments array */
-		foreach ( $_attachments as $key => $val ) {
-			$attachments[ $val->ID ] = $_attachments[ $key ];
-		}
-
-	} else if ( ! empty( $exclude ) ) {
-
-		/* Exclude attribute is present */
-		$exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
-
-		/* Setup attachments array */
-		$attachments = get_children( array( 'post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
-	} else {
-		/* Setup attachments array */
-		$attachments = get_children( array( 'post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
-	}
-
-	if ( empty( $attachments ) ) return '';
-
-	/* Filter gallery differently for feeds */
-	if ( is_feed() ) {
-		$output = "\n";
-		foreach ( $attachments as $att_id => $attachment ) $output .= wp_get_attachment_link( $att_id, $size, true ) . "\n";
-		return $output;
-	}
-
-	/* Filter tags and attributes */
-	$itemtag = tag_escape( $itemtag );
-	$captiontag = tag_escape( $captiontag );
-	$columns = intval( $columns );
-	$itemwidth = $columns > 0 ? floor( 100 / $columns ) : 100;
-	$float = is_rtl() ? 'right' : 'left';
-	$selector = "gallery-{$instance}";
-
-	/* Filter gallery CSS */
-	$gallery_style = $gallery_div = '';
-	if ( apply_filters( 'use_default_gallery_style', true ) )
-		$gallery_style = "
-		<style type='text/css'>
-			#{$selector} {
-				margin: auto;
-			}
-			#{$selector} .gallery-item {
-				float: {$float};
-				margin-top: 10px;
-				text-align: center;
-				width: {$itemwidth}%;
-			}
-			#{$selector} img {
-				border: 2px solid #cfcfcf;
-			}
-			#{$selector} .gallery-caption {
-				margin-left: 0;
-			}
-			/* see gallery_shortcode() in wp-includes/media.php */
-		</style>";
-	$size_class = sanitize_html_class( $size );
-	$gallery_div = "<div id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'>";
-	$output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
-
-	/* Iterate through the attachments in this gallery instance */
-	$i = 0;
-	foreach ( $attachments as $id => $attachment ) {
-
-		/* Attachment link */
-		$link = isset( $attr['link'] ) && 'file' == $attr['link'] ? wp_get_attachment_link( $id, $size, false, false ) : wp_get_attachment_link( $id, $size, true, false ); 
-
-		/* Start itemtag */
-		$output .= "<{$itemtag} class='gallery-item'>";
-
-		/* icontag */
-		$output .= "
-		<{$icontag} class='gallery-icon'>
-			$link
-		</{$icontag}>";
-
-		if ( $captiontag && trim( $attachment->post_excerpt ) ) {
-
-			/* captiontag */
-			$output .= "
-			<{$captiontag} class='gallery-caption'>
-				" . wptexturize($attachment->post_excerpt) . "
-			</{$captiontag}>";
-
-		}
-
-		/* End itemtag */
-		$output .= "</{$itemtag}>";
-
-		/* Line breaks by columns set */
-		if($columns > 0 && ++$i % $columns == 0) $output .= '<br style="clear: both">';
-
-	}
-
-	/* End gallery output */
-	$output .= "
-		<br style='clear: both;'>
-	</div>\n";
-
-	return $output;
-
+        return $attr;
 }
-
-
 
 
 /**
