@@ -107,7 +107,7 @@
 		
 		<?php if ( get_theme_mod( 'wishbone_footer_copyrights_setting', false ) ) : ?>
 			
-			<p><?php echo get_theme_mod( 'wishbone_footer_copyrights_setting' );?></p>
+			<p><?php echo get_theme_mod( 'wishbone_footer_copyrights_setting' ); ?></p>
 		
 		<?php else : ?>	
 	
