@@ -90,9 +90,6 @@ function wishbone_theme_setup() {
 	
 	/* Adds additional CSS to align links under the dashboard login page */
     add_action( 'login_head', 'wishbone_dash_login_page' );
-	
-    /* Changes the icon at the top-left corner of the Dashboard */
-    add_action( 'admin_head', 'wishbone_custom_dash_logo' );
     
     /* FILTERS */
         
@@ -117,43 +114,47 @@ function wishbone_theme_setup() {
 
 function wishbone_register_widget_areas() {	
     /* Register dynamic sidebars using register_sidebar() here. */
-    register_sidebar(array(
+    register_sidebar( array(
         'before_title' 	=> '<h3 class="widgettitle">',
         'after_title' 	=> '</h3>'
-	));
+	) );	
 	
     /* registers the four columns in the semi-footer as widget ready. */
-    register_sidebar(array(
-		'name' 			=> 'Footer 1',
+    register_sidebar( array(
+		'name' 			=> __( 'Footer 1', 'wishbone' ),
+		'id'			=> 'footer-widget1',
 		'before_widget' => '',
 		'after_widget' 	=> '',
 		'before_title' 	=> '<h3>',
 		'after_title' 	=> '</h3>'
-    ));
+    ) );
 
-    register_sidebar(array(
-        'name' 			=> 'Footer 2',
+    register_sidebar( array(
+        'name' 			=> __( 'Footer 2', 'wishbone' ),
+        'id'			=> 'footer-widget2',
         'before_widget' => '',
         'after_widget' 	=> '',
         'before_title' 	=> '<h3>',
         'after_title' 	=> '</h3>'
-    ));
+    ) );
 
-    register_sidebar(array(
-        'name' 			=> 'Footer 3',
+    register_sidebar( array(
+        'name' 			=> __( 'Footer 3', 'wishbone' ),
+        'id'			=> 'footer-widget3',
         'before_widget' => '',
         'after_widget' 	=> '',
         'before_title' 	=> '<h3>',
         'after_title' 	=> '</h3>'
-    ));
+    ) );
     
-    register_sidebar(array(
-        'name' 			=> 'Footer 4',
+    register_sidebar( array(
+        'name' 			=> __( 'Footer 4', 'wishbone' ),
+        'id'			=> 'footer-widget4',
         'before_widget' => '',
         'after_widget' 	=> '',
         'before_title' 	=> '<h3>',
         'after_title' 	=> '</h3>'
-    ));
+    ) );
 }
 
 function wishbone_favicon() { ?>
@@ -258,13 +259,6 @@ function wishbone_dash_login_page() {
     </style>';
 }
 
-function wishbone_custom_dash_logo() {
-    /* Changes the icon at the top-left corner of the Dashboard */
-    echo '<style type="text/css">
-	#header-logo { background-image: url( ' .get_template_directory_uri() . '/images/dash_icon.jpg ) !important; }
-    </style>';
-}
-
 function wishbone_home_page_link( $args ) {
     /* Adds home page link to the Menus admin page */
     $args['show_home']=true;
@@ -284,7 +278,7 @@ function wishbone_home_page_link( $args ) {
 * 
 **/
 
-include 'customizer.php';
+require_once get_template_directory() . '/customizer.php';
 
 
 
