@@ -24,12 +24,18 @@
 							<?php the_content( __( '<p class="serif">Read the rest of this page &raquo;</p>', 'wishbone' ) ); ?>	
 						</div>
 					
-					</article><!-- end of post -->
-					
+					</article><!-- end of post -->					
 					
 					<!-- trackback functionality -->
-					<?php trackback_rdf(); ?>
-				
+					<?php trackback_rdf(); ?>					
+					
+					<!-- wp_link_pages functionality -->
+					<?php wp_link_pages( array(
+						'before'		=> '<p class="postpages">' . __( 'Pages In This Post:', 'wishbone' ),
+						'after'			=> '</p>',
+						'link_before'	=> '<span class="button">',
+						'link_after'	=> '</span>'
+					) ); ?>
 				
 				<?php endwhile; endif; ?>
 				

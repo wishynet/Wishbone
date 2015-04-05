@@ -13,16 +13,13 @@
 		<div class="eleven columns">
 			
 			
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>			
 				
 				<!-- include the content by post format using the 'content-xyz' templates -->
-				<?php get_template_part( 'content', get_post_format() ); ?>
-				
+				<?php get_template_part( 'content', get_post_format() ); ?>				
 				
 				<!-- trackback functionality -->
 				<?php trackback_rdf(); ?>
-				
 				
 				<!-- wp_link_pages functionality -->
 				<?php wp_link_pages( array(
@@ -31,7 +28,6 @@
 					'link_before'	=> '<span class="button">',
 					'link_after'	=> '</span>'
 				) ); ?>
-
 				
 			<?php endwhile; endif; ?>
 			

@@ -16,7 +16,7 @@
 					
 	<div class="postmeta">
 					
-		<small><?php the_time( 'F j, Y' ) ?> / <?php _e( 'Posted By ', 'wishbone' ); ?><?php the_author_posts_link(); ?> / <?php comments_number( 'No Comments', '1 Comment', '% Comments' ); ?></small>
+		<small><?php the_time( get_option( 'time_format' ) ) ?> / <?php _e( 'Posted By ', 'wishbone' ); ?><?php the_author_posts_link(); ?> / <?php comments_number( __( 'No Comments', 'wishbone' ), __( '1 Comment', 'wishbone' ), __( '% Comments', 'wishbone' ) ); ?></small>
 							
 	</div><!-- end of postmeta -->
 	
