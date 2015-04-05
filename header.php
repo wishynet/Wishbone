@@ -120,7 +120,7 @@
 					
 					<hr>
 					
-					<li class="menulist"><?php wp_nav_menu(); ?></li>
+					<li class="menulist"><?php wp_nav_menu( 'mobile_menu' ); ?></li>
 					
 					<hr>
 					
@@ -132,7 +132,7 @@
 		
 			<div id="desktop_menu">
 		
-				<?php wp_nav_menu(); ?>
+				<?php wp_nav_menu( 'desktop_menu' ); ?>
 			
 			</div><!-- end of desktop_menu -->
 		
