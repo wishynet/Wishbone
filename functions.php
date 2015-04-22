@@ -85,9 +85,6 @@ function wishbone_theme_setup() {
     /* Load CSS files on the 'admin_enqueue_styles' action hook. */
     add_action( 'admin_enqueue_scripts', 'wishbone_load_backend_styles' );
 	
-	/* Load the sites Favicon via wp_head */
-	add_action( 'wp_head', 'wishbone_favicon' ); 
-	
 	/* Adds additional CSS to align links under the dashboard login page */
     add_action( 'login_head', 'wishbone_dash_login_page' );
     
@@ -110,6 +107,23 @@ function wishbone_theme_setup() {
 
 	/* Filters the default WordPress gallery shortcode attributes */
 	add_filter( 'shortcode_atts_gallery', 'wishbone_gallery' );
+	
+	/* MENUS */
+	
+	register_nav_menus(	array(
+			'mobile_menu' 	=> 'Mobile Menu',
+			'desktop_menu'	=> 'Desktop Menu'
+	) );
+	
+	/* IMAGE SIZES */
+	
+	/* Adds custom image sizes when importing images */
+    add_image_size( 'wishbone-slide', 1260, 350, true ); 
+    add_image_size( 'wishbone-gallery', 400, 400, true );
+	add_image_size( 'wishbone-gallery-wide', 600, 400, true );
+    add_image_size( 'wishbone-post-half', 620, 250, true );
+    add_image_size( 'wishbone-post-large', 860, 250, true );
+    add_image_size( 'wishbone-post-full', 1260, 350, true );
 }
 
 function wishbone_register_widget_areas() {	
@@ -157,10 +171,7 @@ function wishbone_register_widget_areas() {
     ) );
 }
 
-function wishbone_favicon() { ?>
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-	<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/favicon-152.png">
-<?php }
+
 
 
 /**
@@ -176,13 +187,6 @@ function wishbone_favicon() { ?>
 **/
  
 function wishbone_load_frontend_scripts() {	
-	/* Loads 'thickbox' lightbox functionality for WordPress */
-	/* please note: these scripts are disabled by default due to thickbox creating invalid markup */
-	/*	 
-	DISABLED: wp_enqueue_script( 'thickbox' );
-	DISABLED: wp_enqueue_script( 'wishbone-thickbox', get_template_directory_uri() . '/javascript/wishbone.thickbox.js', array( 'jquery' ), '', true  ); 
-	*/
-	
 	/* Loads 'colorbox' lightbox functionality for WordPress */
 	wp_enqueue_script( 'colorbox', get_template_directory_uri() . '/javascript/jquery.colorbox.js', array( 'jquery' ), '', true  );
 	wp_enqueue_script( 'wishbone-colorbox', get_template_directory_uri() . '/javascript/wishbone.colorbox.js', array( 'jquery' ), '', true  );
@@ -216,9 +220,6 @@ function wishbone_load_backend_scripts() {
 function wishbone_load_frontend_styles() {
 	/* Loads the style.css file */
 	wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css' );
-	
-	/* Loads 'thickbox' lightbox functionality CSS */
-	/* DISABELD: wp_enqueue_style( 'thickbox' ); */
 	
 	/* Loads 'colorbox' lightbox functionality CSS */
 	wp_enqueue_style( 'colorbox', get_template_directory_uri() . '/stylesheets/modules/colorbox.css', false, '1.0', 'all' );
@@ -291,16 +292,6 @@ require_once get_template_directory() . '/customizer.php';
 * Adds additional image sizes for custom image size support.
 * 
 **/
-
-if ( function_exists( 'add_image_size' ) ) {
-	/* Adds custom image sizes when importing images */
-    add_image_size( 'wishbone-slide', 1260, 350, true ); 
-    add_image_size( 'wishbone-gallery', 400, 400, true );
-	add_image_size( 'wishbone-gallery-wide', 600, 400, true );
-    add_image_size( 'wishbone-post-half', 620, 250, true );
-    add_image_size( 'wishbone-post-large', 860, 250, true );
-    add_image_size( 'wishbone-post-full', 1260, 350, true );
-}
 
 function wishbone_image_sizes( $sizes ) {
 	/* Adds custom image sizes to media library settings */
