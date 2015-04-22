@@ -1,7 +1,12 @@
 <hr>
 
+<!-- if the post is password protected, don't load any comments elements -->
+<?php if ( post_password_required() ) {
+	return;
+}; ?>
 
-<h2>Comments</h2>
+
+<h2><?php _e( 'Comments', 'wishbone' ); ?></h2>
 
 
 <!-- if there are any comments, then do the following... -->

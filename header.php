@@ -4,8 +4,7 @@
 	
 <head>
 
-	<!-- Title and Meta -->
-	<title><?php wp_title( '' ); ?></title>
+	<!-- Meta Data -->
 	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -73,7 +72,7 @@
 					<li><a href="<?php echo esc_url( wp_registration_url() ); ?>" class="button"><?php _e( 'Sign Up', 'wishbone' ); ?></a></li>
 				</ul>
 			
-				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" title="Password Lost and Found"><?php _e( 'Lost your password?', 'wishbone' ); ?></a>
+				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" title="<?php _e( 'Password Lost and Found', 'wishbone' ); ?>"><?php _e( 'Lost your password?', 'wishbone' ); ?></a>
 				
 			</div><!-- end of login -->
 		
@@ -103,7 +102,7 @@
 			
 				<img src="<?php echo get_template_directory_uri(); ?>/images/menu.png" alt="menu" />
 			
-				<p>Menu</p>
+				<p><?php _e( 'Menu', 'wishbone'); ?></p>
 		
 				<ul class="menu">
 					
@@ -121,7 +120,7 @@
 					
 					<hr>
 					
-					<li class="menulist"><?php wp_nav_menu(); ?></li>
+					<li class="menulist"><?php wp_nav_menu( 'theme_location=mobile_menu' ); ?></li>
 					
 					<hr>
 					
@@ -133,7 +132,7 @@
 		
 			<div id="desktop_menu">
 		
-				<?php wp_nav_menu(); ?>
+				<?php wp_nav_menu( 'theme_location=desktop_menu' ); ?>
 			
 			</div><!-- end of desktop_menu -->
 		

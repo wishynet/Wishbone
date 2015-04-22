@@ -1,7 +1,6 @@
 /* Back-To-Top button script */
 
-var $ = jQuery;
-$(document).ready(function(){
+jQuery(document).ready(function($){
 
 	/* hide #back-to-top first */
 	$("#back-to-top").hide();

@@ -8,79 +8,83 @@
 
 	<div class="four columns">
 	
-		<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'Footer 1' ) ) : ?>
-		
-			<h3><?php _e( 'About Us', 'wishbone' ); ?></h3>
-		
-			<p><?php _e( 'Wishbone is a WordPress theme based on the Skellington boilerplate, both created by Wishynet. Support for a variety of site styles are included out of the box.', 'wishbone' ); ?></p>
-			<p><?php _e( 'This theme is free for any use. Please let me know what you think of it, any suggestions welcome. I love to hear from you!', 'wishbone' ); ?></p>
+		<?php if ( !dynamic_sidebar( 'Footer 1' ) ) : 
+			
+			$instance = array(
+				'title'			=> __( 'The Footer Widget Area', 'wishbone' ),
+				'text'			=> __( 'This is a Widget Area. Replace the default Widgets with a Widget of your choice from the WordPress Dashboard menu.', 'wishbone' )
+			);
+			
+			$args = array(
+				'before_title'	=> '<h3 class="widgettitle">',
+				'after_title'	=> '</h3>',
+			);
+			
+			the_widget( 'WP_Widget_Text', $instance, $args ); 
 	
-		<?php endif; ?>
+		endif; ?>
 		
 	</div><!-- end of four columns -->
 
 
 	<div class="four columns">
 	
-		<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'Footer 2' ) ) : ?>
-		
-			<h3><?php _e( 'Popular Topics', 'wishbone' ); ?></h3>
-		
-			<?php wp_tag_cloud( 'unit=px&format=list' ); ?>
-		
-		<?php endif; ?>
+		<?php if ( !dynamic_sidebar( 'Footer 2' ) ) :  
+			
+			$instance = array(
+				'title'			=> __( 'Popular Topics', 'wishbone' ),
+				'taxonomy'		=> 'post_tag'
+			);
+			
+			$args = array(
+				'before_title'	=> '<h3 class="widgettitle">',
+				'after_title'	=> '</h3>',
+			);
+			
+			the_widget( 'WP_Widget_Tag_Cloud', $instance, $args ); 
+
+		endif; ?>
 		
 	</div><!-- end of four columns -->
 
 
 	<div class="four columns">
 	
-		<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'Footer 3' ) ) : ?>
-		
-			<h3><?php _e( 'Recent News', 'wishbone' ); ?></h3>
-		
-			<ul id="recentnews">
-				<?php
-				$args = array(
-					'numberposts' 	=> 4 ,
-					'orderby' 		=> 'post_date'
-				);
+		<?php if ( !dynamic_sidebar( 'Footer 3' ) ) :		
+			
+			$instance = array(
+				'title'			=> __( 'Recent Articles', 'wishbone' ),
+				'number'		=> 4
+			);
+			
+			$args = array(
+				'before_title'	=> '<h3 class="widgettitle">',
+				'after_title'	=> '</h3>',
+			);
+			
+			the_widget( 'WP_Widget_Recent_Posts', $instance, $args );
 
-				$recent_posts = wp_get_recent_posts( $args );
-
-				foreach( $recent_posts as $recent ){
-					echo ' <li><a href="' . get_permalink( $recent["ID"] ) . '" title="'.esc_attr( $recent["post_title"] ).'" class="button">' .   $recent["post_title"].'</a></li> ';
-				}
-				?>
-			</ul>
-	
-		<?php endif; ?>
+		endif; ?>
 		
 	</div><!-- end of four columns -->
 	
 	
 	<div class="four columns">
 	
-		<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'Footer 4' ) ) : ?>
-		
-			<div class="contactus">
+		<?php if ( !dynamic_sidebar( 'Footer 4' ) ) : 
 			
-				<h3><?php _e( 'Contact Us', 'wishbone' ); ?></h3>
-				
-				<ul>
-					<li>23 Somewhere Street</li>
-					<li>Relevant Road</li>
-					<li>Town</li>
-					<li>Area</li>
-					<li>Country</li>
-					<li>PST C0D3</li>
-				</ul>
+			$instance = array(
+				'title'			=> __( 'Site Links', 'wishbone' )
+			);
 			
-				<h4>+44 7624 123456</h4>
+			$args = array(
+				'before_title'	=> '<h3 class="widgettitle">',
+				'after_title'	=> '</h3>',
+			);
 			
-			</div><!-- end of contactus -->
+			the_widget( 'WP_Widget_Meta', $instance, $args );
 	
-		<?php endif; ?>
+		endif; ?>
 	
 	</div><!-- end of four columns -->
 	
@@ -103,7 +107,7 @@
 		
 		<?php if ( get_theme_mod( 'wishbone_footer_copyrights_setting', false ) ) : ?>
 			
-			<p><?php echo get_theme_mod( 'wishbone_footer_copyrights_setting' );?></p>
+			<p><?php echo get_theme_mod( 'wishbone_footer_copyrights_setting' ); ?></p>
 		
 		<?php else : ?>	
 	
@@ -122,10 +126,6 @@
 <!-- the wp_footer hook -->
 <!-- please note: to add, modify or remove any javascript - please check the functions.php file -->
 <?php wp_footer(); ?>
-
-
-<!-- End Document
-================================================== -->
 
 
 </body>

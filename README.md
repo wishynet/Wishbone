@@ -89,6 +89,17 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 
 ##Changelog
 
+#### 1.05
+- remove old gallery function and replace with a filter saving code in 'functions.php' file
+
+- add more translations in multiple theme files
+
+- fix up semi-footer widget areas to use 'the_widget' function
+
+- add page links to 'content*.php' files
+
+- add locations back into nav_menus to meet theme review recommendations
+
 #### 1.04
 - remove register nav_menus to maintain same nav styles regardless of menu name
 
@@ -101,8 +112,7 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 #### 1.03
 - update 'header.php' file to remove remaining redundant meta data
 
-- update ‘customizer.php’ file to add further localization for labels and
-description fields
+- update ‘customizer.php’ file to add further localization for labels and description fields
 
 - update various files to include safer 'home_url' links
 
@@ -157,13 +167,11 @@ description fields
 
 **Additional Updates:**
 
-- add additional localisation for theme files, focusing on ‘read more’
-or ‘continue reading’ links
+- add additional localisation for theme files, focusing on ‘read more’ or ‘continue reading’ links
 
 - update documentation to add Showcase implementation/usage
 
-- remove Customizer functionality that duplicates core WordPress
-functionality
+- remove Customizer functionality that duplicates core WordPress functionality
 
 - make all ‘title’ values in the Customizer translatable
 

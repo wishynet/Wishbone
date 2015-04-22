@@ -1,8 +1,6 @@
 /* colorbox for images script */
-
-var	$ = jQuery;
 	
-$( 'a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"]' ).colorbox({
+jQuery( 'a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"]' ).colorbox({
 	transition: 'none',
 	scrolling: 'false',	
 	maxWidth: '90%',

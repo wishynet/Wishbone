@@ -17,11 +17,9 @@
 			<?php
 				$category_description = category_description();
 				
-				if ( !empty( $category_description ))
+				if ( !empty( $category_description ) )
 				
-					echo '<div class="category-description">' . $category_description . '</div>';
-					
-				get_template_part( 'loop', 'category' );
+				echo '<div class="category-description">' . $category_description . '</div>';
 			?>
 
 		</div><!-- end of five columns -->
@@ -37,15 +35,15 @@
 					
 					<div class="postmeta">
 						
-						<small><?php the_time( 'F j, Y' ) ?> / <?php _e( 'Posted By ', 'wishbone' ); ?><?php the_author_posts_link(); ?> / <?php comments_number( 'No Comments', '1 Comment', '% Comments' ); ?></small>
+						<small><?php the_time( get_option( 'time_format' ) ) ?> / <?php _e( 'Posted By ', 'wishbone' ); ?><?php the_author_posts_link(); ?> / <?php comments_number( __( 'No Comments', 'wishbone' ), __( '1 Comment', 'wishbone' ), __( '% Comments', 'wishbone' ) ); ?></small>
 					
 					</div><!-- end of postmeta -->
 					
-					<?php the_excerpt( 'Read More' ); ?>
+					<?php the_excerpt( __( 'Read More', 'wishbone' ) ); ?>
 					
 					<div class="postmore">
 						
-						<a href="<?php the_permalink(); ?>" class="button" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php _e( 'Read More', 'wishbone' ); ?></a>
+						<a href="<?php the_permalink(); ?>" class="button" rel="bookmark" title="<?php _e( 'Permanent Link to', 'wishbone' ); ?> <?php the_title(); ?>"><?php _e( 'Read More', 'wishbone' ); ?></a>
 						
 					</div><!-- end of postmore -->
 					
