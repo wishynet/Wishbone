@@ -196,14 +196,14 @@
 
 		
 /* Menu Items */
-#desktop_menu li.menu-item
+#desktop_menu li
 {
 	position: relative;
 	margin: 0;
 	float: left;
 }
 		
-#desktop_menu li.menu-item a
+#desktop_menu li a
 {
 	display: block;
 	padding: 0 10px 0 10px;
@@ -214,7 +214,7 @@
  	text-decoration: none;
 }
 		
-#desktop_menu li.menu-item:hover
+#desktop_menu li:hover
 {
 	background-color: #444444; 
 	-webkit-transition: all 0.25s ease-in-out;
@@ -224,14 +224,15 @@
       		transition: all 0.25s ease-in-out; 	
 }
 		
-#desktop_menu li.menu-item:hover a		
+#desktop_menu li:hover a		
 {
 	color: #eeeeee;
 }
 
 		
 /* Sub-Menus */
-#desktop_menu ul.sub-menu
+#desktop_menu ul.sub-menu,
+#desktop_menu ul.children
 {		
 	display: none;
 	position: absolute;
@@ -240,28 +241,32 @@
 	z-index: 200;
 }
 		
-#desktop_menu li.menu-item-has-children:hover > ul.sub-menu
+#desktop_menu li.menu-item-has-children:hover > ul.sub-menu,
+#desktop_menu li.page_item_has_children:hover > ul.children
 {		
 	display: block;
 }
 
 		
 /* Sub-Menu Items */
-#desktop_menu ul.sub-menu li
+#desktop_menu ul.sub-menu li,
+#desktop_menu ul.children li
 {
 	margin: 0;
 	float: none;
 	background-color: #444444; 
 }
 		
-#desktop_menu ul.sub-menu li a
+#desktop_menu ul.sub-menu li a,
+#desktop_menu ul.children li a
 {
 	white-space: nowrap;
 }
 
 		
 /* Deeper Menu Items */
-#desktop_menu li.menu-item-has-children:hover ul.sub-menu:hover ul.sub-menu
+#desktop_menu li.menu-item-has-children:hover ul.sub-menu:hover ul.sub-menu,
+#desktop_menu li.page_item_has_children:hover ul.children:hover ul.children
 {
 	position: absolute;
 	top: 0;
@@ -269,14 +274,18 @@
 }
 	
 #desktop_menu li.menu-item-has-children:hover ul.sub-menu li a,
-#desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a
+#desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a,
+#desktop_menu li.page_item_has_children:hover ul.children li a,
+#desktop_menu li.page_item_has_children:hover ul.children ul.children li a
 {
 	color: #ffffff;
 	background-color: #444444;
 }
 		
 #desktop_menu li.menu-item-has-children:hover ul.sub-menu li:hover a,
-#desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li:hover a
+#desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li:hover a,
+#desktop_menu li.page_item_has_children:hover ul.children li:hover a,
+#desktop_menu li.page_item_has_children:hover ul.children ul.children li:hover a
 {
 	color: #444444;
 	background-color: #eeeeee;
