@@ -1471,18 +1471,18 @@ h2.fourzerofour
 
 
 /* Recent Articles */
-#semi-footer .widget_recent_entries ul
+#semi_footer .widget_recent_entries ul
 {
 	margin-top: -5px;
 }
 
-#semi-footer .widget_recent_entries li
+#semi_footer .widget_recent_entries li
 {
 	line-height: 42px;
 	margin-bottom: 0 !important;
 }
 
-#semi-footer .widget_recent_entries a
+#semi_footer .widget_recent_entries a
 {
 	margin-bottom: 0;
 	padding: 8px 10px;
