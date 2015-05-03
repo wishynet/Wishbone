@@ -133,7 +133,27 @@ function wishbone_register_widget_areas() {
         'after_title' 	=> '</h3>'
 	) );	
 	
-    /* registers the four columns in the semi-footer as widget ready. */
+	/* Registers a widget area under a single post next to post comments */
+	register_sidebar( array(
+		'name' 			=> __( 'Post Widget', 'wishbone' ),
+		'id'			=> 'post-widget',
+		'before_widget' => '',
+		'after_widget' 	=> '',
+		'before_title' 	=> '<h2>',
+		'after_title' 	=> '</h2>'
+    ) );
+	
+	/* Registers a widget area under a single page next to post comments */
+	register_sidebar( array(
+		'name' 			=> __( 'Page Widget', 'wishbone' ),
+		'id'			=> 'page-widget',
+		'before_widget' => '',
+		'after_widget' 	=> '',
+		'before_title' 	=> '<h2>',
+		'after_title' 	=> '</h2>'
+    ) );
+	
+    /* Registers the four columns in the semi-footer as widget ready. */
     register_sidebar( array(
 		'name' 			=> __( 'Footer 1', 'wishbone' ),
 		'id'			=> 'footer-widget1',

@@ -611,6 +611,15 @@ p.postpages .button:hover
 }
 
 
+/* Post Widget Area */
+.postwidgetarea
+{
+	display: block;
+	width: 50%;
+	float: left;
+}
+
+
 /* Sticky Posts */
 .sticky
 {
@@ -934,7 +943,8 @@ p.postpages .button:hover
 
 .comments
 {
-	width: 100%; 
+	width: 50%;
+	float: left; 
 	clear: both;
 }
 
@@ -1081,12 +1091,12 @@ p.postpages .button:hover
 #commentform input,
 #commentform textarea
 {
-	width: 50%;
+	width: 100%;
 }
 
 .form-allowed-tags
 {
-	width: 50%;
+	width: 100%;
 	margin: 2% 2% 2% 0;
 	padding: 5px;	
 }

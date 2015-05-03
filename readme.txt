@@ -89,6 +89,9 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 
 ##Changelog
 
+#### 1.06
+- added additional widget areas for single page and post templates
+
 #### 1.05
 - remove old gallery function and replace with a filter saving code in 'functions.php' file
 

@@ -54,7 +54,30 @@
 				
 				<!-- do not display any comment template -->
 				
-			<?php endif; ?>			
+			<?php endif; ?>
+			
+			
+			<div class="pagewidgetarea">
+				
+				<hr>
+				
+				<?php if ( !dynamic_sidebar( 'Page Widget' ) ) : 
+			
+					$instance = array(
+						'title'			=> __( 'The Page Widget Area', 'wishbone' ),
+						'text'			=> __( 'This is a Widget Area. Replace the default Widgets with a Widget of your choice from the WordPress Dashboard menu.', 'wishbone' )
+					);
+			
+					$args = array(
+						'before_title'	=> '<h2 class="widgettitle">',
+						'after_title'	=> '</h2>',
+					);
+			
+					the_widget( 'WP_Widget_Text', $instance, $args ); 
+	
+				endif; ?>
+				
+			</div><!-- end of pagewidgetarea -->			
 			
 		</div><!-- end of sixteen columns -->
 		
