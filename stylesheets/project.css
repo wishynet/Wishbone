@@ -186,6 +186,19 @@
 	color: #ffffff;
 }
 
+/* Menu Items */
+#mobile_menu li a
+{
+	line-height: 32px;
+	color: #ffffff;
+}
+
+/* Sub-Menus */
+#mobile_menu ul ul
+{
+	margin-left: 0;
+}
+
 
 /* Desktop Menu */
 #desktop_menu ul
@@ -1617,7 +1630,7 @@ h2.fourzerofour
 		
 	#mobile_menu .menutitle h2
 	{
-		margin-bottom: 45px;
+		margin: 45px 0 45px 0;
 		color: #eeeeee;
 	}
 		
