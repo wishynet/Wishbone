@@ -155,7 +155,7 @@ function wishbone_register_widget_areas() {
 	
     /* Registers the four columns in the semi-footer as widget ready. */
     register_sidebar( array(
-		'name' 			=> __( 'Footer 1', 'wishbone' ),
+		'name' 			=> __( 'Footer Widget 1', 'wishbone' ),
 		'id'			=> 'footer-widget1',
 		'before_widget' => '',
 		'after_widget' 	=> '',
@@ -164,7 +164,7 @@ function wishbone_register_widget_areas() {
     ) );
 
     register_sidebar( array(
-        'name' 			=> __( 'Footer 2', 'wishbone' ),
+        'name' 			=> __( 'Footer Widget 2', 'wishbone' ),
         'id'			=> 'footer-widget2',
         'before_widget' => '',
         'after_widget' 	=> '',
@@ -173,7 +173,7 @@ function wishbone_register_widget_areas() {
     ) );
 
     register_sidebar( array(
-        'name' 			=> __( 'Footer 3', 'wishbone' ),
+        'name' 			=> __( 'Footer Widget 3', 'wishbone' ),
         'id'			=> 'footer-widget3',
         'before_widget' => '',
         'after_widget' 	=> '',
@@ -182,7 +182,7 @@ function wishbone_register_widget_areas() {
     ) );
     
     register_sidebar( array(
-        'name' 			=> __( 'Footer 4', 'wishbone' ),
+        'name' 			=> __( 'Footer Widget 4', 'wishbone' ),
         'id'			=> 'footer-widget4',
         'before_widget' => '',
         'after_widget' 	=> '',
