@@ -1,5 +1,5 @@
 /**
-* 
+*
 *
 * WISHBONE CSS
 *
@@ -30,21 +30,21 @@
 * 14.0 - MEDIA QUERIES
 *
 * Notes:
-* 
+*
 * This file is itself a dependency of the 'style.css' file found within the root of this theme.
 * Please check the 'style.css' file to understand the stucture of CSS used by this theme.
 *
-* 
+*
 **/
 
 
 
 
-/** 
-* 
+/**
+*
 * 1.0 - HEADER STYLES
 * ==================================================
-*  
+*
 **/
 
 #header
@@ -67,7 +67,7 @@
 }
 
 #title
-{	
+{
 	position: absolute;
 	top: 50%;
 	margin: -35px 0 30px 0;
@@ -76,7 +76,7 @@
 #title h1,p
 {
 	margin-bottom: 5px;
-	vertical-align: middle;	
+	vertical-align: middle;
 }
 
 
@@ -143,7 +143,7 @@
 * 2.0 - NAVIGATION MENU STYLES
 * ==================================================
 *
-* Notes:  
+* Notes:
 *
 * Wishbone makes use of the Wordpress wp_nav_menu function with ref: "main_menu"
 *
@@ -203,11 +203,11 @@
 /* Desktop Menu */
 #desktop_menu ul
 {
-	margin: 0; 
+	margin: 0;
 	padding: 0;
 }
 
-		
+
 /* Menu Items */
 #desktop_menu li
 {
@@ -215,68 +215,68 @@
 	margin: 0;
 	float: left;
 }
-		
+
 #desktop_menu li a
 {
 	display: block;
 	padding: 0 10px 0 10px;
 	line-height: 50px;
-	color: #444444;      		
+	color: #444444;
   	font-weight: bold;
   	text-align: center;
  	text-decoration: none;
 }
-		
+
 #desktop_menu li:hover
 {
-	background-color: #444444; 
+	background-color: #444444;
 	-webkit-transition: all 0.25s ease-in-out;
-       -moz-transition: all 0.25s ease-in-out;
+  	 -moz-transition: all 0.25s ease-in-out;
    		-ms-transition: all 0.25s ease-in-out;
-    	 -o-transition: all 0.25s ease-in-out;   
-      		transition: all 0.25s ease-in-out; 	
+    	 -o-transition: all 0.25s ease-in-out;
+      		transition: all 0.25s ease-in-out;
 }
-		
-#desktop_menu li:hover a		
+
+#desktop_menu li:hover a
 {
 	color: #eeeeee;
 }
 
-		
+
 /* Sub-Menus */
 #desktop_menu ul.sub-menu,
 #desktop_menu ul.children
-{		
+{
 	display: none;
 	position: absolute;
 	top: 50px;
 	margin: 0;
 	z-index: 200;
 }
-		
+
 #desktop_menu li.menu-item-has-children:hover > ul.sub-menu,
 #desktop_menu li.page_item_has_children:hover > ul.children
-{		
+{
 	display: block;
 }
 
-		
+
 /* Sub-Menu Items */
 #desktop_menu ul.sub-menu li,
 #desktop_menu ul.children li
 {
 	margin: 0;
 	float: none;
-	background-color: #444444; 
+	background-color: #444444;
 }
-		
+
 #desktop_menu ul.sub-menu li a,
 #desktop_menu ul.children li a
 {
 	white-space: nowrap;
 }
 
-		
+
 /* Deeper Menu Items */
 #desktop_menu li.menu-item-has-children:hover ul.sub-menu:hover ul.sub-menu,
 #desktop_menu li.page_item_has_children:hover ul.children:hover ul.children
@@ -285,7 +285,7 @@
 	top: 0;
 	left: 100%;
 }
-	
+
 #desktop_menu li.menu-item-has-children:hover ul.sub-menu li a,
 #desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a,
 #desktop_menu li.page_item_has_children:hover ul.children li a,
@@ -294,7 +294,7 @@
 	color: #ffffff;
 	background-color: #444444;
 }
-		
+
 #desktop_menu li.menu-item-has-children:hover ul.sub-menu li:hover a,
 #desktop_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li:hover a,
 #desktop_menu li.page_item_has_children:hover ul.children li:hover a,
@@ -325,7 +325,7 @@
 *
 * 3.0 - SHOWCASE STYLES
 * ==================================================
-* 
+*
 **/
 
 #showcase
@@ -341,7 +341,7 @@
 	font-weight: bold;
 	text-align: center;
 	text-shadow: 0 1px 2px #000000;
-	
+
 }
 
 #showcase p
@@ -363,7 +363,7 @@
 
 
 /**
-* 
+*
 * 4.0 - CONTENT STYLES
 * ==================================================
 *
@@ -404,7 +404,7 @@
 
 
 /**
-* 
+*
 * 5.0 - POST STYLES
 * ==================================================
 *
@@ -610,7 +610,7 @@ p.postpages .button
 	margin-left: 5px;
 	background-color: #eeeeee;
 	color: #444444;
-}	
+}
 
 p.postpages .button:hover
 {
@@ -648,7 +648,7 @@ p.postpages .button:hover
 	background-color: #444444;
 }
 
-	
+
 /* Author Styles */
 .authorimg,
 .authorurl,
@@ -666,7 +666,7 @@ p.postpages .button:hover
 
 
 /**
-* 
+*
 * 6.0 - POST FORMATS
 * ==================================================
 *
@@ -674,47 +674,47 @@ p.postpages .button:hover
 
 .format-gallery
 {
-	
+
 }
 
 .format-image
 {
-	
+
 }
 
 .format-audio
 {
-	
+
 }
 
 .format-video
 {
-	
+
 }
 
 .format-aside
 {
-	
+
 }
 
 .format-status
 {
-	
+
 }
 
 .format-link
 {
-	
+
 }
 
 .format-quote
 {
-	
+
 }
 
 .format-chat
 {
-	
+
 }
 
 /* Videos */
@@ -740,19 +740,19 @@ p.postpages .button:hover
 
 
 /**
-* 
+*
 * 7.0 - GALLERIES
 * ==================================================
 *
-* Notes: 
-*	
-* Wishbone uses a customized native WordPress gallery 
-* structure and styling for both native WordPress galleries 
-* and the portfolio page templates. 
-*	
-* The WordPress default gallery styles have been 
+* Notes:
+*
+* Wishbone uses a customized native WordPress gallery
+* structure and styling for both native WordPress galleries
+* and the portfolio page templates.
+*
+* The WordPress default gallery styles have been
 * disabled in the theme functions.php file.
-* 
+*
 * Wishbone supports Thickbox; a lightbox or modal script packaged with Wordpress.
 * The Thickbox styles listed below the gallery styles are used to override the default Thickbox styles.
 * Unfortunately, Thickbox does not use valid HTML markup and is therefore not the default option for Wishbone.
@@ -760,7 +760,7 @@ p.postpages .button:hover
 **/
 
 .gallery
-{	
+{
 	width: 100%;
 	margin-bottom: 20px;
 	padding: 0;
@@ -910,7 +910,7 @@ p.postpages .button:hover
 .wp-caption img
 {
     width: auto;
-    height: auto;            
+    height: auto;
     max-width: 98.5%;
     margin: 0;
     padding: 0;
@@ -939,16 +939,16 @@ p.postpages .button:hover
 
 
 /**
-* 
+*
 * 8.0 - COMMENTS
 * ==================================================
-* 
+*
 **/
 
 .comments
 {
 	width: 50%;
-	float: left; 
+	float: left;
 	clear: both;
 }
 
@@ -976,7 +976,7 @@ p.postpages .button:hover
 
 .depth-4
 {
-	margin-left: 60px;	
+	margin-left: 60px;
 }
 
 .depth-5,
@@ -986,7 +986,7 @@ p.postpages .button:hover
 .depth-9,
 .depth-10
 {
-	margin-left: 80px;	
+	margin-left: 80px;
 }
 
 .comment-author,
@@ -1075,7 +1075,7 @@ p.postpages .button:hover
 	   -moz-transition: all 0.25s ease-in-out;
 		-ms-transition: all 0.25s ease-in-out;
 		 -o-transition: all 0.25s ease-in-out;
-			transition: all 0.25s ease-in-out;	
+			transition: all 0.25s ease-in-out;
 }
 
 
@@ -1102,7 +1102,7 @@ p.postpages .button:hover
 {
 	width: 100%;
 	margin: 2% 2% 2% 0;
-	padding: 5px;	
+	padding: 5px;
 }
 
 .form-allowed-tags
@@ -1130,14 +1130,14 @@ input#submit
 
 
 /**
-* 
+*
 * 9.0 - PAGE TEMPLATES
 * ==================================================
-* 
-* Notes: 
-*	
-* This section lists various styles for specific page templates. 
-*  
+*
+* Notes:
+*
+* This section lists various styles for specific page templates.
+*
 **/
 
 /* page-search.php */
@@ -1146,7 +1146,7 @@ input#submit
 	display: block;
 	max-width: 300px;
 	height: 32px;
-	margin: 0 auto 50px auto;	
+	margin: 0 auto 50px auto;
 }
 
 .search-page-links li
@@ -1197,7 +1197,7 @@ h2.fourzerofour
 	list-style-type: none;
 	width: 65%;
 	margin: 10px auto 10px auto;
-}	
+}
 
 .fourzerofourhelp li
 {
@@ -1212,7 +1212,7 @@ h2.fourzerofour
 
 .fourzerofour-page-links
 {
-	display: table;	
+	display: table;
 }
 
 .fourzerofour-page-links li
@@ -1224,7 +1224,7 @@ h2.fourzerofour
 
 
 /**
-* 
+*
 * 10.0 - SIDEBAR
 * ==================================================
 *
@@ -1258,7 +1258,7 @@ h2.fourzerofour
 #sidebar ul li a:hover
 {
 	color: #ffffff;
-	background-color: #444444;	
+	background-color: #444444;
 	-webkit-transition: all 0.25s ease-in-out;
 	   -moz-transition: all 0.25s ease-in-out;
 		-ms-transition: all 0.25s ease-in-out;
@@ -1346,7 +1346,7 @@ h2.fourzerofour
 #wp-calendar tbody td a
 {
 	margin: 0px;
-	padding: 0px;	
+	padding: 0px;
 }
 
 #wp-calendar tbody td:hover
@@ -1417,7 +1417,7 @@ h2.fourzerofour
 
 .rss-date
 {
-	font-size: 85%; 
+	font-size: 85%;
 	opacity: 0.70;
 }
 
@@ -1425,7 +1425,7 @@ h2.fourzerofour
 
 
 /**
-* 
+*
 * 12.0 - SEMI-FOOTER STYLES
 * ==================================================
 *
@@ -1491,7 +1491,7 @@ h2.fourzerofour
 
 
 /**
-* 
+*
 * 13.0 - FOOTER STYLES
 * ==================================================
 *
@@ -1512,38 +1512,38 @@ h2.fourzerofour
 
 
 
-/** 
+/**
 *
 * 14.0 - MEDIA QUERIES
 * ==================================================
-*  
+*
 **/
 
 /* Phone (Portrait): min - 479px */
 @media only screen and ( max-width: 479px )
 {
-	
+
 	/* Login */
 	#logo
 	{
 		display: none;
 	}
-	
-		
+
+
 	/* Title */
 	#title
 	{
 		width: 100%;
 	}
-	
-	
+
+
 	/* Galleries */
 	.gallery .gallery-item:hover .plus_button
 	{
 		display: none;
 	}
-	
-	
+
+
 	/* 404 Page */
 	.fourzerofour-page-links li
 	{
@@ -1556,14 +1556,14 @@ h2.fourzerofour
 /* Phone (Landscape): 480px - 767px */
 @media only screen and ( max-width: 767px )
 {
-	
+
 	/* Logo */
 	#logo
 	{
 		display: none;
 	}
-	
-	
+
+
 	/* Title */
 	#title
 	{
@@ -1571,27 +1571,27 @@ h2.fourzerofour
 		width: 100%;
 		margin-top: 40px;
 	}
-		
+
 	#title h1,
 	p
 	{
-		text-align: center;	
+		text-align: center;
 	}
-	
-		
+
+
 	/* Login */
 	#login
 	{
 		display: none;
 	}
-	
-		
+
+
 	/* Mobile Navigation Menu */
 	#navigation
 	{
 		border: none !important;
 	}
-		
+
 	#mobile_menu
 	{
 		display: block;
@@ -1616,51 +1616,51 @@ h2.fourzerofour
 	 		 -o-transition: left 0.25s ease-in-out;
 				transition: left 0.25s ease-in-out;
 	}
-		
+
 	#mobile_menu:hover ul.menu
 	{
 		left: 0;
 	}
-		
+
 	#mobile_menu .menulogo img
 	{
 		margin-top: 55px;
 	}
-		
+
 	#mobile_menu .menutitle h2
 	{
 		margin: 45px 0 45px 0;
 		color: #eeeeee;
 	}
-		
+
 	#mobile_menu hr
 	{
 		margin: 10px 15px 10px 15px;
 		border-color: #aaaaaa;
 		opacity: 0.25;
 	}
-		
+
 	#mobile_menu li p
 	{
 		margin: 5px 0 5px 0;
 		color: #aaaaaa;
 	}
-	
-		
+
+
 	/* WP Menu */
 	#mobile_menu .main-menu
 	{
 		margin-left: 0;
 	}
-	
-		
+
+
 	/* WP Menu Items */
 	#mobile_menu li.menu-item
 	{
 		width: 100%;
 		margin: 0;
 	}
-		
+
 	#mobile_menu li.menu-item a
 	{
 		display: block;
@@ -1671,18 +1671,18 @@ h2.fourzerofour
 		text-align: left;
    		text-decoration: none;
 	}
-		
+
 	#mobile_menu li.menu-item:hover
 	{
-		background-color: #eeeeee;	
+		background-color: #eeeeee;
 	}
-		
-	#mobile_menu li.menu-item:hover a		
+
+	#mobile_menu li.menu-item:hover a
 	{
 		color: #444444;
 	}
-	
-		
+
+
 	/* WP Sub Menus */
 	#mobile_menu ul.sub-menu,
 	#mobile_menu ul.sub-menu:hover
@@ -1692,58 +1692,58 @@ h2.fourzerofour
 		color: #ffffff;
 		background-color: #444444;
 	}
-	
-		
+
+
 	/* WP Sub Menu Items */
 	#mobile_menu ul.sub-menu li
 	{
 		display: block;
 	}
-		
+
 	#mobile_menu ul.sub-menu li a:before
 	{
 		margin-right: 10px;
 		float: left;
 		content: '\203A \203A ';
 	}
-	
-		
-	/* WP Deeper Menu Items */		
+
+
+	/* WP Deeper Menu Items */
 	#mobile_menu ul.sub-menu ul.sub-menu li a:before
 	{
 		margin-right: 10px;
 		float: left;
 		content: '\203A \203A \203A ';
 	}
-		
+
 	#mobile_menu li.menu-item-has-children:hover ul.sub-menu li a,
 	#mobile_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li a
 	{
 		color: #ffffff;
 	}
-		
+
 	#mobile_menu li.menu-item-has-children:hover ul.sub-menu li:hover a,
 	#mobile_menu li.menu-item-has-children:hover ul.sub-menu ul.sub-menu li:hover a
 	{
 		color: #444444;
-	}		
-	
-		
+	}
+
+
 	/* Navigation */
 	#desktop_menu
 	{
 		display: none;
 	}
-	
-			
+
+
 	/* Welcome Slogan */
 	#welcomeslogan
 	{
 		margin-top: 85px;
 	}
-	
-			
-	/* Content */		
+
+
+	/* Content */
 	#content h1,
 	#content h2,
 	#content h3,
@@ -1756,22 +1756,22 @@ h2.fourzerofour
 	{
 		text-align: center;
 	}
-		
+
 	.entry
 	{
 		margin-bottom: 15px;
 	}
-		
+
 	input[type="password"]
 	{
 		width: 100%;
 	}
-		
+
 	.postmore
 	{
 		margin-bottom: 30px;
 	}
-		
+
 	.postmore a
 	{
 		width: 100px;
@@ -1780,12 +1780,12 @@ h2.fourzerofour
 		margin-right: auto;
 		float: none;
 	}
-		
+
 	.author-img
 	{
 		text-align: center;
-	}		
-	
+	}
+
 	.postwidgetarea,
 	.pagewidgetarea
 	{
@@ -1793,38 +1793,38 @@ h2.fourzerofour
 		padding: 0;
 		text-align: center;
 	}
-	
-		
+
+
 	/* Galleries */
 	.gallery-item
 	{
 		padding: 0 7px 7px 0;
 	}
-		
+
 	.gallery .gallery-caption,
-	.gallery .gallery-item:hover .gallery-caption 
+	.gallery .gallery-item:hover .gallery-caption
 	{
 		display: none;
-	}	
-	
-	
+	}
+
+
 	/* Comments */
 	.comments
 	{
 		width: 100%;
 	}
-	
+
 	.comment p
 	{
 		width: 100%;
 		clear: both;
 	}
-		
+
 	.comment-main
 	{
 		clear: both;
 	}
-		
+
 	.comment-input,
 	.comment-author,
 	.comment-meta,
@@ -1839,86 +1839,86 @@ h2.fourzerofour
 	{
 		height: 50px;
 	}
-		
+
 	.comment-reply-link,
 	.comment-reply-link:hover
 	{
 		display: inline-block;
 		float: none;
 	}
-		
+
 	#commentform input,
 	#commentform textarea,
 	.form-allowed-tags
 	{
 		width: 100%;
 	}
-		
+
 	.form-allowed-tags
 	{
 		margin-bottom: 20px;
 	}
-		
+
 	input#submit
 	{
 		width: 50%;
 	}
-		
+
 	.comment p
 	{
 		margin-bottom: 15px;
 		clear: both;
-	}		
+	}
 
-		
+
 	/* Sidebar */
 	#search-input
 	{
 		width: 100%;
 	}
-		
+
 	#wp-calendar tfoot #prev
 	{
 		float: left;
 	}
-		
+
 	#wp-calendar tfoot #next
 	{
 		float: right;
-	}	
-	
-	
+	}
+
+
 	/* Semi-Footer */
 	#semi_footer .columns
 	{
 		margin-bottom: 40px;
 	}
-		
+
 	#semi_footer h3, h4, ul, li, p, a
 	{
 		text-align: center;
-	}	
-	
-	
+	}
+
+
 	/* Footer */
 	#footer
 	{
 		text-align: center;
 	}
-	
+
 }
 
 
 /* Tablet (Portrait): 768px - 959px */
 @media only screen and ( min-width: 768px )
 {
-		
+
 	/* Logo */
 	#logo img
 	{
 		max-width: 100px;
 		margin: 50px 30px 50px 0;
-	}	
+	}
 
 
 	/* Comments */
@@ -1926,50 +1926,49 @@ h2.fourzerofour
 	{
 		width: 50%;
 	}
-	
-	
+
+
 	/* 404.php */
 	.fourzerofourhelp
 	{
 		width: 100%;
 	}
-	
+
 	/* check these two values below - the need to be moved to the correct place */
 	h1.fourzerofour
 	{
 		font-size: 150px;
 		line-height: 150px;
 	}
-	
+
 	h2.fourzerofour
 	{
 		margin-top: 20px;
 	}
-	
-		
+
+
 }
 
 
 /* Tablet (Landscape): 960px - 1279px */
 @media only screen and ( min-width: 960px )
 {
-	
+
 }
 
 
 /* Desktop (1280): 1280px - 1599px */
 @media only screen and ( min-width: 1280px )
 {
-		
+
 }
 
 
 /* Desktop (1600): 1600px - max */
 @media only screen and ( min-width: 1600px )
 {
-		
+
 }
 
 
 /* END OF FILE */
-

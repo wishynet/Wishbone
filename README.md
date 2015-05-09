@@ -2,21 +2,21 @@ Wishbone Wordpress Theme
 ==============================
 
 **Contributors:** Paul Williamson  
-**Developer Link:** [Here](http://www.wishynet.co.uk)    
-**Donate Link:** [Here](http://wishbone.wishynet.co.uk/donate)    
+**Developer Link:** [Here](http://www.wishynet.co.uk)
+**Donate Link:** [Here](http://wishbone.wishynet.co.uk/donate)
 **License:** GNU General Public License  
 **Requires at least:** 4.1  
 **Tested up to:** 4.1  
 **Stable tag:** 4.1  
 **Tags:** black, white, light, dark, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, sticky-post, flexible-header, full-width-template, post-formats, theme-options, translation-ready, threaded-comments, accessibility-ready
 
-**Description:** Wishbone is a multi purpose WordPress theme containing everything needed to build a great WordPress website. Wishbone fully supports all WordPress theme features without being cluttered with gimmicky extras. 
+**Description:** Wishbone is a multi purpose WordPress theme containing everything needed to build a great WordPress website. Wishbone fully supports all WordPress theme features without being cluttered with gimmicky extras.
 
 ##Description
 
-Wishbone is a responsive theme for WordPress created using the fantastic Skellington boilerplate. Wishbone enables you to create classic blog style websites focusing on readable content and enhanced media handling. 
+Wishbone is a responsive theme for WordPress created using the fantastic Skellington boilerplate. Wishbone enables you to create classic blog style websites focusing on readable content and enhanced media handling.
 
-Wishbone contains many responsive elements including a mobile slide in menu and a 16 column grid that supports screen sizes for devices from mobile phones right up to large desktops. Some basic HTML element formatting is included as part of the Skellington boilerplate and in-turn the Wishbone theme, support for many WordPress elements are also included and editable. 
+Wishbone contains many responsive elements including a mobile slide in menu and a 16 column grid that supports screen sizes for devices from mobile phones right up to large desktops. Some basic HTML element formatting is included as part of the Skellington boilerplate and in-turn the Wishbone theme, support for many WordPress elements are also included and editable.
 
 ####Features:
 
@@ -30,7 +30,7 @@ Wishbone contains many responsive elements including a mobile slide in menu and 
 
 While Wishbone is designed to handle any plugin with minimal intrusion, special focus for supporting select plugins is on the way. Plugins to be supported include:
 
-* bbPress 
+* bbPress
 * WooCommerce
 * BuddyPress
 * Jetpack
@@ -39,7 +39,7 @@ There are also a number of plugins designed with Wishbone in mind that will be a
 
 ##Installation
 
-This process assumes you have already installed WordPress to your web server or host. 
+This process assumes you have already installed WordPress to your web server or host.
 To install and activate the Wishbone theme:
 
 1. Unzip the 'wishbone' downloaded file to a location on your computer
@@ -51,31 +51,31 @@ To install and activate the Wishbone theme:
 ##Configuration
 
 ####Showcase
-Wishbone provides a Showcase that can display a banner image and/or statement at a single location on your site (usually a home page). To make use of this feature, paste the following code either directly in your home page code or by using the WordPress code editor. 
+Wishbone provides a Showcase that can display a banner image and/or statement at a single location on your site (usually a home page). To make use of this feature, paste the following code either directly in your home page code or by using the WordPress code editor.
 
     <div id="showcase">
-		
+
 	<div class="container">
-		
-	
+
+
 	    <?php get_template_part( 'showcase' ); ?>
-		
-			
+
+
 	</div><!-- container -->
-	
+
     </div><!-- end of showcase -->
 
-Finally, configure the Showcase in the theme Customizer section of the Dashboard. 
+Finally, configure the Showcase in the theme Customizer section of the Dashboard.
 
 ##Frequently Asked Questions
 
 **I have a problem with Wishbone, where should I go to get help?**
 
-If you have a problem with Wishbone, please direct any queries to the Wishbone Support Forum on wordpress.org. 
+If you have a problem with Wishbone, please direct any queries to the Wishbone Support Forum on wordpress.org.
 
 **Can I modify Wishbone code for my own use?**
 
-Wishbone Core is released as open source software under the GPL, so yes. If any code is used, the author would great appreciate some acknowledgement of their contribution to the code. 
+Wishbone Core is released as open source software under the GPL, so yes. If any code is used, the author would great appreciate some acknowledgement of their contribution to the code.
 
 **How can I contact or find out more about the author of Wishbone?**
 
@@ -90,7 +90,7 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 ##Changelog
 
 #### 1.06
-- added additional widget areas for single page and post templates
+- added additional widget area for comment sections
 
 #### 1.05
 - remove old gallery function and replace with a filter saving code in 'functions.php' file
@@ -129,7 +129,7 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 
 - update pagination and post links to use new WordPress 4.1 functions
 
-- add theme support for 'title-tags' 
+- add theme support for 'title-tags'
 
 #### 1.02
 **Updated header.php as follows:**
@@ -166,7 +166,7 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 
 **Updated comments.php as follows:**
 
-- add additional translation code to all some text to be translated 
+- add additional translation code to all some text to be translated
 
 **Additional Updates:**
 
