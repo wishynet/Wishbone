@@ -90,7 +90,9 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 ##Changelog
 
 #### 1.06
-- added additional widget area for comment sections
+- add additional widget area for comment sections
+
+- add genericon support
 
 #### 1.05
 - remove old gallery function and replace with a filter saving code in 'functions.php' file
