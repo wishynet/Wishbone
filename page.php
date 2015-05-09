@@ -49,22 +49,15 @@
 					<?php comments_template( '', false ); ?>
 				
 				</div><!-- end of comments -->
-			
-			<?php else : ?>
 				
-				<!-- do not display any comment template -->
-				
-			<?php endif; ?>
-			
-			
-			<div class="pagewidgetarea">
+				<div class="commentwidgetarea">
 				
 				<hr>
 				
-				<?php if ( !dynamic_sidebar( 'Page Widget' ) ) : 
+				<?php if ( !dynamic_sidebar( 'Comments Widget' ) ) : 
 			
 					$instance = array(
-						'title'			=> __( 'The Page Widget Area', 'wishbone' ),
+						'title'			=> __( 'The Comment Widget Area', 'wishbone' ),
 						'text'			=> __( 'This is a Widget Area. Replace the default Widgets with a Widget of your choice from the WordPress Dashboard menu.', 'wishbone' )
 					);
 			
@@ -77,7 +70,14 @@
 	
 				endif; ?>
 				
-			</div><!-- end of pagewidgetarea -->			
+				</div><!-- end of commentwidgetarea -->
+			
+			<?php else : ?>
+				
+				<!-- do not display any comment template -->
+				
+			<?php endif; ?>
+						
 			
 		</div><!-- end of sixteen columns -->
 		
