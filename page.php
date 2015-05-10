@@ -49,12 +49,35 @@
 					<?php comments_template( '', false ); ?>
 				
 				</div><!-- end of comments -->
+				
+				<div class="commentwidgetarea">
+				
+				<hr>
+				
+				<?php if ( !dynamic_sidebar( 'Comments Widget' ) ) : 
+			
+					$instance = array(
+						'title'			=> __( 'The Comment Widget Area', 'wishbone' ),
+						'text'			=> __( 'This is a Widget Area. Replace the default Widgets with a Widget of your choice from the WordPress Dashboard menu.', 'wishbone' )
+					);
+			
+					$args = array(
+						'before_title'	=> '<h2 class="widgettitle">',
+						'after_title'	=> '</h2>',
+					);
+			
+					the_widget( 'WP_Widget_Text', $instance, $args ); 
+	
+				endif; ?>
+				
+				</div><!-- end of commentwidgetarea -->
 			
 			<?php else : ?>
 				
 				<!-- do not display any comment template -->
 				
-			<?php endif; ?>			
+			<?php endif; ?>
+						
 			
 		</div><!-- end of sixteen columns -->
 		

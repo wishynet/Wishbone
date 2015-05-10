@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wishbone\n"
-"POT-Creation-Date: 2014-10-12 21:16-0000\n"
-"PO-Revision-Date: 2014-10-30 14:44-0000\n"
+"POT-Creation-Date: 2015-04-23 14:34-0000\n"
+"PO-Revision-Date: 2015-04-23 14:39-0000\n"
 "Last-Translator: Paul Williamson <paul@wishynet.co.uk>\n"
 "Language-Team: Wishynet <hello@wishynet.co.uk>\n"
 "Language: en_GB\n"
@@ -36,71 +36,368 @@ msgstr ""
 msgid "Search Page"
 msgstr "Suchseite"
 
-#: ../404.php:45 ../page-search.php:37
+#: ../404.php:48 ../page-search.php:40
 msgid "Site Map"
 msgstr "Site Map"
 
-#: ../404.php:48 ../page-search.php:40
+#: ../404.php:54 ../page-search.php:46
 msgid "Home Page"
 msgstr "Startseite"
 
-#: ../author.php:66 ../category.php:44 ../content-aside.php:19
+#: ../archive.php:15 ../sidebar.php:22
+msgid "Archives"
+msgstr "Archiv"
+
+#: ../archive.php:22 ../page-search.php:55
+msgid "Archives by Month:"
+msgstr "Archive nach Monat:"
+
+#: ../archive.php:33 ../page-search.php:65
+msgid "Archives by Category:"
+msgstr "Archiv nach Kategorie:"
+
+#: ../archive.php:44 ../page-search.php:75
+msgid "Archives by Author:"
+msgstr "Archiv nach Autor:"
+
+#: ../author.php:29
+msgid "Website: "
+msgstr "Webseite:"
+
+#: ../author.php:41
+msgid "Looking For Another Author?"
+msgstr "Suche nach einem anderen Autor?"
+
+#: ../author.php:62 ../category.php:38 ../content-aside.php:19
 #: ../content-audio.php:19 ../content-chat.php:19 ../content-gallery.php:19
 #: ../content-image.php:19 ../content-link.php:19 ../content-quote.php:19
 #: ../content-status.php:19 ../content-video.php:19 ../content.php:19
-#: ../date.php:42 ../tag.php:50
+#: ../date.php:45 ../tag.php:38
 msgid "Posted By "
 msgstr "Geschrieben Von"
 
-#: ../author.php:74 ../category.php:52 ../date.php:50 ../index.php:26
-#: ../page-blog.php:41 ../tag.php:58
+#: ../author.php:70 ../category.php:42 ../category.php:46 ../date.php:53
+#: ../index.php:26 ../page-blog.php:43 ../tag.php:46
 msgid "Read More"
 msgstr "Weiterlesen"
 
-#: ../author.php:92
+#: ../author.php:88
 msgid "No Posts By This Author"
 msgstr "Keine Beiträge von diesem Autor"
 
-#: ../category.php:69
+#: ../category.php:38 ../content-aside.php:19 ../content-audio.php:19
+#: ../content-chat.php:19 ../content-gallery.php:19 ../content-image.php:19
+#: ../content-link.php:19 ../content-quote.php:19 ../content-status.php:19
+#: ../content-video.php:19 ../content.php:19
+#, fuzzy
+msgid "No Comments"
+msgstr "Ein Kommentar"
+
+#: ../category.php:38 ../content-aside.php:19 ../content-audio.php:19
+#: ../content-chat.php:19 ../content-gallery.php:19 ../content-image.php:19
+#: ../content-link.php:19 ../content-quote.php:19 ../content-status.php:19
+#: ../content-video.php:19 ../content.php:19
+#, fuzzy
+msgid "1 Comment"
+msgstr "Ein Kommentar"
+
+#: ../category.php:38 ../content-aside.php:19 ../content-audio.php:19
+#: ../content-chat.php:19 ../content-gallery.php:19 ../content-image.php:19
+#: ../content-link.php:19 ../content-quote.php:19 ../content-status.php:19
+#: ../content-video.php:19 ../content.php:19
+#, fuzzy
+msgid "% Comments"
+msgstr "Ein Kommentar"
+
+#: ../category.php:46 ../index.php:26 ../page-blog.php:43
+msgid "Permanent Link to"
+msgstr "Permanenter Link zu"
+
+#: ../category.php:63
 msgid "No Posts In This Category"
 msgstr "Keine Themen in dieser Kategorie"
 
-#: ../comments.php:12
+#: ../comments.php:9
+#, fuzzy
+msgid "Comments"
+msgstr "Ein Kommentar"
+
+#: ../comments.php:17
 #, php-format
 msgid "One Comment"
 msgid_plural "%1$s Comments"
 msgstr[0] "Ein Kommentar"
 msgstr[1] "%1$s Kommentare"
 
-#: ../comments.php:43
+#: ../comments.php:27
+msgid "Reply To This Comment"
+msgstr "Auf diesen Kommentar antworten"
+
+#: ../comments.php:48
 msgid "There are no Comments"
 msgstr "Es sind keine Kommentare"
 
-#: ../comments.php:50
+#: ../comments.php:55
 msgid "Comments are Closed"
 msgstr "Kommentare sind geschlossen"
 
-#: ../date.php:70
+#: ../comments.php:63
+#, fuzzy
+msgid "Leave a Comment:"
+msgstr "Ein Kommentar"
+
+#: ../comments.php:64
+msgid "Add Your Comment"
+msgstr "Fügen Sie Ihren Kommentar"
+
+#: ../content-aside.php:46 ../content-audio.php:46 ../content-chat.php:46
+#: ../content-gallery.php:46 ../content-image.php:32 ../content-link.php:32
+#: ../content-quote.php:32 ../content-status.php:32 ../content-video.php:32
+#: ../page.php:34 ../single.php:26
+msgid "Pages In This Post:"
+msgstr "Seiten In Diesem Beitrag:"
+
+#: ../content.php:40
+msgid "Continue Reading..."
+msgstr "Weiterlesen..."
+
+#: ../customizer.php:60
+msgid "Site Colors"
+msgstr "Website Farben"
+
+#: ../customizer.php:62
+msgid "Change the colors of your site"
+msgstr "Ändern Sie die Farben Ihrer Website"
+
+#: ../customizer.php:81 ../customizer.php:651
+msgid "Site Logo"
+msgstr "Site Logo"
+
+#: ../customizer.php:83
+msgid "Choose your site logo"
+msgstr "Wählen Sie Ihre Seite logo"
+
+#: ../customizer.php:90
+msgid "Site Fonts"
+msgstr "Site Fonts"
+
+#: ../customizer.php:92
+msgid "Choose your site fonts"
+msgstr "Wählen Sie Ihre Seite Schriftarten"
+
+#: ../customizer.php:99
+msgid "Colors: Theme"
+msgstr "Farben: Theme"
+
+#: ../customizer.php:101
+msgid "Choose your site theme colors"
+msgstr "Wählen Sie Ihre Seite Designfarben"
+
+#: ../customizer.php:109
+msgid "Colors: Backgrounds"
+msgstr "Farben: Hintergründe"
+
+#: ../customizer.php:111
+msgid "Customize the background colors"
+msgstr "Passen Sie die Hintergrundfarben"
+
+#: ../customizer.php:119
+msgid "Colors: Text"
+msgstr "Farben: Text"
+
+#: ../customizer.php:121
+msgid "Customize the text colors"
+msgstr "Passen Sie die Textfarben"
+
+#: ../customizer.php:129
+msgid "Colors: Navigation"
+msgstr "Farben: Navigation"
+
+#: ../customizer.php:131
+msgid "Customize the Navigation Bar colors"
+msgstr "Passen Sie die Navigationsleiste Farben"
+
+#: ../customizer.php:139
+#, fuzzy
+msgid "Site Components"
+msgstr "Ein Kommentar"
+
+#: ../customizer.php:141
+msgid "Choose which page components to display"
+msgstr ""
+
+#: ../customizer.php:148
+msgid "Header"
+msgstr ""
+
+#: ../customizer.php:150
+msgid "Modify header options"
+msgstr ""
+
+#: ../customizer.php:157
+msgid "Navigation"
+msgstr ""
+
+#: ../customizer.php:159
+msgid "Modify navigation options"
+msgstr ""
+
+#: ../customizer.php:166
+msgid "Showcase"
+msgstr ""
+
+#: ../customizer.php:168
+msgid "Modify showcase options"
+msgstr ""
+
+#: ../customizer.php:175
+msgid "Blog"
+msgstr ""
+
+#: ../customizer.php:177
+msgid "Modify blog options"
+msgstr ""
+
+#: ../customizer.php:184
+msgid "Footer"
+msgstr ""
+
+#: ../customizer.php:186
+msgid "Modify footer options"
+msgstr ""
+
+#: ../customizer.php:663
+msgid "Header Font"
+msgstr ""
+
+#: ../customizer.php:686
+msgid "Content Font"
+msgstr ""
+
+#: ../customizer.php:713
+msgid "Theme Accent Color"
+msgstr ""
+
+#: ../customizer.php:726
+msgid "Theme Accent Sub Color"
+msgstr ""
+
+#: ../customizer.php:739
+msgid "Header Background Color"
+msgstr ""
+
+#: ../customizer.php:752
+msgid "Navigation Background Color"
+msgstr ""
+
+#: ../customizer.php:765
+msgid "Content Background Color"
+msgstr ""
+
+#: ../customizer.php:778
+msgid "Semi-Footer Background Color"
+msgstr ""
+
+#: ../customizer.php:791
+msgid "Footer Background Color"
+msgstr ""
+
+#: ../customizer.php:804
+msgid "Heading Text Color"
+msgstr ""
+
+#: ../customizer.php:817
+msgid "Content Text Color"
+msgstr ""
+
+#: ../customizer.php:830
+msgid "Display Header"
+msgstr ""
+
+#: ../customizer.php:840
+msgid "Display Navigation Menu"
+msgstr ""
+
+#: ../customizer.php:850
+msgid "Display Showcase"
+msgstr ""
+
+#: ../customizer.php:860
+msgid "Display Semi-Footer"
+msgstr ""
+
+#: ../customizer.php:872
+msgid "Display Logo"
+msgstr ""
+
+#: ../customizer.php:882
+msgid "Display Login"
+msgstr ""
+
+#: ../customizer.php:894
+msgid "Header Background Image"
+msgstr ""
+
+#: ../customizer.php:906
+msgid "Navigation Border"
+msgstr ""
+
+#: ../customizer.php:923
+msgid "What to Display in the Showcase"
+msgstr ""
+
+#: ../customizer.php:939
+msgid "Showcase Image"
+msgstr ""
+
+#: ../customizer.php:951
+msgid "Showcase Background Color"
+msgstr ""
+
+#: ../customizer.php:961
+msgid "Showcase Heading"
+msgstr ""
+
+#: ../customizer.php:971
+msgid "Showcase Slogan"
+msgstr ""
+
+#: ../customizer.php:983
+msgid "Blog Layout"
+msgstr ""
+
+#: ../customizer.php:1000
+msgid "Footer Text"
+msgstr ""
+
+#: ../date.php:73
 msgid "No Posts On This Date"
 msgstr "Keine Beiträge zu diesem Tag"
 
-#: ../footer.php:13
-msgid "About Us"
-msgstr "über Uns"
+#: ../footer.php:14
+msgid "The Footer Widget Area"
+msgstr ""
 
-#: ../footer.php:27
+#: ../footer.php:15
+msgid ""
+"This is a Widget Area. Replace the default Widgets with a Widget of your "
+"choice from the WordPress Dashboard menu."
+msgstr ""
+
+#: ../footer.php:35
 msgid "Popular Topics"
 msgstr "Beliebte Themen"
 
-#: ../footer.php:40
-msgid "Recent News"
+#: ../footer.php:56
+#, fuzzy
+msgid "Recent Articles"
 msgstr "Neueste News"
 
-#: ../footer.php:69
-msgid "Contact Us"
-msgstr "Kontaktieren Sie Uns"
+#: ../footer.php:77
+msgid "Site Links"
+msgstr ""
 
-#: ../footer.php:111
+#: ../footer.php:114
 msgid ""
 "Copyrights etc. go here. Wishbone theme development by Wishynet. All Rights "
 "Reserved."
@@ -108,108 +405,79 @@ msgstr ""
 "Copyrights usw. finden Sie hier. Wishbone Thema Entwicklung von Wishynet. "
 "Alle Rechte vorbehalten."
 
-#: ../functions.php:110
-msgid "Main Menu"
-msgstr "Hauptmenü"
+#: ../functions.php:138
+msgid "Footer 1"
+msgstr ""
 
-#: ../functions.php:302
+#: ../functions.php:147
+msgid "Footer 2"
+msgstr ""
+
+#: ../functions.php:156
+msgid "Footer 3"
+msgstr ""
+
+#: ../functions.php:165
+msgid "Footer 4"
+msgstr ""
+
+#: ../functions.php:299
 msgid "Wishbone - Slide"
 msgstr "Wishbone - Lichtbild"
 
-#: ../functions.php:303
+#: ../functions.php:300
 msgid "Wishbone - Gallery"
 msgstr "Wishbone - Galerie"
 
-#: ../functions.php:304
+#: ../functions.php:301
 msgid "Wishbone - Gallery Wide"
 msgstr "Wishbone - Galerie (breit)"
 
-#: ../functions.php:305
+#: ../functions.php:302
 msgid "Wishbone - Post (normal)"
 msgstr "Wishbone - Artikel (normal)"
 
-#: ../functions.php:306
+#: ../functions.php:303
 msgid "Wishbone - Post (large)"
 msgstr "Wishbone - Artikel (groß)"
 
-#: ../functions.php:307
+#: ../functions.php:304
 msgid "Wishbone - Post (full)"
 msgstr "Wishbone - Artikel (Voll)"
 
-#: ../header.php:96
+#: ../header.php:38 ../header.php:42 ../header.php:113
+msgid "logo"
+msgstr ""
+
+#: ../header.php:71
 msgid "Login"
 msgstr "Login"
 
-#: ../header.php:97
-msgid "Signup"
+#: ../header.php:72
+#, fuzzy
+msgid "Sign Up"
 msgstr "Unterschreiben"
 
-#: ../header.php:100
+#: ../header.php:75
+msgid "Password Lost and Found"
+msgstr ""
+
+#: ../header.php:75
 msgid "Lost your password?"
 msgstr "Passwort vergessen?"
 
-#: ../index.php:33 ../page-blog.php:48
+#: ../header.php:105
+#, fuzzy
+msgid "Menu"
+msgstr "Hauptmenü"
+
+#: ../header.php:127
+msgid "Thanks for Visiting"
+msgstr ""
+
+#: ../index.php:33 ../page-blog.php:50
 msgid "Sorry, no posts matched your criteria."
 msgstr "Sorry, keine Beiträge mit Ihren Kriterien."
-
-#: ../page-contact.php:20
-msgid "Contact"
-msgstr "Kontakt"
-
-#: ../page-contact.php:29
-msgid "Email"
-msgstr "E-Mail"
-
-#: ../page-contact.php:52
-msgid "Address"
-msgstr "Adresse"
-
-#: ../page-home.php:39
-msgid "Clean"
-msgstr "Sauber"
-
-#: ../page-home.php:41
-msgid ""
-"WishBone is a clean and simple Wordpress theme that gets straight to the "
-"point; putting content at the center of user focus and wrapping it around a "
-"clean and simple design."
-msgstr ""
-"Wishbone ist eine saubere und einfache Wordpress Thema, das gerade auf den "
-"Punkt; Putting Inhalte im Mittelpunkt der Anwenderorientierung und wickelte "
-"sie um einen klaren und einfachen Design."
-
-#: ../page-home.php:50
-msgid "Responsive"
-msgstr "Ansprechbar"
-
-#: ../page-home.php:52
-msgid ""
-"Built on Skellington, WishBone is a fully responsive theme that accurately "
-"displays on anything from a phone to a large desktop screen ensuring that "
-"all of the site content is visible to the user."
-msgstr ""
-"Auf Skellington erbaute Wishbone eine voll reaktions Thema, das genau zeigt "
-"auf etwas von einem Telefon zu einem großen Desktop-Bildschirm "
-"gewährleistet, dass alle von dem Inhalt der Website für den Benutzer "
-"sichtbar ist."
-
-#: ../page-home.php:61
-msgid "Flexible"
-msgstr "Flexibel"
-
-#: ../page-home.php:63
-msgid ""
-"WishBone comes packed with features and page templates for use with almost "
-"any type of website including personal blogs, portfolios, business, news and "
-"community sites."
-msgstr ""
-"Wishbone kommt mit Features und Seitenvorlagen zur Verwendung mit fast jeder "
-"Art von Website, einschließlich persönliche Blogs, Portfolios, Business, "
-"News und Community-Seiten gepackt."
-
-#: ../page-home.php:75
-msgid "Latest Posts"
-msgstr "Neueste Beiträge"
 
 #: ../page-search.php:22
 msgid ""
@@ -224,21 +492,9 @@ msgid "Perhaps these links can also help you find what you are looking for:"
 msgstr ""
 "Vielleicht sind diese Links kann auch helfen, Sie finden was Sie suchen:"
 
-#: ../page-search.php:49
-msgid "Archives by Month:"
-msgstr "Archive nach Monat:"
-
-#: ../page-search.php:59
-msgid "Archives by Category:"
-msgstr "Archiv nach Kategorie:"
-
-#: ../page-search.php:69
-msgid "Archives by Author:"
-msgstr "Archiv nach Autor:"
-
-#: ../page-testimonials.php:20
-msgid "Testimonials"
-msgstr "Die Empfehlung"
+#: ../page.php:24
+msgid "<p class=\"serif\">Read the rest of this page &raquo;</p>"
+msgstr ""
 
 #: ../search.php:15
 msgid "Search Results"
@@ -248,23 +504,24 @@ msgstr "Suchergebnisse"
 msgid "Your search criteria was found in the following pages: "
 msgstr "Ihre Suchkriterien wurde in folgenden Seiten gefunden:"
 
-#: ../search.php:52
+#: ../search.php:49
 msgid "Sorry, no posts found. Perhaps try a different search?"
 msgstr ""
 "Sorry, keine Beiträge gefunden. Vielleicht versuchen Sie einen anderen "
 "suchen?"
 
-#: ../searchform.php:1 ../sidebar.php:8
+#: ../searchform.php:1 ../searchform.php:6 ../sidebar.php:8
 msgid "Search"
+msgstr "Suche"
+
+#: ../searchform.php:5
+#, fuzzy
+msgid "Search..."
 msgstr "Suche"
 
 #: ../sidebar.php:14
 msgid "Categories"
 msgstr "Kategorien"
-
-#: ../sidebar.php:22
-msgid "Archives"
-msgstr "Archiv"
 
 #: ../sidebar.php:30
 msgid "Popular Tags"
@@ -274,6 +531,65 @@ msgstr "Popular Tags"
 msgid "Admin"
 msgstr "Admin"
 
-#: ../single.php:29
-msgid "Pages In This Post:"
-msgstr "Seiten In Diesem Beitrag:"
+#: ../tag.php:63
+#, fuzzy
+msgid "No Posts With This Tag"
+msgstr "Keine Beiträge zu diesem Tag"
+
+#~ msgid "About Us"
+#~ msgstr "über Uns"
+
+#~ msgid "Contact Us"
+#~ msgstr "Kontaktieren Sie Uns"
+
+#~ msgid "Contact"
+#~ msgstr "Kontakt"
+
+#~ msgid "Email"
+#~ msgstr "E-Mail"
+
+#~ msgid "Address"
+#~ msgstr "Adresse"
+
+#~ msgid "Clean"
+#~ msgstr "Sauber"
+
+#~ msgid ""
+#~ "WishBone is a clean and simple Wordpress theme that gets straight to the "
+#~ "point; putting content at the center of user focus and wrapping it around "
+#~ "a clean and simple design."
+#~ msgstr ""
+#~ "Wishbone ist eine saubere und einfache Wordpress Thema, das gerade auf "
+#~ "den Punkt; Putting Inhalte im Mittelpunkt der Anwenderorientierung und "
+#~ "wickelte sie um einen klaren und einfachen Design."
+
+#~ msgid "Responsive"
+#~ msgstr "Ansprechbar"
+
+#~ msgid ""
+#~ "Built on Skellington, WishBone is a fully responsive theme that "
+#~ "accurately displays on anything from a phone to a large desktop screen "
+#~ "ensuring that all of the site content is visible to the user."
+#~ msgstr ""
+#~ "Auf Skellington erbaute Wishbone eine voll reaktions Thema, das genau "
+#~ "zeigt auf etwas von einem Telefon zu einem großen Desktop-Bildschirm "
+#~ "gewährleistet, dass alle von dem Inhalt der Website für den Benutzer "
+#~ "sichtbar ist."
+
+#~ msgid "Flexible"
+#~ msgstr "Flexibel"
+
+#~ msgid ""
+#~ "WishBone comes packed with features and page templates for use with "
+#~ "almost any type of website including personal blogs, portfolios, "
+#~ "business, news and community sites."
+#~ msgstr ""
+#~ "Wishbone kommt mit Features und Seitenvorlagen zur Verwendung mit fast "
+#~ "jeder Art von Website, einschließlich persönliche Blogs, Portfolios, "
+#~ "Business, News und Community-Seiten gepackt."
+
+#~ msgid "Latest Posts"
+#~ msgstr "Neueste Beiträge"
+
+#~ msgid "Testimonials"
+#~ msgstr "Die Empfehlung"
