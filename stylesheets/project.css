@@ -1165,23 +1165,21 @@ input#submit
 /* 404.php */
 h1.fourzerofour
 {
-	font-size: 210px;
-	line-height: 210px;
+	font-size: 150px;
+	line-height: 150px;
 	letter-spacing: 0.01em;
 	opacity: 0.5;
-	float: right;
 }
 
 h2.fourzerofour
 {
-	margin-top: 70px;
+	margin-top: 16px;
 }
 
 .fourzerofourhelp
 {
 	display: block;
-	width: 50%;
-	margin: 50px auto 0 auto;
+	margin-top: 30px;
 	text-align: center;
 }
 
@@ -1611,10 +1609,10 @@ h2.fourzerofour
 		overflow: auto;
 		background-color: #444444;
 		-webkit-transition: left 0.25s ease-in-out;
-   		   -moz-transition: left 0.25s ease-in-out;
-			-ms-transition: left 0.25s ease-in-out;
-	 		 -o-transition: left 0.25s ease-in-out;
-				transition: left 0.25s ease-in-out;
+   		 -moz-transition: left 0.25s ease-in-out;
+				-ms-transition: left 0.25s ease-in-out;
+	 		 	 -o-transition: left 0.25s ease-in-out;
+						transition: left 0.25s ease-in-out;
 	}
 
 	#mobile_menu:hover ul.menu
@@ -1894,7 +1892,7 @@ h2.fourzerofour
 		margin-bottom: 40px;
 	}
 
-	#semi_footer h3, h4, ul, li, p, a
+	#semi_footer div, h3, h4, ul, li, p, a
 	{
 		text-align: center;
 	}
@@ -1929,23 +1927,10 @@ h2.fourzerofour
 
 
 	/* 404.php */
-	.fourzerofourhelp
-	{
-		width: 100%;
-	}
-
-	/* check these two values below - the need to be moved to the correct place */
 	h1.fourzerofour
 	{
-		font-size: 150px;
-		line-height: 150px;
+		float: right;
 	}
-
-	h2.fourzerofour
-	{
-		margin-top: 20px;
-	}
-
 
 }
 
@@ -1960,6 +1945,12 @@ h2.fourzerofour
 /* Desktop (1280): 1280px - 1599px */
 @media only screen and ( min-width: 1280px )
 {
+
+	/* 404.php */
+	h2.fourzerofour
+	{
+		margin-top: 50px;
+	}
 
 }
 
