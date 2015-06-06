@@ -1161,6 +1161,34 @@ input#submit
 	margin-right: 0;
 }
 
+.archivelist ul
+{
+	margin-left: 0;
+}
+
+.archivelist li
+{
+	margin-bottom: 15px;
+}
+
+.archivelist li a
+{
+	padding: 5px;
+	background-color: #eeeeee;
+	color: #444444;
+}
+
+.archivelist li a:hover
+{
+	background-color: #444444;
+	color: #ffffff;
+	-webkit-transition: all 0.25s ease-in-out;
+		 -moz-transition: all 0.25s ease-in-out;
+		  -ms-transition: all 0.25s ease-in-out;
+			 -o-transition: all 0.25s ease-in-out;
+					transition: all 0.25s ease-in-out;
+}
+
 
 /* 404.php */
 h1.fourzerofour
@@ -1779,7 +1807,7 @@ h2.fourzerofour
 		float: none;
 	}
 
-	.author-img
+	.authorimg
 	{
 		text-align: center;
 	}

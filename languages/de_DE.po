@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wishbone\n"
 "POT-Creation-Date: 2015-04-23 14:34-0000\n"
-"PO-Revision-Date: 2015-04-23 14:39-0000\n"
+"PO-Revision-Date: 2015-05-18 11:01-0000\n"
 "Last-Translator: Paul Williamson <paul@wishynet.co.uk>\n"
 "Language-Team: Wishynet <hello@wishynet.co.uk>\n"
 "Language: en_GB\n"
@@ -224,11 +224,11 @@ msgstr "Ein Kommentar"
 
 #: ../customizer.php:141
 msgid "Choose which page components to display"
-msgstr ""
+msgstr "Wählen Sie die Seite Komponenten angezeigt"
 
 #: ../customizer.php:148
 msgid "Header"
-msgstr ""
+msgstr "Kopfzeile"
 
 #: ../customizer.php:150
 msgid "Modify header options"
