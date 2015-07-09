@@ -120,7 +120,7 @@ function wishbone_theme_setup() {
 	/* Adds custom image sizes when importing images */
     add_image_size( 'wishbone-slide', 1260, 350, true );
     add_image_size( 'wishbone-gallery', 400, 400, true );
-	add_image_size( 'wishbone-gallery-wide', 600, 400, true );
+	  add_image_size( 'wishbone-gallery-wide', 600, 400, true );
     add_image_size( 'wishbone-post-half', 620, 250, true );
     add_image_size( 'wishbone-post-large', 860, 250, true );
     add_image_size( 'wishbone-post-full', 1260, 350, true );
