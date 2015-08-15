@@ -5,20 +5,20 @@
 *
 *
 * WISHBONE OPTIONS CUSTOMIZER
-* 
+*
 * This file creates an additional menu system for managing Wishbone theme options.
 *
 * This menu system uses the WordPress Customizer system.
-* 
+*
 * Contents:
-* 
+*
 * 1.0 - HOOKS (ACTIONS + FILTERS) AND MENU
 * 2.0 - PANELS
 * 3.0 - SECTIONS
 * 4.0 - SETTINGS
 * 5.0 - SANITIZATION
 * 6.0 - CONTROLS
-* 7.0 - CSS  
+* 7.0 - CSS
 *
 *
 **/
@@ -27,9 +27,9 @@
 
 
 /**
-* 
+*
 * 1.0 - HOOKS (ACTIONS + FILTERS) AND MENU
-*  
+*
 **/
 
 /* Registers the option panels */
@@ -43,18 +43,18 @@ add_action( 'customize_register', 'wishbone_options_settings' );
 
 /* Registers the option controls */
 add_action( 'customize_register', 'wishbone_options_controls' );
-   
+
 
 
 
 /**
-* 
-* 2.0 - PANELS 
-* 
+*
+* 2.0 - PANELS
+*
 **/
 
 function wishbone_options_panels( $wp_customize ) {
-	$wp_customize->add_panel(    
+	$wp_customize->add_panel(
         'wishbone_colors_panel',
         array(
             'title'         => __( 'Site Colors', 'wishbone' ),
@@ -68,14 +68,14 @@ function wishbone_options_panels( $wp_customize ) {
 
 
 /**
-* 
+*
 * 3.0 - SECTIONS
-* 
+*
 **/
 
 function wishbone_options_sections( $wp_customize ) {
-    
-    $wp_customize->add_section(    
+
+    $wp_customize->add_section(
         'wishbone_logo_section',
         array(
             'title'         => __( 'Site Logo', 'wishbone' ),
@@ -83,8 +83,8 @@ function wishbone_options_sections( $wp_customize ) {
             'description'   => __( 'Choose your site logo', 'wishbone' )
         )
     );
-	
-	$wp_customize->add_section(    
+
+	$wp_customize->add_section(
         'wishbone_fonts_section',
         array(
             'title'         => __( 'Site Fonts', 'wishbone' ),
@@ -92,8 +92,8 @@ function wishbone_options_sections( $wp_customize ) {
             'description'   => __( 'Choose your site fonts', 'wishbone' )
         )
     );
-	
-	$wp_customize->add_section(    
+
+	$wp_customize->add_section(
         'wishbone_colors_theme_section',
         array(
             'title'         => __( 'Colors: Theme', 'wishbone' ),
@@ -102,8 +102,8 @@ function wishbone_options_sections( $wp_customize ) {
             'panel'			=> 'wishbone_colors_panel'
         )
     );
-    
-    $wp_customize->add_section(    
+
+    $wp_customize->add_section(
         'wishbone_colors_bg_section',
         array(
             'title'         => __( 'Colors: Backgrounds', 'wishbone' ),
@@ -112,8 +112,8 @@ function wishbone_options_sections( $wp_customize ) {
             'panel'			=> 'wishbone_colors_panel'
         )
     );
-	
-	$wp_customize->add_section(    
+
+	$wp_customize->add_section(
         'wishbone_colors_text_section',
         array(
             'title'         => __( 'Colors: Text', 'wishbone' ),
@@ -122,8 +122,8 @@ function wishbone_options_sections( $wp_customize ) {
             'panel'			=> 'wishbone_colors_panel'
         )
     );
-	
-	$wp_customize->add_section(    
+
+	$wp_customize->add_section(
         'wishbone_colors_nav_section',
         array(
             'title'         => __( 'Colors: Navigation', 'wishbone' ),
@@ -132,8 +132,8 @@ function wishbone_options_sections( $wp_customize ) {
             'panel'			=> 'wishbone_colors_panel'
         )
     );
-   
-    $wp_customize->add_section(    
+
+    $wp_customize->add_section(
         'wishbone_page_section',
         array(
             'title'         => __( 'Site Components', 'wishbone' ),
@@ -141,8 +141,8 @@ function wishbone_options_sections( $wp_customize ) {
             'description'   => __( 'Choose which page components to display', 'wishbone' )
         )
     );
-    
-    $wp_customize->add_section(    
+
+    $wp_customize->add_section(
         'wishbone_header_section',
         array(
             'title'         => __( 'Header', 'wishbone' ),
@@ -150,8 +150,8 @@ function wishbone_options_sections( $wp_customize ) {
             'description'   => __( 'Modify header options', 'wishbone' )
         )
     );
-	
-	$wp_customize->add_section(    
+
+	$wp_customize->add_section(
         'wishbone_navigation_section',
         array(
             'title'         => __( 'Navigation', 'wishbone' ),
@@ -159,8 +159,8 @@ function wishbone_options_sections( $wp_customize ) {
             'description'   => __( 'Modify navigation options', 'wishbone' )
         )
     );
-	
-    $wp_customize->add_section(    
+
+    $wp_customize->add_section(
         'wishbone_showcase_section',
         array(
             'title'         => __( 'Showcase', 'wishbone' ),
@@ -168,8 +168,8 @@ function wishbone_options_sections( $wp_customize ) {
             'description'   => __( 'Modify showcase options', 'wishbone' )
         )
     );
-    
-    $wp_customize->add_section(    
+
+    $wp_customize->add_section(
         'wishbone_blog_section',
         array(
             'title'         => __( 'Blog', 'wishbone' ),
@@ -178,7 +178,7 @@ function wishbone_options_sections( $wp_customize ) {
         )
     );
 
-	$wp_customize->add_section(    
+	  $wp_customize->add_section(
         'wishbone_footer_section',
         array(
             'title'         => __( 'Footer', 'wishbone' ),
@@ -190,26 +190,26 @@ function wishbone_options_sections( $wp_customize ) {
     /* Hides any default sections ( uncomment to hide ) */
     /*
     $wp_customize->remove_section( 'colors' );
-	$wp_customize->remove_section( 'header_image' );
+	  $wp_customize->remove_section( 'header_image' );
     $wp_customize->remove_section( 'background_image' );
-	$wp_customize->remove_section( 'nav' );
-	$wp_customize->remove_section( 'static_front_page' );
-	*/
+	  $wp_customize->remove_section( 'nav' );
+	  $wp_customize->remove_section( 'static_front_page' );
+	  */
 }
 
 
- 
+
 
 /**
-* 
-* 4.0 - SETTINGS 
-* 
+*
+* 4.0 - SETTINGS
+*
 **/
 
 function wishbone_options_settings( $wp_customize ) {
-    
+
     /* logo settings */
-    
+
     $wp_customize->add_setting(
         'wishbone_logo_setting',
         array(
@@ -220,9 +220,9 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback'	=> 'esc_url_raw'
         )
     );
-	
+
 	/* font settings */
-    
+
     $wp_customize->add_setting(
 		'wishbone_font_header_setting',
 		array(
@@ -231,9 +231,9 @@ function wishbone_options_settings( $wp_customize ) {
             'capability'    	=> 'edit_theme_options',
             'transport'     	=> '',
             'sanitize_callback'	=> 'wishbone_sanitize_font_header_setting'
-		)	
+		)
 	);
-	
+
 	$wp_customize->add_setting(
 		'wishbone_font_content_setting',
 		array(
@@ -242,11 +242,11 @@ function wishbone_options_settings( $wp_customize ) {
             'capability'    	=> 'edit_theme_options',
             'transport'     	=> '',
             'sanitize_callback'	=> 'wishbone_sanitize_font_content_setting'
-		)	
+		)
 	);
 
     /* color settings */
-	
+
 	$wp_customize->add_setting(
         'wishbone_theme_color_setting',
         array(
@@ -257,7 +257,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-	
+
 	$wp_customize->add_setting(
         'wishbone_theme_sub_color_setting',
         array(
@@ -268,7 +268,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_header_background_color_setting',
         array(
@@ -279,7 +279,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-	
+
 	$wp_customize->add_setting(
         'wishbone_nav_background_color_setting',
         array(
@@ -290,7 +290,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-	
+
 	$wp_customize->add_setting(
         'wishbone_content_background_color_setting',
         array(
@@ -301,7 +301,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_semifooter_background_color_setting',
         array(
@@ -312,7 +312,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_footer_background_color_setting',
         array(
@@ -323,7 +323,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_heading_text_color_setting',
         array(
@@ -334,7 +334,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_content_text_color_setting',
         array(
@@ -345,9 +345,9 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-		   
+
     /* page settings */
-    
+
     $wp_customize->add_setting(
         'wishbone_toggle_header_setting',
         array(
@@ -358,7 +358,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'wishbone_sanitize_checkbox'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_toggle_navmenu_setting',
         array(
@@ -369,7 +369,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'wishbone_sanitize_checkbox'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_toggle_showcase_setting',
         array(
@@ -391,9 +391,9 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'wishbone_sanitize_checkbox'
         )
     );
-    
+
 	/* header settings */
-    
+
     $wp_customize->add_setting(
         'wishbone_header_toggle_logo_setting',
         array(
@@ -404,7 +404,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'wishbone_sanitize_checkbox'
         )
     );
-	
+
     $wp_customize->add_setting(
         'wishbone_header_toggle_login_setting',
         array(
@@ -415,7 +415,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'wishbone_sanitize_checkbox'
         )
     );
-	
+
 	$wp_customize->add_setting(
         'wishbone_header_bg_image_setting',
         array(
@@ -426,9 +426,9 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback'	=> 'esc_url_raw'
         )
     );
-	
+
 	/* navigation settings */
-    
+
     $wp_customize->add_setting(
         'wishbone_navigation_border_setting',
         array(
@@ -439,9 +439,9 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback'	=> 'wishbone_sanitize_navigation_border_setting'
         )
     );
-	
+
     /* showcase settings */
-    
+
     $wp_customize->add_setting(
         'wishbone_showcase_type_setting',
         array(
@@ -452,7 +452,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback'	=> 'wishbone_sanitize_showcase_type_setting'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_showcase_img_setting',
         array(
@@ -463,7 +463,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback'	=> 'esc_url_raw'
         )
     );
-	
+
 	$wp_customize->add_setting(
         'wishbone_showcase_bg_color_setting',
         array(
@@ -474,7 +474,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'sanitize_hex_color'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_showcase_heading_setting',
         array(
@@ -485,7 +485,7 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'wishbone_sanitize_text'
         )
     );
-    
+
     $wp_customize->add_setting(
         'wishbone_showcase_slogan_setting',
         array(
@@ -496,9 +496,9 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback' => 'wishbone_sanitize_text'
         )
     );
-    
+
     /* blog settings */
-    
+
     $wp_customize->add_setting(
         'wishbone_blog_layout_setting',
         array(
@@ -509,9 +509,9 @@ function wishbone_options_settings( $wp_customize ) {
             'sanitize_callback'	=> 'wishbone_sanitize_blog_layout_setting'
         )
     );
-	
+
 	/* footer settings */
-	
+
 	$wp_customize->add_setting(
         'wishbone_footer_copyrights_setting',
         array(
@@ -528,9 +528,9 @@ function wishbone_options_settings( $wp_customize ) {
 
 
 /**
-* 
+*
 * 5.0 - SANITIZATION
-* 
+*
 **/
 
 function wishbone_sanitize_text( $input ) {
@@ -549,17 +549,17 @@ function wishbone_sanitize_font_header_setting( $input ) {
 	$valid = array(
 		''				=> '',
 		'abril'			=> 'Abril Fatface',
-		'arvo'			=> 'Arvo',				
+		'arvo'			=> 'Arvo',
 		'helvetica'		=> 'Helvetica',
 		'josefin'		=> 'Josefin Slab',
 		'lato'			=> 'Lato',
 		'lobster'		=> 'Lobster',
 		'oldstandard'	=> 'Old Standard TT',
-		'opensans'		=> 'Open Sans',				
-		'ubuntu'		=> 'Ubuntu',				
+		'opensans'		=> 'Open Sans',
+		'ubuntu'		=> 'Ubuntu',
 		'volkhov'		=> 'Volkhov'
 	);
-	
+
 	if ( array_key_exists( $input, $valid ) ) {
 		return $input;
 	} else {
@@ -571,17 +571,17 @@ function wishbone_sanitize_font_content_setting( $input ) {
 	$valid = array(
 		''				=> '',
 		'abril'			=> 'Abril Fatface',
-		'arvo'			=> 'Arvo',				
+		'arvo'			=> 'Arvo',
 		'helvetica'		=> 'Helvetica',
 		'josefin'		=> 'Josefin Slab',
 		'lato'			=> 'Lato',
 		'lobster'		=> 'Lobster',
 		'oldstandard'	=> 'Old Standard TT',
-		'opensans'		=> 'Open Sans',				
-		'ubuntu'		=> 'Ubuntu',				
+		'opensans'		=> 'Open Sans',
+		'ubuntu'		=> 'Ubuntu',
 		'volkhov'		=> 'Volkhov'
 	);
-	
+
 	if ( array_key_exists( $input, $valid ) ) {
 		return $input;
 	} else {
@@ -595,7 +595,7 @@ function wishbone_sanitize_navigation_border_setting( $input ) {
         'bottom'    => 'Border Bottom',
         'none'		=> 'No Border'
 	);
-	
+
 	if ( array_key_exists( $input, $valid ) ) {
 		return $input;
 	} else {
@@ -608,7 +608,7 @@ function wishbone_sanitize_showcase_type_setting( $input ) {
 		'static'	=> 'Static Background',
         'slider'    => 'Slider'
 	);
-	
+
 	if ( array_key_exists( $input, $valid ) ) {
 		return $input;
 	} else {
@@ -622,7 +622,7 @@ function wishbone_sanitize_blog_layout_setting( $input ) {
         'blog_sidebar_left'     => 'Blog with Left-hand Sidebar',
         'blog_sidebar_none'     => 'Blog with no Sidebar'
 	);
-	
+
 	if ( array_key_exists( $input, $valid ) ) {
 		return $input;
 	} else {
@@ -634,15 +634,15 @@ function wishbone_sanitize_blog_layout_setting( $input ) {
 
 
 /**
-* 
+*
 * 6.0 - CONTROLS
-* 
+*
 **/
 
 function wishbone_options_controls( $wp_customize ) {
-    
+
     /* logo controls */
-    
+
     $wp_customize->add_control(
         new WP_Customize_Image_Control(
             $wp_customize,
@@ -654,9 +654,9 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
 	/* font controls */
-    
+
     $wp_customize->add_control(
 		'wishbone_font_header_control',
 		array(
@@ -667,19 +667,19 @@ function wishbone_options_controls( $wp_customize ) {
 			'choices'		=> array(
 				''				=> '',
 				'abril'			=> 'Abril Fatface',
-				'arvo'			=> 'Arvo',				
+				'arvo'			=> 'Arvo',
 				'helvetica'		=> 'Helvetica',
 				'josefin'		=> 'Josefin Slab',
 				'lato'			=> 'Lato',
 				'lobster'		=> 'Lobster',
 				'oldstandard'	=> 'Old Standard TT',
-				'opensans'		=> 'Open Sans',				
-				'ubuntu'		=> 'Ubuntu',				
+				'opensans'		=> 'Open Sans',
+				'ubuntu'		=> 'Ubuntu',
 				'volkhov'		=> 'Volkhov'
 			)
         )
     );
-	
+
 	$wp_customize->add_control(
 		'wishbone_font_content_control',
 		array(
@@ -690,21 +690,21 @@ function wishbone_options_controls( $wp_customize ) {
 			'choices'		=> array(
 				''				=> '',
 				'abril'			=> 'Abril Fatface',
-				'arvo'			=> 'Arvo',				
+				'arvo'			=> 'Arvo',
 				'helvetica'		=> 'Helvetica',
 				'josefin'		=> 'Josefin Slab',
 				'lato'			=> 'Lato',
 				'lobster'		=> 'Lobster',
 				'oldstandard'	=> 'Old Standard TT',
-				'opensans'		=> 'Open Sans',				
-				'ubuntu'		=> 'Ubuntu',				
+				'opensans'		=> 'Open Sans',
+				'ubuntu'		=> 'Ubuntu',
 				'volkhov'		=> 'Volkhov'
 			)
         )
     );
-	
+
 	/* color controls */
-	
+
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -717,7 +717,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
 	$wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -730,7 +730,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -743,7 +743,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
 	$wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -756,7 +756,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
 	$wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -769,7 +769,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-    
+
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -782,7 +782,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-    
+
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -795,7 +795,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-    
+
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -808,7 +808,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-    
+
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -821,9 +821,9 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
     /* page controls */
-    
+
     $wp_customize->add_control(
         'wishbone_toggle_header_control',
         array(
@@ -833,7 +833,7 @@ function wishbone_options_controls( $wp_customize ) {
             'type'          => 'checkbox'
         )
     );
-    
+
     $wp_customize->add_control(
         'wishbone_toggle_navmenu_control',
         array(
@@ -843,7 +843,7 @@ function wishbone_options_controls( $wp_customize ) {
             'type'          => 'checkbox'
         )
     );
-    
+
     $wp_customize->add_control(
         'wishbone_toggle_showcase_control',
         array(
@@ -863,9 +863,9 @@ function wishbone_options_controls( $wp_customize ) {
             'type'          => 'checkbox'
         )
     );
-    
+
 	/* header controls */
-    
+
     $wp_customize->add_control(
         'wishbone_header_toggle_logo_control',
         array(
@@ -885,7 +885,7 @@ function wishbone_options_controls( $wp_customize ) {
             'type'          => 'checkbox'
         )
     );
-	
+
 	$wp_customize->add_control(
         new WP_Customize_Image_Control(
             $wp_customize,
@@ -897,9 +897,9 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
 	/* navigation controls */
-    
+
     $wp_customize->add_control(
         'wishbone_navigation_border_control',
         array(
@@ -914,9 +914,9 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
     /* showcase controls */
-    
+
     $wp_customize->add_control(
         'wishbone_showcase_type_control',
         array(
@@ -930,7 +930,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-    
+
     $wp_customize->add_control(
         new WP_Customize_Image_Control(
             $wp_customize,
@@ -942,7 +942,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-    
+
 	$wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
@@ -954,7 +954,7 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
     $wp_customize->add_control(
         'wishbone_showcase_heading_control',
         array(
@@ -964,7 +964,7 @@ function wishbone_options_controls( $wp_customize ) {
             'type'          => 'text'
         )
     );
-    
+
     $wp_customize->add_control(
         'wishbone_showcase_slogan_control',
         array(
@@ -974,9 +974,9 @@ function wishbone_options_controls( $wp_customize ) {
             'type'          => 'text'
         )
     );
-    
+
     /* blog controls */
-    
+
     $wp_customize->add_control(
         'wishbone_blog_layout_control',
         array(
@@ -991,9 +991,9 @@ function wishbone_options_controls( $wp_customize ) {
             )
         )
     );
-	
+
 	/* footer controls */
-	
+
 	$wp_customize->add_control(
         'wishbone_footer_copyrights_control',
         array(
@@ -1009,13 +1009,13 @@ function wishbone_options_controls( $wp_customize ) {
 
 
 /**
-*  
+*
 * 7.0 - CSS
-* 
+*
 * Notes:
-* 
+*
 * Loads CSS from the Wishbone theme customizer options.
-* 
+*
 **/
 
 function wishbone_options_css() {
@@ -1029,12 +1029,12 @@ $header_font = get_theme_mod( 'wishbone_font_header_setting' );
 $content_font = get_theme_mod( 'wishbone_font_content_setting' );
 
 /* colors - theme */
-	
+
 $theme_color = get_theme_mod( 'wishbone_theme_color_setting' );
 $theme_sub_color = get_theme_mod( 'wishbone_theme_sub_color_setting' );
 
 /* colors - backgrounds */
- 
+
 $header_background_color = get_theme_mod( 'wishbone_header_background_color_setting' );
 $nav_background_color = get_theme_mod( 'wishbone_nav_background_color_setting' );
 $showcase_background_color = get_theme_mod( 'wishbone_showcase_bg_color_setting' );
@@ -1043,7 +1043,7 @@ $semifooter_background_color = get_theme_mod( 'wishbone_semifooter_background_co
 $footer_background_color = get_theme_mod( 'wishbone_footer_background_color_setting' );
 
 /* colors - text */
-	
+
 $text_heading_color = get_theme_mod( 'wishbone_heading_text_color_setting' );
 $text_content_color = get_theme_mod( 'wishbone_content_text_color_setting' );
 
@@ -1071,76 +1071,76 @@ if ( $header_font != '' ) {
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'abril' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "Abril Fatface, cursive; }';
 			echo '</style>';
 		break;
-		
+
 		case 'arvo' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Arvo);';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "Arvo", sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'helvetica' :
 			echo '<style>';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'josefin' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "Josefin Slab", serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'lato' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Lato);';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "Lato", sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'lobster' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Lobster);';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "Lobster", cursive; }';
 			echo '</style>';
 		break;
-		
+
 		case 'oldstandard' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT);';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "Old Standard TT", serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'opensans' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Open+Sans);';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "Open Sans", sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'ubuntu' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Ubuntu);';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "Ubuntu", sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'volkhov' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Volkhov);';
 				echo 'h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4, h4 a, h4 a:visited, h5, h5 a, h5 a:visited, h6, h6 a, h6 a:visited{ font-family: "Volkhov", serif; }';
 			echo '</style>';
 		break;
-	}	
+	}
 };
 
 
@@ -1153,69 +1153,69 @@ if ( $content_font != '' ) {
 				echo 'p{ font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'abril' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);';
 				echo 'p{ font-family: "Abril Fatface, cursive; }';
 			echo '</style>';
 		break;
-		
+
 		case 'arvo' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Arvo);';
 				echo 'p{ font-family: "Arvo", sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'helvetica' :
 			echo '<style>';
 				echo 'p{ font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'josefin' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);';
 				echo 'p{ font-family: "Josefin Slab", serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'lato' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Lato);';
 				echo 'p{ font-family: "Lato", sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'lobster' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Lobster);';
 				echo 'p{ font-family: "Lobster", cursive; }';
 			echo '</style>';
 		break;
-		
+
 		case 'oldstandard' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT);';
 				echo 'p{ font-family: "Old Standard TT", serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'opensans' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Open+Sans);';
 				echo 'p{ font-family: "Open Sans", sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'ubuntu' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Ubuntu);';
 				echo 'p{ font-family: "Ubuntu", sans-serif; }';
 			echo '</style>';
 		break;
-		
+
 		case 'volkhov' :
 			echo '<style>';
 				echo '@import url(https://fonts.googleapis.com/css?family=Volkhov);';
@@ -1243,12 +1243,12 @@ if ( $theme_sub_color !='' ) {
 	echo '</style>';
 };
 
-/* colors - backgrounds */ 
+/* colors - backgrounds */
 
 if ( $header_background_color !='' ) {
 	echo '<style type="text/css">';
 		echo '#header{ background-color:' . $header_background_color . '; }';
-	echo '</style>'; 
+	echo '</style>';
 };
 
 if ( $nav_background_color !='' ) {
@@ -1302,7 +1302,7 @@ if ( $text_content_color !='' ) {
 if ( $header_toggle_logo == false ) {
 	echo '<style type="text/css">';
 		echo '#title{ position: relative; top: 0; margin: 35px 0 30px 0; }';
-	echo '</style>';	
+	echo '</style>';
 }
 
 if ( $header_bg_image != '' ) {
@@ -1321,19 +1321,19 @@ if ( $navigation_border != '' ) {
 				echo '#navigation{ border-top-width: 5px; border-top-style: solid; border-bottom: none; }';
 			echo '</style>';
 		break;
-		
+
 		case 'bottom' :
 			echo '<style type="text/css">';
 				echo '#navigation{ border-top: none; border-bottom-width: 5px; border-bottom-style: solid; }';
 			echo '</style>';
 		break;
-			
+
 		case 'none' :
 			echo '<style type="text/css">';
 				echo '#navigation{ border: none; }';
 			echo '</style>';
 		break;
-	}	
+	}
 };
 
 
@@ -1344,20 +1344,20 @@ if ( $blog_layout != '' ) {
 		case 'blog_sidebar_right' :
 			/* Don't add any additional css */
 		break;
-		
+
 		case 'blog_sidebar_left' :
 			echo '<style type="text/css">';
 				echo '#posts{ float: right; }';
 			echo '</style>';
 		break;
-		
+
 		case 'blog_sidebar_none' :
 			echo '<style type="text/css">';
 				echo '#sidebar{ display: none; }';
 				echo '#posts{ width: 100%; padding-right: 10px; }';
 			echo '</style>';
 		break;
-	}	
+	}
 };
 
 
