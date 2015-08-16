@@ -86,7 +86,7 @@
 	position: absolute;
 	top: 50%;
 	right: 10px;
-	width: 150px;
+	width: 200px;
 	margin: -25px 0 20px 0;
 	float: right;
 }
@@ -1118,16 +1118,6 @@ input#submit
 }
 
 
-/* Comment Widget Area */
-.commentwidgetarea
-{
-	display: block;
-	width: 50%;
-	padding-left: 20px;
-	float: left;
-}
-
-
 
 
 /**
@@ -1140,6 +1130,17 @@ input#submit
 * This section lists various styles for specific page templates.
 *
 **/
+
+/* single.php and post.php widget areas */
+.postwidgetarea,
+.pagewidgetarea
+{
+	display: block;
+	width: 50%;
+	margin-bottom: 50px;
+	padding-left: 20px;
+	float: left;
+}
 
 /* page-search.php */
 .search-page-links

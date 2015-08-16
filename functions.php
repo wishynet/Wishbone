@@ -131,12 +131,22 @@ function wishbone_register_widget_areas() {
     register_sidebar( array(
         'before_title' 	=> '<h3 class="widgettitle">',
         'after_title' 	=> '</h3>'
-	) );
+	  ) );
 
-	/* Registers a widget area in the comments area next to post comments */
-	register_sidebar( array(
-		'name' 			=> __( 'Comments Widget', 'wishbone' ),
-		'id'			=> 'comments-widget',
+	  /* Registers a widget area on pages below the content */
+	  register_sidebar( array(
+		'name' 			    => __( 'Post Widget', 'wishbone' ),
+		'id'			      => 'post-widget',
+		'before_widget' => '',
+		'after_widget' 	=> '',
+		'before_title' 	=> '<h2>',
+		'after_title' 	=> '</h2>'
+    ) );
+
+    /* Registers a widget area on single post pages below the content */
+	  register_sidebar( array(
+		'name' 			    => __( 'Page Widget', 'wishbone' ),
+		'id'			      => 'page-widget',
 		'before_widget' => '',
 		'after_widget' 	=> '',
 		'before_title' 	=> '<h2>',
