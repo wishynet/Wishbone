@@ -948,7 +948,6 @@ p.postpages .button:hover
 
 .comments
 {
-	width: 50%;
 	float: left;
 	clear: both;
 }
@@ -1136,10 +1135,19 @@ input#submit
 .pagewidgetarea
 {
 	display: block;
-	width: 50%;
 	margin-bottom: 50px;
 	padding-left: 20px;
 	float: left;
+}
+
+.postwidgetarea
+{
+	width: 100%;
+}
+
+.pagewidgetarea
+{
+	width: 50%;
 }
 
 /* page-search.php */

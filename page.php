@@ -42,19 +42,13 @@
 			</div><!-- end of page -->
 
 
-			<?php if ( comments_open() ) : ?>
-
-				<div class="comments">
-
-					<?php comments_template( '', false ); ?>
-
-				</div><!-- end of comments -->
+			<?php if ( is_active_sidebar( 'page-widget' ) ) : ?>
 
 				<div class="pagewidgetarea">
 
 				<hr>
 
-				<?php if ( !dynamic_sidebar( 'Page Widget' ) ) :
+				<?php if ( !dynamic_sidebar( 'Page Widget' ) ) : ?>
 
 					$instance = array(
 						'title'			=> __( 'The Page Widget Area', 'wishbone' ),
@@ -68,9 +62,20 @@
 
 					the_widget( 'WP_Widget_Text', $instance, $args );
 
-				endif; ?>
+				<?php endif; ?>
 
-				</div><!-- end of commentwidgetarea -->
+			</div><!-- end of pagewidgetarea -->
+
+			<?php endif; ?>
+
+
+			<?php if ( comments_open() ) : ?>
+
+				<div class="comments">
+
+					<?php comments_template( '', false ); ?>
+
+				</div><!-- end of comments -->
 
 			<?php else : ?>
 
