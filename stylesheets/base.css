@@ -337,7 +337,8 @@ p a:hover
 */
 
 ul,
-ol
+ol,
+dl
 {
 	margin-bottom: 20px;
 }
