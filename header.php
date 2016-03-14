@@ -121,7 +121,7 @@
 
 				<p><?php _e( 'Menu', 'wishbone'); ?></p>
 
-				<ul class="menu">
+				<ul class="menuoverlay">
 
 					<?php if ( get_theme_mod( 'wishbone_logo_setting', true ) ) : ?>
 
@@ -135,13 +135,9 @@
 
 					<li class="menutitle"><h2><?php bloginfo( 'name' ); ?></h2></li>
 
-					<hr>
-
 					<li class="menulist"><?php wp_nav_menu( 'theme_location=mobile_menu' ); ?></li>
 
-					<hr>
-
-					<li><p><?php _e( 'Thanks for Visiting', 'wishbone' ); ?></p></li>
+					<li class="menufooter"><p><?php _e( 'Thanks for Visiting', 'wishbone' ); ?></p></li>
 
 				</ul><!-- end of menu -->
 

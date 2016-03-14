@@ -89,6 +89,11 @@ The author of Wishbone is Paul Williamson and can be contacted by visiting his s
 
 ##Changelog
 
+#### 1.07
+- update mobile menu li classes
+
+- update mobile menu to use 100% width
+
 #### 1.06
 - add additional widget area for comment sections
 
