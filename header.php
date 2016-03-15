@@ -123,13 +123,11 @@
 
 				<ul class="menuoverlay">
 
+					<a href="#close-menu" id="close-menu"><img src="<?php echo get_template_directory_uri(); ?>/images/cross.png" alt="closemenu" /></a>
+
 					<?php if ( get_theme_mod( 'wishbone_logo_setting', true ) ) : ?>
 
-					<li class="menulogo">
-
-						<img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="<?php _e( 'logo', 'wishbone' ); ?>" />
-
-					</li>
+					<li class="menulogo"><img src="<?php echo get_theme_mod( 'wishbone_logo_setting' ); ?>" alt="<?php _e( 'logo', 'wishbone' ); ?>" /></li>
 
 					<?php endif; ?>
 
@@ -139,7 +137,7 @@
 
 					<li class="menufooter"><p><?php _e( 'Thanks for Visiting', 'wishbone' ); ?></p></li>
 
-				</ul><!-- end of menu -->
+				</ul><!-- end of menuoverlay -->
 
 			</div><!-- end of mobile_menu -->
 
