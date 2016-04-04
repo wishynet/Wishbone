@@ -117,9 +117,14 @@
 
 			<div id="mobile_menu">
 
-				<img src="<?php echo get_template_directory_uri(); ?>/images/menu.png" alt="menu" />
+				<p class="menusomething"><?php bloginfo( 'name' ); ?></p>
 
-				<p><?php _e( 'Menu', 'wishbone'); ?></p>
+				<img class="menuicon" src="<?php echo get_template_directory_uri(); ?>/images/menu.png" alt="menu" />
+
+				<img class="menuicon" src="<?php echo get_template_directory_uri(); ?>/images/search.png" alt="search" />
+
+				<img  class="menuicon" src="<?php echo get_template_directory_uri(); ?>/images/login.png" alt="login" />
+
 
 				<ul class="menuoverlay">
 

@@ -163,12 +163,12 @@
 {
 	display: none;
 	height: 50px;
-	background-color: #444444;
 	cursor: pointer;
 	text-align: center;
 }
 
 #mobile_menu img,
+#mobile_menu img.menuicon,
 #mobile_menu p
 {
 	display: inline-block;
@@ -179,10 +179,16 @@
 	max-width: 300px;
 }
 
+#mobile_menu img.menuicon
+{
+	float: right;
+}
+
 #mobile_menu p
 {
+	margin: 0;
 	line-height: 50px;
-	margin: -40px 0 0 0;
+	float: left;
 	font-weight: bold;
 	color: #ffffff;
 }
@@ -1028,6 +1034,7 @@ p.postpages .button:hover
 
 .avatar
 {
+	margin: 0 auto 30px auto;
 	border-radius: 50%;
 }
 
@@ -1613,6 +1620,14 @@ h2.fourzerofour
 @media only screen and ( max-width: 767px )
 {
 
+	/* Header */
+	#header
+	{
+		position: relative;
+		top: 50px;
+	}
+
+
 	/* Logo */
 	#logo
 	{
@@ -1645,6 +1660,12 @@ h2.fourzerofour
 	/* Mobile Navigation Menu */
 	#navigation
 	{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+		background-color: #444444;
 		border: none !important;
 	}
 
