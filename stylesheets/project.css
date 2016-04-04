@@ -1718,14 +1718,13 @@ h2.fourzerofour
 
 	#mobile_menu .menufooter
 	{
-		position: absolute;
-		bottom: 0;
 		width: 100%;
 	}
 
 	#mobile_menu .menufooter p
 	{
 		margin: 5px 0 5px 0;
+		font-size: 16px;
 		color: #aaaaaa;
 	}
 
