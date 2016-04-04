@@ -128,7 +128,7 @@
 
 				<ul class="menuoverlay">
 
-					<a href="#close-menu" id="close-menu"><img src="<?php echo get_template_directory_uri(); ?>/images/cross.png" alt="closemenu" /></a>
+					<a href="#" id="close-menu"><img src="<?php echo get_template_directory_uri(); ?>/images/cross.png" alt="closemenu" /></a>
 
 					<?php if ( get_theme_mod( 'wishbone_logo_setting', true ) ) : ?>
 
