@@ -117,13 +117,13 @@
 
 			<div id="mobile_menu">
 
+				<img class="menuiconmenu" src="<?php echo get_template_directory_uri(); ?>/images/menu.png" alt="menu" />
+
 				<p class="menusomething"><?php bloginfo( 'name' ); ?></p>
 
-				<img class="menuicon" src="<?php echo get_template_directory_uri(); ?>/images/menu.png" alt="menu" />
+				<img  class="menuiconlogin" src="<?php echo get_template_directory_uri(); ?>/images/login.png" alt="login" />
 
-				<img class="menuicon" src="<?php echo get_template_directory_uri(); ?>/images/search.png" alt="search" />
-
-				<img  class="menuicon" src="<?php echo get_template_directory_uri(); ?>/images/login.png" alt="login" />
+				<img class="menuiconsearch" src="<?php echo get_template_directory_uri(); ?>/images/search.png" alt="search" />
 
 
 				<ul class="menuoverlay">
