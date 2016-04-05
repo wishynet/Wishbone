@@ -232,6 +232,11 @@
 	text-align: center;
 }
 
+#close-menu:hover ul.menuoverlay
+{
+	left: -100%;
+}
+
 
 /* Desktop Menu */
 #desktop_menu ul
@@ -1751,7 +1756,7 @@ h2.fourzerofour
 		color: #ffffff;
 		font-weight: bold;
 		text-align: left;
-   		text-decoration: none;
+   	text-decoration: none;
 	}
 
 	#mobile_menu li.menu-item:hover
@@ -1811,7 +1816,7 @@ h2.fourzerofour
 	}
 
 
-	/* Navigation */
+	/* Desktop Menu */
 	#desktop_menu
 	{
 		display: none;

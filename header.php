@@ -125,7 +125,6 @@
 
 				<img class="menuiconsearch" src="<?php echo get_template_directory_uri(); ?>/images/search.png" alt="search" />
 
-
 				<ul class="menuoverlay">
 
 					<a href="#" id="close-menu"><img src="<?php echo get_template_directory_uri(); ?>/images/cross.png" alt="closemenu" /></a>
